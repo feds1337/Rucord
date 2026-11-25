@@ -24,36 +24,14 @@ The build produces:
 - `target/flatpak-build/repo/`: exported static OSTree repository with static deltas
 - `target/flatpak-build/rucord.flatpakref`: one-click repository install file
 
-### Installing and Automatic Updates
+### Install the standalone bundle
 
-#### Option A: One-click repository install (Recommended for automatic updates)
-To install Rucord configured to receive automatic updates from the hosted OSTree repository:
+Download the `*-Linux-x86_64.flatpak` asset from the stable GitHub release. A hosted
+OSTree repository and Flathub listing are not configured, so install the downloaded
+bundle directly and replace it manually when a newer release is available:
 
 ```sh
-flatpak install --user packaging/flatpak/rucord.flatpakref
-# Or from a published URL:
-# flatpak install --user https://feds1337.github.io/Rucord/flatpak/rucord.flatpakref
-```
-
-Once installed via `.flatpakref`, your desktop environment (GNOME Software, KDE Discover)
-and `flatpak update` will automatically discover and install new releases.
-
-If installation reports `No such ref 'app/io.github.feds1337.rucord/x86_64/master'`,
-check that the hosted `flatpak/repo/summary` exists. Publishing the `.flatpakref`
-alone is insufficient. The package-repository workflow imports the release's
-checksum-verified Flatpak bundle and requires the app ref before uploading the
-site; missing bundles or refs fail publishing. To repair an incomplete site,
-run the corrected workflow with deployment enabled for a release tag containing
-all native build-matrix assets (including Fedora 43) and the Flatpak bundle.
-Until it is republished, use the standalone release bundle below.
-
-The in-app **Settings -> Updates** screen automatically detects when Rucord is running
-inside Flatpak, checks GitHub releases, and prompts you to update through `flatpak update`
-or your desktop software manager when a new release is available.
-
-#### Option B: Standalone bundle (Offline install)
-```sh
-flatpak install --user ./target/flatpak-build/Rucord-linux.flatpak
+flatpak install --user ./rucord-v*-Linux-x86_64.flatpak
 flatpak run io.github.feds1337.rucord
 flatpak uninstall --user io.github.feds1337.rucord
 ```

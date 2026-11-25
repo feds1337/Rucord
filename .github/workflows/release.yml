@@ -45,19 +45,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: bun .github/release/release.mjs plan
-      - name: Require Mac signing credentials before building
-        if: steps.version.outputs.release == 'true'
-        env:
-          MACOS_CERTIFICATE_BASE64: ${{ secrets.MACOS_CERTIFICATE_BASE64 }}
-          MACOS_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
-          MACOS_SIGNING_IDENTITY: ${{ secrets.MACOS_SIGNING_IDENTITY }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-        run: |
-          for name in MACOS_CERTIFICATE_BASE64 MACOS_CERTIFICATE_PASSWORD MACOS_SIGNING_IDENTITY APPLE_ID APPLE_TEAM_ID APPLE_APP_SPECIFIC_PASSWORD; do
-            test -n "${!name}" || { echo "Missing Actions secret: $name"; exit 1; }
-          done
       - name: Apply planned version to manifests
         if: steps.version.outputs.release == 'true'
         env:
@@ -82,7 +69,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, windows-11-arm]
+        os: [windows-latest, windows-11-arm]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 90
     env:
@@ -106,6 +93,9 @@ jobs:
       - name: Install NSIS
         if: runner.os == 'Windows'
         run: choco install nsis --no-progress -y
+      - name: Test installer with offline fixture
+        if: runner.os == 'Windows'
+        run: python packaging/windows/test_installer.py
       - name: Offline checks
         run: cargo xtask check
       - uses: oven-sh/setup-bun@v2.2.0
@@ -117,28 +107,16 @@ jobs:
           cargo xtask package
           mkdir release-assets
           echo "ASSET=rucord-$TAG-$RUNNER_OS-$RUNNER_ARCH" >> "$GITHUB_ENV"
-      - name: Sign, notarize and verify Mac app
-        if: runner.os == 'macOS'
-        env:
-          MACOS_CERTIFICATE_BASE64: ${{ secrets.MACOS_CERTIFICATE_BASE64 }}
-          MACOS_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
-          MACOS_SIGNING_IDENTITY: ${{ secrets.MACOS_SIGNING_IDENTITY }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-        run: bash packaging/macos/sign-release.sh "$PACKAGE_ROOT/Rucord.app"
-      - name: Archive Mac package
-        if: runner.os == 'macOS'
-        run: ditto -c -k --sequesterRsrc "$PACKAGE_ROOT" "release-assets/$ASSET.zip"
       - name: Archive Windows package
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
           Compress-Archive -Path "$env:PACKAGE_ROOT/*" -DestinationPath "release-assets/$env:ASSET.zip"
-          $installer = Get-ChildItem -Path "dist-installer/*-setup.exe" -ErrorAction SilentlyContinue | Select-Object -First 1
-          if ($installer) {
-            Copy-Item -LiteralPath $installer.FullName -Destination "release-assets/$env:ASSET-Setup.exe"
+          $installers = @(Get-ChildItem -Path "dist-installer/*-setup.exe" -File -ErrorAction SilentlyContinue)
+          if ($installers.Count -ne 1) {
+            throw "Expected one NSIS installer in dist-installer; found $($installers.Count)."
           }
+          Copy-Item -LiteralPath $installers[0].FullName -Destination "release-assets/$env:ASSET-Setup.exe"
       - uses: actions/upload-artifact@v7.0.1
         with:
           name: ${{ env.ASSET }}
@@ -184,23 +162,17 @@ jobs:
       - name: Checksums
         working-directory: release-assets
         run: sha256sum ./* > SHA256SUMS.txt
+      - name: Configure authenticated release commit
+        run: gh auth setup-git
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Commit versions and publish semantic release with notes and assets
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
           HOMEBREW_TAP_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+          GIT_AUTHOR_NAME: feds1337
+          GIT_AUTHOR_EMAIL: 166226509+feds1337@users.noreply.github.com
+          GIT_COMMITTER_NAME: feds1337
+          GIT_COMMITTER_EMAIL: 166226509+feds1337@users.noreply.github.com
         run: bun .github/release/release.mjs publish
-
-  repositories:
-    needs: [prepare, build, linux, publish]
-    if: needs.prepare.outputs.release == 'true'
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    uses: ./.github/workflows/package-repositories.yml
-    with:
-      tag: ${{ needs.prepare.outputs.tag }}
-      channel: ${{ inputs.channel || 'nightly' }}
-      base_url: https://feds1337.github.io/Rucord
-      deploy: true
-    secrets: inherit
