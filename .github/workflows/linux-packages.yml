@@ -69,9 +69,13 @@ jobs:
       - name: Build and inspect native package
         env:
           FORMAT: ${{ matrix.format }}
+          CARGO_PROFILE_RELEASE_LTO: ${{ matrix.runner == 'ubuntu-24.04-arm' && 'thin' || 'fat' }}
+          CARGO_PROFILE_RELEASE_CODEGEN_UNITS: ${{ matrix.runner == 'ubuntu-24.04-arm' && '4' || '1' }}
         run: |
           chown -R builder:builder /home/builder "$GITHUB_WORKSPACE"
-          runuser -u builder -- env HOME=/home/builder bash <<'BUILD'
+          runuser -u builder -- env HOME=/home/builder \
+            CARGO_PROFILE_RELEASE_LTO="$CARGO_PROFILE_RELEASE_LTO" \
+            CARGO_PROFILE_RELEASE_CODEGEN_UNITS="$CARGO_PROFILE_RELEASE_CODEGEN_UNITS" bash <<'BUILD'
             set -eu
             curl --proto "=https" --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain none
             export PATH="$HOME/.cargo/bin:$PATH"
