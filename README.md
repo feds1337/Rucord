@@ -1,38 +1,38 @@
 # Rucord
 
-<p align="center"><img src="assets/brand/rucord-1024.png" width="160" alt="Минималистичный логотип Rucord" /></p>
+<p align="center"><img src="assets/brand/rucord-1024.png" width="160" alt="Minimal Rucord logo" /></p>
 
-Неофициальный нативный клиент Discord на Rust и egui. Rucord объединяет текстовые каналы, голос и видео в настольном приложении. Это независимый проект, не одобренный и не поддерживаемый Discord.
+Rucord is an unofficial native Discord client built with Rust and egui. It brings text channels, voice, and video into a desktop app. This is an independent project and is neither endorsed nor supported by Discord.
 
-> Использование стороннего клиента может нарушать правила Discord и привести к ограничению аккаунта. Перед входом ознакомьтесь с [ограничениями совместимости](docs/discord-compatibility.md). Работа протокола не гарантируется.
+> Using a third-party client may violate Discord's rules and could lead to account restrictions. Review the [compatibility limits](docs/discord-compatibility.md) before signing in. Protocol behavior is not guaranteed.
 
-## Возможности
+## Features
 
-- Нативный интерфейс Windows, macOS и Linux.
-- Текстовые каналы, личные сообщения, голос, видео и демонстрация экрана.
-- Локальные настройки оформления, каталог и SDK расширений.
-- Интерфейс на русском языке и дополнительные локализации.
-- Офлайн-демо с синтетическими данными, которое не подключается к Discord.
+- Native desktop interface for Windows, macOS, and Linux.
+- Text channels, direct messages, voice, video, and screen sharing.
+- Local appearance settings, an extension catalog, and an extension SDK.
+- Russian interface and additional localizations.
+- Offline demo with synthetic data that does not connect to Discord.
 
-Некоторые возможности зависят от неофициального протокола и могут перестать работать. Сведения о совместимости и ограничениях описаны в [документации](docs/discord-compatibility.md).
+Some features rely on an unofficial protocol and may stop working. See the [compatibility documentation](docs/discord-compatibility.md) for known limitations.
 
-## Скачать и установить
+## Download and install
 
-Стабильные сборки публикуются в [последнем релизе](https://github.com/feds1337/Rucord/releases/latest). Репозиторий приватный, поэтому GitHub попросит войти в аккаунт с доступом к нему.
+Stable builds are published in the [latest release](https://github.com/feds1337/Rucord/releases/latest). This repository is private, so you must sign in to GitHub with an account that has access to download its releases.
 
 ### Windows
 
-Скачайте `*-Windows-X64-Setup.exe` или `*-Windows-ARM64-Setup.exe` для установки только в текущий профиль Windows. Установщик создаёт ярлыки и запись удаления; права администратора не нужны. Для переносного запуска скачайте соответствующий `*-Windows-*.zip` и распакуйте его. Сборки пока не подписаны Authenticode, поэтому Windows может показать предупреждение SmartScreen.
+Rucord 1.0.0 provides Windows x64 packages: use `rucord-v1.0.0-Windows-X64-Setup.exe` for a per-user installation, or download `rucord-v1.0.0-Windows-X64.zip` for portable use. The installer creates shortcuts and an uninstall entry and does not require administrator privileges. The binaries are not Authenticode-signed, so Windows SmartScreen may show a warning.
 
 ### Linux
 
-Выберите пакет для своего дистрибутива и архитектуры: `.deb` для Ubuntu 26.04 (x86_64/ARM64), `.rpm` для Fedora 43/44 или openSUSE Tumbleweed (x86_64), `.pkg.tar.zst` для Arch (x86_64), AppImage для Linux x86_64 либо отдельный Flatpak bundle. Подробные системные зависимости и команды установки приведены в [инструкции по Linux-пакетам](packaging/linux/README.md). Пакеты устанавливаются из файла релиза; подписанный репозиторий обновлений пока не настроен.
+Rucord 1.0.0 provides a `.deb` package for Ubuntu 24.04 on x86_64. Runtime dependencies are declared in the package metadata. The project also includes packaging definitions for RPM, Arch, AppImage, and Flatpak; check the release page to see which formats are available for a particular version. See the [Linux packaging guide](packaging/linux/README.md) for system dependencies and build instructions. Packages are currently distributed as release downloads; a signed update repository is not configured.
 
-AppImage использует GTK4/WebKitGTK, установленные в системе. Flatpak устанавливается из bundle и требует Flatpak runtime. Автоматическая установка из Flathub не настроена. Поддержка macOS доступна при сборке из исходников; macOS binary не входит в этот релиз.
+AppImage builds use GTK4 and WebKitGTK from the host system. Flatpak bundles require the Flatpak runtime and are not published to Flathub. macOS can be built from source, but this release does not include a macOS binary.
 
-## Сборка из исходников
+## Build from source
 
-Установите Rust из `rust-toolchain.toml` и зависимости вашей платформы по [инструкции](docs/platform-support.md).
+Install the Rust toolchain specified in `rust-toolchain.toml` and the platform dependencies listed in the [platform guide](docs/platform-support.md).
 
 ```sh
 cargo run --locked --features demo -- --demo
@@ -40,10 +40,10 @@ cargo xtask check
 cargo xtask package
 ```
 
-Демо использует синтетические данные и не проверяет соединение с Discord. Перед распространением сборки сохраните сторонние лицензии и уведомления из [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+The demo uses synthetic data and does not test a connection to Discord. When redistributing a build, include the third-party licenses and notices from [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-## Данные и расширения
+## Data and extensions
 
-Rucord хранит настройки, кэш и учётные данные в собственных каталогах. Существующие данные других приложений не изменяются и автоматически не импортируются. Имена ABI и формат пакетов расширений сохранены для совместимости.
+Rucord stores its settings, cache, and credentials in its own data directories. It does not modify or automatically import data from other applications. Extension ABI names and package formats are retained for compatibility.
 
-Документы: [хранение данных](docs/storage-policy.md), [вход](docs/authentication.md), [платформы](docs/platform-support.md), [SDK расширений](docs/extension-sdk-overview.md). Исходный код распространяется по MIT или Apache-2.0; сторонние компоненты могут использовать другие лицензии — см. [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+Documentation: [storage policy](docs/storage-policy.md), [authentication](docs/authentication.md), [platform support](docs/platform-support.md), and the [extension SDK](docs/extension-sdk-overview.md). The source code is licensed under MIT or Apache-2.0. Third-party components may use other licenses; see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
