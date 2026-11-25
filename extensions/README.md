@@ -1,7 +1,9 @@
 # Rucord extensions
 
-The extension SDK and the official theme and plugin catalog for Rucord. Plugins build
-against the one [SDK](sdk); the [authoring guide](../examples/extensions/README.md)
+The extension SDK and compatibility mirror of the Rucord theme and plugin catalog. The
+canonical community catalog lives in the public
+[Rucord-Extensions repository](https://github.com/feds1337/Rucord-Extensions). Plugins
+build against the one [SDK](sdk); the [authoring guide](../examples/extensions/README.md)
 covers writing your own.
 
 | Path | Contents |
@@ -16,21 +18,22 @@ covers writing your own.
 | `catalog.json` | Generated; never edit by hand |
 
 `catalog.json` lists each package's manifest, exact byte length, SHA-256 hash and an
-immutable URL pinned to a full commit on `main`. The client reads it from `main`,
-downloads package data only, and verifies every hash before installing. It never
+immutable URL pinned to a full commit on `main`. New clients read the canonical catalog
+from Rucord-Extensions; this copy remains for old clients and test fixtures. The client
+downloads package data only and verifies every hash before installing. It never
 clones this repository or runs build scripts. Capabilities and updates go through the
 client's explicit consent flow.
 
 ## Publishing a package
 
-1. Edit a theme under `themes/` or plugin source under `plugins/`. Preserve
-   `manifest.id` and bump `manifest.version` for any changed package.
+1. Edit a theme under `themes/` or plugin source under `plugins/` in Rucord-Extensions.
+   Preserve `manifest.id` and bump `manifest.version` for any changed package.
 2. For a plugin, rebuild and repackage it under `plugins/packages/` (see
    [plugins/README.md](plugins/README.md)). The source and packaged manifests must match.
 3. Optionally add a PNG preview under `previews/` with the package's file stem.
 4. Open a pull request. CI validates every package, manifest and preview
    (`python3 catalog.py --validate`), builds the plugins and runs them in the host sandbox.
-5. After merge, the [catalog workflow](../.github/workflows/extension-catalog.yml) runs
+5. After merge, the catalog workflow in Rucord-Extensions runs
    `catalog.py --pin` on the merged commit and commits the regenerated catalog to `main`.
    Pull requests are squash-merged, so only a commit on `main` is a durable pin.
 

@@ -8,15 +8,16 @@ and other app operations; the user reviews and applies each operation in Rucord.
 
 ## Install and remove
 
-Themes and plugins are published together from [`extensions/`](../extensions/README.md)
-in this repository. Opening Settings > Themes or Extensions checks its shared catalog
-on the existing worker. Normal builds embed no package payloads; bundled examples
+Themes and plugins are published together from the public
+[`Rucord-Extensions`](https://github.com/feds1337/Rucord-Extensions) repository.
+The client source tree's [`extensions/`](../extensions/README.md) remains a compatibility
+mirror for already released clients and a source of offline demo/test fixtures. Opening
+Settings > Themes or Extensions checks its shared catalog on the existing worker. Normal
+builds embed no package payloads; bundled examples
 remain available only as demo/test fixtures. Demo catalog refresh, previews and
 selected catalog installs use the same public repository downloads as normal builds.
 An identical bundled fixture with the approved ID and hash is reused without a download.
-Catalog packages, plugin source and previews have one canonical copy in `extensions/`;
-tests and demos read it directly. Runtime catalog refresh reads the catalog published
-from `main`.
+New runtime catalog refresh reads the catalog published from `Rucord-Extensions/main`.
 The last valid catalog and installed packages remain available offline. Refresh
 retries immediately. Catalog changes add/remove available choices and mark
 installed updates; they never install, update or delete packages automatically.
@@ -61,15 +62,16 @@ preference. There is no periodic background polling or automatic package update.
    file. Test through Import with synthetic `--demo` conversations first; catalog browsing
    may download public GitHub content.
 4. Add the package and reproducible source/build instructions under `extensions/`
-   in a pull request; CI validates it. After merge, a workflow pins `catalog.json`
-   to the merged commit, recording immutable package URLs, byte lengths and SHA-256
+   in a pull request to Rucord-Extensions; CI validates it. After merge, a workflow
+   pins `catalog.json` to the merged commit, recording immutable package URLs, byte
+   lengths and SHA-256
    hashes. See the [extensions README](../extensions/README.md) for exact commands.
 5. Maintainers review each listed version, its capabilities and the source to
    artifact relationship. A catalog checksum identifies reviewed bytes; it is
    not a signature or a guarantee that code is harmless. Updates need review too.
 
-The in-app catalog reads `extensions/catalog.json` from this repository's `main`
-branch. A new entry is listed only after it is merged and the catalog is pinned. Empty catalogs
+The in-app catalog reads `catalog.json` from the `main` branch of Rucord-Extensions.
+A new entry is listed only after it is merged and the catalog is pinned. Empty catalogs
 are valid; imports allow development before a release is listed.
 
 ## Shop previews

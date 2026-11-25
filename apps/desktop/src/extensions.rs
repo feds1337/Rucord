@@ -20,9 +20,9 @@ use extensions::{
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 
-/// Generated from `extensions/` and pinned to a merged commit by the catalog workflow.
+/// The community catalog is maintained separately from the client source repository.
 const CATALOG_URL: &str =
-	"https://raw.githubusercontent.com/feds1337/Rucord/main/extensions/catalog.json";
+	"https://raw.githubusercontent.com/feds1337/Rucord-Extensions/main/catalog.json";
 const MAX_PACKAGE: usize = 16 * 1024 * 1024;
 const MAX_RECORD: usize = MAX_PACKAGE + 64 * 1024;
 const MAX_CATALOG: usize = 1024 * 1024;
