@@ -38,7 +38,7 @@ impl Default for Updates {
 	fn default() -> Self {
 		Self {
 			auto_update: false,
-			nightly: true,
+			nightly: false,
 			status: "Updates have not been checked yet.".into(),
 			busy: false,
 			available: false,

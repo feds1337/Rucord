@@ -42,6 +42,9 @@ pub struct AppPreferences {
 	pub notifications_enabled: bool,
 	pub auto_update: bool,
 	pub update_nightly: bool,
+	/// Whether the owner has received the stable-channel default migration. Missing in older files.
+	#[serde(default)]
+	pub update_channel_configured: Option<bool>,
 	pub notification_options: model::notification_preferences::Device,
 	pub show_hidden_channels: bool,
 	/// Keep custom emoji that need Nitro out of suggestions and lock them in the picker.
@@ -120,7 +123,8 @@ impl Default for AppPreferences {
 			language: None,
 			notifications_enabled: true,
 			auto_update: false,
-			update_nightly: true,
+			update_nightly: false,
+			update_channel_configured: Some(true),
 			notification_options: Default::default(),
 			show_hidden_channels: false,
 			hide_nitro_emojis: false,

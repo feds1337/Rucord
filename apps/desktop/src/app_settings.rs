@@ -17,6 +17,13 @@ impl Settings {
 			current: value.unwrap_or_default(),
 			..Self::default()
 		};
+		if settings.loaded && settings.current.update_channel_configured != Some(true) {
+			// Older versions defaulted every install to Nightly, even though only stable releases
+			// are published. Migrate that implicit choice once; explicit future choices persist.
+			settings.current.update_nightly = false;
+			settings.current.update_channel_configured = Some(true);
+			settings.state.dirty = true;
+		}
 		settings.state.failed = !settings.loaded;
 		settings
 	}
@@ -50,6 +57,7 @@ impl Settings {
 			notifications_enabled: ui.notifications_enabled,
 			auto_update: ui.updates.auto_update,
 			update_nightly: ui.updates.nightly,
+			update_channel_configured: Some(true),
 			notification_options: ui.notification_options,
 			show_hidden_channels: ui.show_hidden_channels,
 			hide_nitro_emojis: ui.hide_nitro_emojis,

@@ -689,14 +689,14 @@ fn demo_check_updates() {
 	messaging.updates.restart_requested = true;
 	assert!(!updater.sync(&ctx, &runtime, &mut messaging.updates, false));
 	let restored: local_store::AppPreferences = serde_json::from_str("{}").unwrap();
-	assert!(!restored.auto_update && restored.update_nightly);
+	assert!(!restored.auto_update && !restored.update_nightly);
 	let mut settings = app_settings::Settings::default();
-	messaging.updates.nightly = true;
+	messaging.updates.nightly = false;
 	settings.observe(&messaging);
 	let encoded = serde_json::to_string(&settings.current).unwrap();
 	settings.current = serde_json::from_str(&encoded).unwrap();
 	settings.apply(&mut messaging);
-	assert!(!messaging.updates.auto_update && messaging.updates.nightly);
+	assert!(!messaging.updates.auto_update && !messaging.updates.nightly);
 	messaging.open_update_settings();
 	let mut state = test_support::demo_state();
 	for size in [
