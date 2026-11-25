@@ -206,7 +206,11 @@ fn preview_card(
 	activity_status: (&str, bool),
 ) {
 	let colors = design::palette(ui);
-	ui.label(design::eyebrow(ui, "PROFILE PREVIEW", colors.muted));
+	ui.label(design::eyebrow(
+		ui,
+		"presence-profile-preview",
+		colors.muted,
+	));
 	ui.add_space(8.0);
 	if let Some(presence) = presence {
 		let kind = match presence.kind {
@@ -243,16 +247,15 @@ fn preview_card(
 		crate::profiles::activity_card(ui, &activity, avatars, true, (colors.raised, colors.muted));
 		summary(ui, presence);
 		if presence.large_image.is_some() || presence.small_image.is_some() {
-			design::hint(
-				ui,
-				"Artwork resolves when applied. This draft preview uses placeholders.",
-			);
+			design::hint(ui, "presence-preview-artwork");
 		}
 	} else {
 		design::card(ui, |ui| {
 			crate::icons::inline(ui, crate::icons::Icon::GameController, 32.0, colors.muted);
-			ui.label(egui::RichText::new("Your activity goes here").strong());
-			ui.label("Enter an application ID and activity name, then choose Preview.");
+			ui.label(
+				egui::RichText::new(crate::i18n::translate("presence-preview-empty")).strong(),
+			);
+			ui.label(crate::i18n::translate("presence-preview-instructions"));
 		});
 	}
 	ui.add_space(12.0);
@@ -261,7 +264,7 @@ fn preview_card(
 			crate::dialog::notice(
 				ui,
 				crate::dialog::Level::Warning,
-				"Activity sharing is off. Enable it in Settings > Registered Games to publish your presence.",
+				"presence-preview-disabled",
 			);
 		} else if !activity_status.0.is_empty() {
 			design::hint(ui, activity_status.0);
@@ -270,28 +273,31 @@ fn preview_card(
 	design::hint(
 		ui,
 		if state.demo {
-			"Offline demo. Nothing is published."
+			"presence-preview-offline-demo"
 		} else if !state.gateway_connected {
-			"Offline. Your saved activity will wait for a connection."
+			"presence-preview-offline"
 		} else {
-			"Enable activity sharing in Settings > Registered Games. Invisible hides your activity."
+			"presence-preview-sharing"
 		},
 	);
 }
 
 pub(crate) fn summary(ui: &mut egui::Ui, presence: &CustomRichPresence) {
 	if let Some(party) = &presence.party {
-		ui.label(format!("Party: {} / {}", party.current, party.max));
+		ui.label(crate::i18n::translate_args(
+			"presence-party",
+			&[
+				("current", &party.current.to_string()),
+				("max", &party.max.to_string()),
+			],
+		));
 	}
 	match presence.timer {
 		RichPresenceTimer::Elapsed => {
-			design::hint(
-				ui,
-				"Elapsed since starting; applying edits keeps the timer.",
-			);
+			design::hint(ui, "presence-timer-elapsed");
 		}
 		RichPresenceTimer::LocalDay => {
-			design::hint(ui, "Timer starts at local midnight.");
+			design::hint(ui, "presence-timer-midnight");
 		}
 		_ => {}
 	}

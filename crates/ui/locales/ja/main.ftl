@@ -28,11 +28,11 @@ description-appearance = テーマ、色、ウィンドウ効果、レイアウ�
 description-chat = メッセージ、メディア、リンク、スクロールの動作。
 description-messaging-permissions = 誰があなたに連絡できるか、そしてメッセージをどのようにフィルタリングするかを制御します。
 description-notifications = 受信する通知とその表示方法を選択します。
-description-registered-games = プレイ中のゲームを共有し、Serein が検出したゲームを修正・追加します。
+description-registered-games = プレイ中のゲームを共有し、Rucord が検出したゲームを修正・追加します。
 description-voice = マイク、スピーカー、カメラ、音声処理。
 description-keybinds = セレインのキーボード ショートカット。
-description-storage = Serein がこのデバイスに保存しているもの。
-description-updates = このデバイスで Serein を常に最新の状態に保ってください。
+description-storage = Rucord がこのデバイスに保存しているもの。
+description-updates = このデバイスで Rucord を常に最新の状態に保ってください。
 description-extensions = コミュニティプラグインを管理します。
 description-themes = コミュニティのテーマを選択します。
 theme-maker = テーマメーカー
@@ -45,39 +45,39 @@ log-out = ログアウト
 unofficial = 非公式・Discordによって承認されていません
 offline-preview = オフライン プレビュー · 変更はこのセッションに残り、送信されることはありません。
 general-startup = 起動する
-general-open-at-startup = コンピュータの起動時に Serein を開きます
-general-open-at-startup-description = Serein がサインインし、バックグラウンドで接続します。
+general-open-at-startup = コンピュータの起動時に Rucord を開きます
+general-open-at-startup-description = Rucord がサインインし、バックグラウンドで接続します。
 general-start-minimized = 最小化して開始
 general-start-minimized-description = 邪魔にならないバックグラウンドで開始します。
 general-startup-unavailable = 自動起動は Windows と macOS で利用できます。
 general-window = ウィンドウ
 general-hide-decorations = タイトルバーなし
-general-hide-decorations-description = タイル型ウィンドウ マネージャー向け: Serein 独自のものを含め、すべてのタイトルバーと境界線を削除します。Serein の移動、サイズ変更、終了はウィンドウ マネージャーで行います。
+general-hide-decorations-description = タイル型ウィンドウ マネージャー向け: Rucord 独自のものを含め、すべてのタイトルバーと境界線を削除します。Rucord の移動、サイズ変更、終了はウィンドウ マネージャーで行います。
 general-custom-title-bar = カスタムタイトルバー
-general-custom-title-bar-description = システムのタイトルバーを Serein 独自の GTK 4 風ヘッダーバーに置き換えます。
+general-custom-title-bar-description = システムのタイトルバーを Rucord 独自の GTK 4 風ヘッダーバーに置き換えます。
 general-hide-title-bar = セレインのタイトルバーを非表示にする
 general-hide-title-bar-description = 代わりに、システムのタイトル バーとウィンドウ ボタンを使用してください。
 general-keep-menu-bar = セレインをメニューバーに置いておく
-general-keep-system-tray = Serein をシステム トレイに入れておきます
-general-menu-bar-description = ウィンドウを閉じると、Serein がメニュー バーに表示されたままになります。終了するにはメニューから終了してください。
+general-keep-system-tray = Rucord をシステム トレイに入れておきます
+general-menu-bar-description = ウィンドウを閉じると、Rucord がメニュー バーに表示されたままになります。終了するにはメニューから終了してください。
 general-linux-tray-description = クロージングによりセレインは継続します。トレイを使用して、表示、最小化、または終了します。
-general-windows-tray-description = ウィンドウを閉じると、Serein が通知領域に表示されたままになります。終了するにはメニューから終了してください。
+general-windows-tray-description = ウィンドウを閉じると、Rucord が通知領域に表示されたままになります。終了するにはメニューから終了してください。
 general-tray-unavailable = このプラットフォームではトレイを使用できません。
 general-graphics = グラフィックス
 general-render-with = でレンダリング
 general-gpu-restart = 次回セレイン起動時に有効となります。
 general-gpu-current-prefix = 現在絵を描いているのは
 general-steady-refresh-rate = リフレッシュレートを固定
-general-steady-refresh-rate-description = Serein がアクティブなウィンドウの間は、ディスプレイのリフレッシュレートで描画するため、可変リフレッシュレート (VRR、G-SYNC、FreeSync) のディスプレイでもちらつかずに一定のレートを保てます。消費電力が増えます。
+general-steady-refresh-rate-description = Rucord がアクティブなウィンドウの間は、ディスプレイのリフレッシュレートで描画するため、可変リフレッシュレート (VRR、G-SYNC、FreeSync) のディスプレイでもちらつかずに一定のレートを保てます。消費電力が増えます。
 steady-refresh-prompt-title = G-SYNC ディスプレイを検出しました
-steady-refresh-prompt-body = Serein は変化があったときだけ再描画するため、Serein がアクティブなウィンドウの間、G-SYNC ディスプレイがちらつくことがあります。「リフレッシュレートを固定」をオンにすると、ディスプレイのリフレッシュレートで描画してちらつきを防ぎますが、消費電力が増えます。オンにしますか？
+steady-refresh-prompt-body = Rucord は変化があったときだけ再描画するため、Rucord がアクティブなウィンドウの間、G-SYNC ディスプレイがちらつくことがあります。「リフレッシュレートを固定」をオンにすると、ディスプレイのリフレッシュレートで描画してちらつきを防ぎますが、消費電力が増えます。オンにしますか？
 steady-refresh-prompt-turn-on = オンにする
 steady-refresh-prompt-keep-off = いいえ
 steady-refresh-prompt-settings = あとで設定の { $page } > { $group } から変更できます。
 gpu-automatic = 自動
 gpu-high-performance = 高性能
 gpu-power-saving = 省電力
-gpu-automatic-description = Serein にこのウィンドウを描画できる GPU を選択させます。
+gpu-automatic-description = Rucord にこのウィンドウを描画できる GPU を選択させます。
 gpu-high-performance-description = 専用グラフィックス カードが利用可能な場合は、それを使用してください。
 gpu-power-saving-description = 内蔵グラフィックスを使用してバッテリーを節約します。
 direct-messages = ダイレクトメッセージ
@@ -222,7 +222,7 @@ account-menu-custom-status-editor-clear-after = 後クリア
 # Context: custom_status_editor
 account-menu-custom-status-editor-no-custom-status = カスタムステータスなし
 # Context: custom_status_editor
-account-menu-custom-status-editor-serein-clears-it = セレインがクリアする
+account-menu-custom-status-editor-rucord-clears-it = セレインがクリアする
 # Context: custom_status_editor
 account-menu-custom-status-editor-status-text = ステータステキスト
 # Context: custom_status_editor
@@ -1578,7 +1578,7 @@ keybinds-show-voice-enable-global-keybinds = グローバルキーバインド�
 # Context: show_voice
 keybinds-show-voice-global-availability = グローバルな可用性
 # Context: show_voice
-keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = 別のアプリがフォーカスされているときに音声ショートカットを使用します。オフの場合、ショートカットは Serein がフォーカスされている間のみ機能します。
+keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = 別のアプリがフォーカスされているときに音声ショートカットを使用します。オフの場合、ショートカットは Rucord がフォーカスされている間のみ機能します。
 
 ## crates/ui/src/lib.rs
 # Context: account_card
@@ -1656,7 +1656,7 @@ main-restoring-checking-your-saved-login = 保存されたログイン情報を�
 # Context: restoring
 main-restoring-connecting-to-discord = Discordに接続する
 # Context: restoring_screen
-main-restoring-screen-serein = セレイン
+main-restoring-screen-rucord = セレイン
 # Context: restoring_screen
 main-restoring-screen-use-a-different-account = 別のアカウントを使用する
 # Context: restoring_screen
@@ -1664,7 +1664,7 @@ main-restoring-screen-welcome-back = おかえり
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = 保存されたアカウント
 # Context: sign_in_disclosures
-main-sign-in-disclosures-about-serein = セレインについて
+main-sign-in-disclosures-about-rucord = セレインについて
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = このトークンで接続します
 # Context: sign_in_disclosures
@@ -1678,7 +1678,7 @@ main-sign-in-header-sign-in-with-your-discord-account-to-get-started = 始める
 # Context: sign_in_header
 main-sign-in-header-welcome-back = おかえり
 # Context: sign_in_header
-main-sign-in-header-welcome-to-serein = セレインへようこそ
+main-sign-in-header-welcome-to-rucord = セレインへようこそ
 # Context: sign_in_preview
 main-sign-in-status-copy-failure-details = エラーの詳細をコピー
 main-sign-in-preview-explore-the-offline-preview = オフライン プレビューを確認する
@@ -1687,7 +1687,7 @@ main-sign-in-preview-sample-conversations-no-discord-connection = 会話例。 D
 # Context: sign_in_screen
 main-sign-in-screen-independent-and-open-source-not-affiliated-with-discord = 独立したオープンソース。 Discordとは関係ありません。
 # Context: sign_in_screen
-main-sign-in-screen-serein = セレイン
+main-sign-in-screen-rucord = セレイン
 # Context: ui
 main-ui-cancel = キャンセル
 # Context: ui
@@ -2286,13 +2286,13 @@ screen-body-refresh = リフレッシュ
 # Context: body
 screen-body-screen-or-window = スクリーンまたはウィンドウ
 # Context: body
-screen-body-send-what-your-mac-plays-along-with-the-screen-serein = Mac で再生しているものを画面とともに送信します。セレイン自身の通話音声は省略されています。
+screen-body-send-what-your-mac-plays-along-with-the-screen-rucord = Mac で再生しているものを画面とともに送信します。セレイン自身の通話音声は省略されています。
 # Context: body
-screen-body-share-sound-from-other-apps-even-when-sharing-one-window = 1 つのウィンドウを共有している場合でも、他のアプリのサウンドを共有します。 Serein 自身の音声は省略されています。
+screen-body-share-sound-from-other-apps-even-when-sharing-one-window = 1 つのウィンドウを共有している場合でも、他のアプリのサウンドを共有します。 Rucord 自身の音声は省略されています。
 # Context: body
 screen-body-share-system-audio = システムオーディオを共有する
 # Context: body
-screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = 共有中のアプリの音声を共有します。画面を共有する場合は他のすべてのアプリの音声を共有します。Serein 自身の音声は含まれません。
+screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = 共有中のアプリの音声を共有します。画面を共有する場合は他のすべてのアプリの音声を共有します。Rucord 自身の音声は含まれません。
 # Context: body
 screen-body-show-cursor = カーソルを表示
 # Context: body
@@ -3449,7 +3449,7 @@ settings-activity-added-games = 追加済みのゲーム
 # Context: activity_settings
 settings-activity-no-games-added = 追加されたゲームはありません
 # Context: activity_settings
-settings-activity-hidden = 非表示。Serein はこのゲームを検出しません。
+settings-activity-hidden = 非表示。Rucord はこのゲームを検出しません。
 # Context: activity_settings
 settings-activity-detected = 自動検出
 # Context: activity_settings
@@ -3471,7 +3471,7 @@ settings-activity-click-to-rename = クリックして名前を変更
 # Context: activity_settings
 settings-activity-add-a-game = ゲームを追加
 # Context: activity_settings
-settings-activity-choose-program = 実行中のプログラムを選んでください。実行されるたびに Serein がゲームとして表示します。
+settings-activity-choose-program = 実行中のプログラムを選んでください。実行されるたびに Rucord がゲームとして表示します。
 # Context: activity_settings
 settings-activity-search-programs = 実行中のプログラムを検索
 # Context: activity_settings
@@ -3493,7 +3493,7 @@ settings-appearance-settings-primary-color = 原色
 # Context: appearance_settings
 settings-appearance-settings-reset = リセット
 # Context: appearance_settings
-settings-appearance-settings-restart-serein-after-changing-this-themes-can-customize-effects-while = これを変更した後、Serein を再起動します。テーマは有効になっている間、効果をカスタマイズできます。
+settings-appearance-settings-restart-rucord-after-changing-this-themes-can-customize-effects-while = これを変更した後、Rucord を再起動します。テーマは有効になっている間、効果をカスタマイズできます。
 # Context: appearance_settings
 settings-appearance-settings-the-active-theme-brings-its-own-accent-it-takes-over = アクティブなテーマが独自のアクセントをもたらします。テーマの使用中はそれが引き継がれます。
 # Context: appearance_settings
@@ -3530,11 +3530,11 @@ settings-storage-page-clear-cache = キャッシュをクリアする
 # Context: storage_page
 settings-storage-page-local-storage = ローカルストレージ
 # Context: storage_page
-settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = メッセージと下書きは、このデバイス上の制限されたアカウント分離ファイル内にキャッシュされます。キャッシュ データは Serein によって暗号化されません。保存されたログイン トークンは OS 資格情報ストアを使用します。
+settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = メッセージと下書きは、このデバイス上の制限されたアカウント分離ファイル内にキャッシュされます。キャッシュ データは Rucord によって暗号化されません。保存されたログイン トークンは OS 資格情報ストアを使用します。
 # Context: storage_page
 settings-storage-page-removes-cached-messages-and-media-drafts-and-your-login-stay = キャッシュされたメッセージとメディアを削除します。下書きとログインはそのまま残ります。
 # Context: storage_page
-settings-storage-page-serein-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Serein はテレメトリを収集したり、診断をアップロードしたりしません。 Discord は、独自のポリシーに従ってサービス側のデータを保持します。
+settings-storage-page-rucord-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Rucord はテレメトリを収集したり、診断をアップロードしたりしません。 Discord は、独自のポリシーに従ってサービス側のデータを保持します。
 # Context: storage_page
 settings-storage-page-your-privacy = あなたのプライバシー
 # Context: cosmetic_settings
@@ -3986,7 +3986,7 @@ updates-update-settings-could-not-load-or-save-update-preferences-changes-may-no
 # Context: update_settings
 updates-update-settings-download-update = アップデートをダウンロード
 # Context: update_settings
-updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = バックグラウンドでアップデートをダウンロードします。準備ができたら再起動します。 Serein は起動時と、これがオフの場合でも定期的にチェックします。
+updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = バックグラウンドでアップデートをダウンロードします。準備ができたら再起動します。 Rucord は起動時と、これがオフの場合でも定期的にチェックします。
 # Context: update_settings
 updates-update-settings-early-builds-with-the-newest-changes-nightly-releases-can-be = 最新の変更を加えた初期のビルド。夜間リリースは信頼性が低くなる可能性があります。
 # Context: update_settings
@@ -4012,7 +4012,7 @@ updates-update-settings-release-channel = リリースチャンネル
 # Context: update_settings
 updates-update-settings-restart-to-update = 更新するには再起動してください
 # Context: update_settings
-updates-update-settings-serein-was-installed-via-your-distribution-run-this-in-a = Serein はディストリビューション経由でインストールされました。ターミナルでこれを実行して更新します。
+updates-update-settings-rucord-was-installed-via-your-distribution-run-this-in-a = Rucord はディストリビューション経由でインストールされました。ターミナルでこれを実行して更新します。
 # Context: update_settings
 updates-update-settings-save-diagnostics = 診断を保存
 # Context: update_settings
@@ -4034,7 +4034,7 @@ updates-update-settings-log-warnings = エラーと警告
 # Context: update_settings
 updates-update-settings-open-folder = フォルダーを開く
 # Context: update_settings
-updates-update-settings-the-log-folder-could-not-be-written = ログフォルダーに書き込めませんでした。Serein のデータフォルダーを確認して、もう一度お試しください。
+updates-update-settings-the-log-folder-could-not-be-written = ログフォルダーに書き込めませんでした。Rucord のデータフォルダーを確認して、もう一度お試しください。
 # Context: update_settings
 updates-update-settings-timings-stages-and-failures-in-one-local-file-no-account-channel-or = タイミング、段階、失敗を 1 つのローカルログファイルに記録します。アカウント、チャンネル、メッセージ、認証情報は書き込まれず、どこにも送信されません。
 # Context: update_log
@@ -4102,7 +4102,7 @@ verification-show-verification-required = 要検証
 # Context: show
 verification-show-verify = 確認する
 # Context: show
-verification-show-safer-in-the-official-discord-app = この確認は公式のDiscordアプリで行う方が安全です。Sereinで確認を完了すると、Discordが新しいアカウントに電話番号の認証を求めることがあります。
+verification-show-safer-in-the-official-discord-app = この確認は公式のDiscordアプリで行う方が安全です。Rucordで確認を完了すると、Discordが新しいアカウントに電話番号の認証を求めることがあります。
 # Context: show
 verification-show-open-discord = Discordを開く
 
@@ -4485,7 +4485,7 @@ onboarding-rules-heading = サーバールール
 # Context: rules
 onboarding-rules-review = チャットする前に、モデレーターがこれらの回答を確認します。
 # Context: field
-onboarding-field-unsupported = このサーバーには Serein がまだ表示できない質問があります。Discord アプリで参加を完了してください。
+onboarding-field-unsupported = このサーバーには Rucord がまだ表示できない質問があります。Discord アプリで参加を完了してください。
 # Context: field
 onboarding-field-agree = ルールを読み、同意します
 
@@ -4621,7 +4621,7 @@ reading-double-click-reaction = Double-click reaction
 
 ## crates/platform/src/app_menu.rs
 # Context: macos_menu_bar
-app-menu-about = Sereinについて
+app-menu-about = Rucordについて
 # Context: macos_menu_bar
 app-menu-updates = アップデートを確認…
 # Context: macos_menu_bar
@@ -4629,13 +4629,13 @@ app-menu-settings = 設定…
 # Context: macos_menu_bar
 app-menu-services = サービス
 # Context: macos_menu_bar
-app-menu-hide = Sereinを非表示
+app-menu-hide = Rucordを非表示
 # Context: macos_menu_bar
 app-menu-hide-others = ほかを非表示
 # Context: macos_menu_bar
 app-menu-show-all = すべてを表示
 # Context: macos_menu_bar
-app-menu-quit = Sereinを終了
+app-menu-quit = Rucordを終了
 # Context: macos_menu_bar
 app-menu-file = ファイル
 # Context: macos_menu_bar
@@ -4677,7 +4677,7 @@ app-menu-bring-all-to-front = すべてを手前に移動
 # Context: macos_menu_bar
 app-menu-help = ヘルプ
 # Context: macos_menu_bar
-app-menu-github = GitHubのSerein
+app-menu-github = GitHubのRucord
 # Context: macos_menu_bar
 app-menu-report-issue = 問題を報告…
 

@@ -528,7 +528,7 @@ impl DiscordApi {
 	}
 	/// Asks Discord once for this device's installation ID and keeps it, before the Gateway
 	/// identifies. Unofficial: SakuraCord's desktop sign-in reads it from an unauthenticated
-	/// `GET /apex/experiments?surface=2`. Best effort and bounded; Serein works without it.
+	/// `GET /apex/experiments?surface=2`. Best effort and bounded; Rucord works without it.
 	pub async fn ensure_installation(&self) {
 		// One attempt per process: a reconnect must not wait on an endpoint that gave no ID.
 		static ASKED: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);

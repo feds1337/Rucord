@@ -249,7 +249,7 @@ btls-sys = { git = "https://github.com/0x676e67/btls", rev = "129887582a538b8f4d
 tokio-btls = { git = "https://github.com/0x676e67/btls", rev = "129887582a538b8f4dcf371d15c953335312ca37" }
 
 [patch."https://github.com/emilk/egui"]
-# Serein's egui fork: upstream PRs and local patches on the pinned rev; see vendor/egui/SEREIN-PATCH.md.
+# Rucord's egui fork: upstream PRs and local patches on the pinned rev; see vendor/egui/SEREIN-PATCH.md.
 eframe = { path = "vendor/egui/eframe" }
 egui = { path = "vendor/egui/egui" }
 egui-wgpu = { path = "vendor/egui/egui-wgpu" }

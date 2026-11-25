@@ -1,6 +1,6 @@
 # Text Commands
 
-A bounded, local-only Serein port of safe workflows from Equicord's **TextReplace** and
+A bounded, local-only Rucord port of safe workflows from Equicord's **TextReplace** and
 **CustomCommands** plugins. Upstream source is pinned to Equicord/Equicord commit
 [`200dba124066146a8f043fde7fc8b05e3dc5e68e`](https://github.com/Equicord/Equicord/tree/200dba124066146a8f043fde7fc8b05e3dc5e68e):
 `src/plugins/textReplace/index.tsx` and `src/plugins/customCommands/index.ts`.

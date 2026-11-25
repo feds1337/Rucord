@@ -1,8 +1,8 @@
 # External Search Tools
 
-A safe Serein port of Equicord/Vencord **Translate** and **ReplaceGoogleSearch**
+A safe Rucord port of Equicord/Vencord **Translate** and **ReplaceGoogleSearch**
 workflows. It reads the selected message text and proposes an external public
-browser page for translation or search. Serein validates and displays that URL,
+browser page for translation or search. Rucord validates and displays that URL,
 and only opens it after the user confirms **Apply**.
 
 Unlike the upstream plugins, this port performs no inline translation, no API

@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Serein contributors",
   "license": "MIT OR Apache-2.0",
-  "source": "https://github.com/ViceVerse-cz/Serein/tree/main/examples/extensions/message-counter",
+  "source": "https://github.com/feds1337/Rucord/tree/main/examples/extensions/message-counter",
   "kind": "plugin",
   "capabilities": ["message_events", "storage"],
   "actions": [

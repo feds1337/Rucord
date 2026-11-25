@@ -1,10 +1,10 @@
-# Build your first Serein plugin
+# Build your first Rucord plugin
 
 > **Preview SDK — PR #411, not yet released.** The branch adds approved reply,
 > sticker, forward, channel, server, role, moderation and host-mediated media
 > actions. Install a matching host build before using those grants or variants.
 
-A plugin is a function: Serein passes it JSON, it returns JSON, and the host renders
+A plugin is a function: Rucord passes it JSON, it returns JSON, and the host renders
 native controls or presents an action for the user to apply. Each call gets a fresh
 Wasm instance. Save persistent choices through `storage`, not global variables.
 
@@ -29,7 +29,7 @@ app; return the appropriate output or host action instead.
 Published catalog plugins live in [`extensions/plugins`](../../extensions/plugins) and
 build against this SDK; this workspace holds the SDK and its authoring examples.
 
-You need a Serein source checkout, Rust installed through `rustup`, and Python 3
+You need a Rucord source checkout, Rust installed through `rustup`, and Python 3
 available as `python`. Run commands in that checkout so Rust uses its pinned
 `rust-toolchain.toml`. Building the native demo also needs the platform build
 prerequisites in the [repository README](../../README.md). No Discord account or
@@ -267,7 +267,7 @@ to `pack.py`; Cargo will not necessarily write into this example's `target/`.
 Step 4: return to the repository root and start the offline app:
 
 ```powershell
-cargo run --locked -p serein -- --demo
+cargo run --locked -p rucord -- --demo
 ```
 
 Step 5: in **Settings > Extensions**, import
@@ -448,7 +448,7 @@ retained text and offers local controls without calling Discord. Deleted bodies
 are never supplied to this plugin, written to disk, or recovered from before they
 were loaded. Disable, logout, permission revocation and eviction release them.
 
-Emoji and sticker image fallback is built into Serein; the former Emoji & Sticker
+Emoji and sticker image fallback is built into Rucord; the former Emoji & Sticker
 Images plugin has been retired. The legacy `image_sharing` capability/output remains
 accepted with its existing activation/grant checks for ABI compatibility and has no
 behavioral effect. Wasm receives no artwork bytes and cannot fetch or send them.
@@ -458,7 +458,7 @@ Activation itself does not require deleted-message access. Granted `appearance`
 can return a [theme object](../../docs/theme-api.md); granted `storage` can restore
 saved choices. Storage is one opaque UTF-8 value, replaced when returned.
 Ocean, Midnight, Rose, Forest and Latte are declarative themes under `extensions/`.
-Authors package compiled bytes; Serein never runs their build scripts.
+Authors package compiled bytes; Rucord never runs their build scripts.
 
 ## Custom Rich Presence example
 

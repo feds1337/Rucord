@@ -3,7 +3,7 @@
 //! Observed (unofficial): Discord's desktop client sends a super-properties payload, its
 //! Electron user agent, locale and timezone on REST and the Gateway; a 0.0.423 session was
 //! recorded on 2026-11-19 (see the compatibility notes). How the service weighs any of
-//! them is unverified; an earlier Serein identity without them coincided with account
+//! them is unverified; an earlier Rucord identity without them coincided with account
 //! restrictions (spam flag, attachment limits), which is not proof of cause. Every transport
 //! uses the desktop metadata below. Embedded verification keeps its engine-specific identity.
 //! Locale and timezone come from the operating system. Host and engine versions are those of
@@ -58,7 +58,7 @@ fn desktop_version() -> &'static str {
 	}
 }
 /// The engine of the recorded desktop 0.0.423 client (2026-11-19), paired with wreq-util's
-/// Chromium 152 handshake. Not a claim that Serein runs on Electron.
+/// Chromium 152 handshake. Not a claim that Rucord runs on Electron.
 const ELECTRON_VERSION: &str = "44.10.2";
 const DESKTOP_CHROMIUM_VERSION: &str = "152.0.7977.169";
 const WEBKIT: bool = !cfg!(windows);
@@ -355,7 +355,7 @@ static INSTALLATION: std::sync::RwLock<Option<String>> = std::sync::RwLock::new(
 
 /// Discord's installation ID for this device, sent as `X-Installation-ID` on REST and as
 /// `installation_id` in the Gateway identify (unofficial, observed in SakuraCord's desktop
-/// metadata). Serein never makes one up; without one, both are left out.
+/// metadata). Rucord never makes one up; without one, both are left out.
 pub fn installation_id() -> Option<String> {
 	INSTALLATION.read().ok()?.clone()
 }

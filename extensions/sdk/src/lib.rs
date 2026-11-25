@@ -288,7 +288,7 @@ fn encode<T: Serialize + ?Sized>(value: &T) -> Result<Vec<u8>, Error> {
 	Ok(buffer.0)
 }
 
-/// Export a typed handler as Serein ABI version 1, including `fn(Invocation) -> Output`.
+/// Export a typed handler as Rucord ABI version 1, including `fn(Invocation) -> Output`.
 /// Each invocation gets a fresh instance, so buffers are reclaimed when it finishes.
 #[macro_export]
 macro_rules! export {
@@ -303,7 +303,7 @@ macro_rules! export {
 		}
 
 		/// # Safety
-		/// The Serein host supplies the pointer returned by `serein_alloc` and its allocated length.
+		/// The Rucord host supplies the pointer returned by `serein_alloc` and its allocated length.
 		#[unsafe(no_mangle)]
 		pub unsafe extern "C" fn serein_invoke(pointer: u32, length: u32) -> u64 {
 			if pointer == 0 || length == 0 || length as usize > $crate::MAX_IO_BYTES {

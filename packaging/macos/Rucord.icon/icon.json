@@ -1,0 +1,23 @@
+{
+  "fill": {
+    "solid": "srgb:0.14510,0.38824,0.92157,1.00000"
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "image-name": "rucord-mark.svg",
+          "name": "Rucord",
+          "fill": {
+            "solid": "srgb:1.00000,1.00000,1.00000,1.00000"
+          }
+        }
+      ]
+    }
+  ],
+  "supported-platforms": {
+    "squares": [
+      "macOS"
+    ]
+  }
+}

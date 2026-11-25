@@ -3,7 +3,7 @@
 language-system = Sistem
 language-group = Dil
 language-label = Ekran dili
-language-description = Serein'in dilini seçin. Discord içeriği asla çevrilmez.
+language-description = Rucord'in dilini seçin. Discord içeriği asla çevrilmez.
 section-user = Kullanıcı ayarları
 section-app = Uygulama ayarları
 section-customization = Özelleştirme
@@ -28,11 +28,11 @@ description-appearance = Tema, renkler, pencere efektleri ve düzen.
 description-chat = Mesajların, medyanın, bağlantıların ve kaydırmanın nasıl davrandığı.
 description-messaging-permissions = Sizinle kimlerin iletişim kurabileceğini ve mesajların nasıl filtreleneceğini kontrol edin.
 description-notifications = Hangi bildirimleri alacağınızı ve bunların nasıl görüneceğini seçin.
-description-registered-games = Ne oynadığınızı paylaşın, Serein'in algıladığı oyunları düzeltin veya ekleyin.
+description-registered-games = Ne oynadığınızı paylaşın, Rucord'in algıladığı oyunları düzeltin veya ekleyin.
 description-voice = Mikrofon, hoparlörler, kamera ve ses işleme.
-description-keybinds = Serein için klavye kısayolları.
-description-storage = Serein'in bu cihazda sakladıkları.
-description-updates = Bu cihazda Serein'i güncel tutun.
+description-keybinds = Rucord için klavye kısayolları.
+description-storage = Rucord'in bu cihazda sakladıkları.
+description-updates = Bu cihazda Rucord'i güncel tutun.
 description-extensions = Topluluk eklentilerini yönetin.
 description-themes = Bir topluluk teması seçin.
 theme-maker = Tema oluşturucu
@@ -45,39 +45,39 @@ log-out = Oturumu kapat
 unofficial = Resmi değil · Discord tarafından onaylanmadı
 offline-preview = Çevrimdışı önizleme · değişiklikler bu oturumda kalır ve hiçbir zaman gönderilmez.
 general-startup = Başlatmak
-general-open-at-startup = Bilgisayarınız başladığında Serein'i açın
-general-open-at-startup-description = Serein arka planda oturum açar ve bağlantı kurar.
+general-open-at-startup = Bilgisayarınız başladığında Rucord'i açın
+general-open-at-startup-description = Rucord arka planda oturum açar ve bağlantı kurar.
 general-start-minimized = Küçültülmüş başlangıç
 general-start-minimized-description = Arka planda başlayın, yolunuzdan çekilin.
 general-startup-unavailable = Otomatik başlatma Windows ve macOS'ta mevcuttur.
 general-window = Pencere
 general-hide-decorations = Başlık çubuğu yok
-general-hide-decorations-description = Döşemeli pencere yöneticileri için: Serein'in kendi başlık çubuğu dahil tüm başlık çubuklarını ve kenarlıkları kaldırır. Serein'i taşımak, yeniden boyutlandırmak veya kapatmak için pencere yöneticinizi kullanın.
+general-hide-decorations-description = Döşemeli pencere yöneticileri için: Rucord'in kendi başlık çubuğu dahil tüm başlık çubuklarını ve kenarlıkları kaldırır. Rucord'i taşımak, yeniden boyutlandırmak veya kapatmak için pencere yöneticinizi kullanın.
 general-custom-title-bar = Özel başlık çubuğu
-general-custom-title-bar-description = Sistem başlık çubuğunu Serein'in GTK 4 tarzındaki kendi başlık çubuğuyla değiştirir.
-general-hide-title-bar = Serein başlık çubuğunu gizle
+general-custom-title-bar-description = Sistem başlık çubuğunu Rucord'in GTK 4 tarzındaki kendi başlık çubuğuyla değiştirir.
+general-hide-title-bar = Rucord başlık çubuğunu gizle
 general-hide-title-bar-description = Bunun yerine sistem başlık çubuğunu ve pencere düğmelerini kullanın.
-general-keep-menu-bar = Serein'i menü çubuğunda tutun
-general-keep-system-tray = Serein'i sistem tepsisinde tutun
-general-menu-bar-description = Pencereyi kapatmak Serein'i menü çubuğunda tutar. Çıkmak için menüsünden çıkın.
-general-linux-tray-description = Kapanış Serein'in çalışmasını sağlar. Göstermek, simge durumuna küçültmek veya çıkmak için tepsiyi kullanın.
-general-windows-tray-description = Pencereyi kapatmak Serein'i bildirim alanında tutar. Çıkmak için menüsünden çıkın.
+general-keep-menu-bar = Rucord'i menü çubuğunda tutun
+general-keep-system-tray = Rucord'i sistem tepsisinde tutun
+general-menu-bar-description = Pencereyi kapatmak Rucord'i menü çubuğunda tutar. Çıkmak için menüsünden çıkın.
+general-linux-tray-description = Kapanış Rucord'in çalışmasını sağlar. Göstermek, simge durumuna küçültmek veya çıkmak için tepsiyi kullanın.
+general-windows-tray-description = Pencereyi kapatmak Rucord'i bildirim alanında tutar. Çıkmak için menüsünden çıkın.
 general-tray-unavailable = Tepsi bu platformda kullanılamıyor.
 general-graphics = Grafik
 general-render-with = Şununla oluştur:
-general-gpu-restart = Serein'in bir sonraki başlangıcında etkili olur.
+general-gpu-restart = Rucord'in bir sonraki başlangıcında etkili olur.
 general-gpu-current-prefix = Şu anda çizim yapıyorum
 general-steady-refresh-rate = Sabit yenileme hızı
-general-steady-refresh-rate-description = Serein etkin pencereyken ekranın yenileme hızında çizer; böylece değişken yenileme hızlı (VRR, G-SYNC, FreeSync) ekranlar titremek yerine tek bir hızda kalabilir. Daha fazla güç tüketir.
+general-steady-refresh-rate-description = Rucord etkin pencereyken ekranın yenileme hızında çizer; böylece değişken yenileme hızlı (VRR, G-SYNC, FreeSync) ekranlar titremek yerine tek bir hızda kalabilir. Daha fazla güç tüketir.
 steady-refresh-prompt-title = G-SYNC ekran algılandı
-steady-refresh-prompt-body = Serein yalnızca bir şey değiştiğinde yeniden çizer; bu da Serein etkin pencereyken G-SYNC ekranın titremesine yol açabilir. Sabit yenileme hızı, ekranın yenileme hızında çizerek bunu önler ancak daha fazla güç tüketir. Açılsın mı?
+steady-refresh-prompt-body = Rucord yalnızca bir şey değiştiğinde yeniden çizer; bu da Rucord etkin pencereyken G-SYNC ekranın titremesine yol açabilir. Sabit yenileme hızı, ekranın yenileme hızında çizerek bunu önler ancak daha fazla güç tüketir. Açılsın mı?
 steady-refresh-prompt-turn-on = Aç
 steady-refresh-prompt-keep-off = Hayır, teşekkürler
 steady-refresh-prompt-settings = Bunu daha sonra ayarlarda { $page } > { $group } bölümünden değiştirebilirsiniz.
 gpu-automatic = Otomatik
 gpu-high-performance = Yüksek performans
 gpu-power-saving = Güç tasarrufu
-gpu-automatic-description = Bu pencereyi çizebilecek GPU'yu Serein seçsin.
+gpu-automatic-description = Bu pencereyi çizebilecek GPU'yu Rucord seçsin.
 gpu-high-performance-description = Mevcut olduğunda ayrı grafik kartını kullanın.
 gpu-power-saving-description = Pilden tasarruf etmek için entegre grafikleri kullanın.
 direct-messages = Doğrudan Mesajlar
@@ -222,7 +222,7 @@ account-menu-custom-status-editor-clear-after = Şu tarihten sonra temizle:
 # Context: custom_status_editor
 account-menu-custom-status-editor-no-custom-status = Özel durum yok
 # Context: custom_status_editor
-account-menu-custom-status-editor-serein-clears-it = Serein temizliyor
+account-menu-custom-status-editor-rucord-clears-it = Rucord temizliyor
 # Context: custom_status_editor
 account-menu-custom-status-editor-status-text = Durum metni
 # Context: custom_status_editor
@@ -1578,7 +1578,7 @@ keybinds-show-voice-enable-global-keybinds = Genel tuş bağlantılarını etkin
 # Context: show_voice
 keybinds-show-voice-global-availability = Küresel kullanılabilirlik
 # Context: show_voice
-keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = Başka bir uygulamaya odaklanırken ses kısayollarını kullanın. Kapalıyken kısayollar yalnızca Serein odaklandığında çalışır.
+keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = Başka bir uygulamaya odaklanırken ses kısayollarını kullanın. Kapalıyken kısayollar yalnızca Rucord odaklandığında çalışır.
 
 ## crates/ui/src/lib.rs
 # Context: account_card
@@ -1656,7 +1656,7 @@ main-restoring-checking-your-saved-login = Kayıtlı giriş bilgileriniz kontrol
 # Context: restoring
 main-restoring-connecting-to-discord = Discord'a bağlanma
 # Context: restoring_screen
-main-restoring-screen-serein = Serin
+main-restoring-screen-rucord = Serin
 # Context: restoring_screen
 main-restoring-screen-use-a-different-account = Farklı bir hesap kullanın
 # Context: restoring_screen
@@ -1664,7 +1664,7 @@ main-restoring-screen-welcome-back = tekrar hoşgeldiniz
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Kayıtlı hesaplar
 # Context: sign_in_disclosures
-main-sign-in-disclosures-about-serein = Serein hakkında
+main-sign-in-disclosures-about-rucord = Rucord hakkında
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Bu jetonla bağlanın
 # Context: sign_in_disclosures
@@ -1678,7 +1678,7 @@ main-sign-in-header-sign-in-with-your-discord-account-to-get-started = Başlamak
 # Context: sign_in_header
 main-sign-in-header-welcome-back = tekrar hoşgeldiniz
 # Context: sign_in_header
-main-sign-in-header-welcome-to-serein = Serein'e hoş geldiniz
+main-sign-in-header-welcome-to-rucord = Rucord'e hoş geldiniz
 # Context: sign_in_preview
 main-sign-in-status-copy-failure-details = Hata ayrıntılarını kopyala
 main-sign-in-preview-explore-the-offline-preview = Çevrimdışı önizlemeyi keşfedin
@@ -1687,7 +1687,7 @@ main-sign-in-preview-sample-conversations-no-discord-connection = Örnek konuşm
 # Context: sign_in_screen
 main-sign-in-screen-independent-and-open-source-not-affiliated-with-discord = Bağımsız ve açık kaynak. Discord'a bağlı değildir.
 # Context: sign_in_screen
-main-sign-in-screen-serein = Serin
+main-sign-in-screen-rucord = Serin
 # Context: ui
 main-ui-cancel = İptal etmek
 # Context: ui
@@ -2286,13 +2286,13 @@ screen-body-refresh = Yenile
 # Context: body
 screen-body-screen-or-window = Ekran veya pencere
 # Context: body
-screen-body-send-what-your-mac-plays-along-with-the-screen-serein = Mac'inizin oynattıklarını ekranla birlikte gönderin. Serein'in kendi çağrı sesi dışarıda bırakıldı.
+screen-body-send-what-your-mac-plays-along-with-the-screen-rucord = Mac'inizin oynattıklarını ekranla birlikte gönderin. Rucord'in kendi çağrı sesi dışarıda bırakıldı.
 # Context: body
-screen-body-share-sound-from-other-apps-even-when-sharing-one-window = Bir pencereyi paylaşırken bile diğer uygulamalardaki sesi paylaşın. Serein'in kendi sesi dışarıda bırakıldı.
+screen-body-share-sound-from-other-apps-even-when-sharing-one-window = Bir pencereyi paylaşırken bile diğer uygulamalardaki sesi paylaşın. Rucord'in kendi sesi dışarıda bırakıldı.
 # Context: body
 screen-body-share-system-audio = Sistem sesini paylaş
 # Context: body
-screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = Paylaşılan uygulamanın sesini veya ekran paylaşırken diğer tüm uygulamaların sesini paylaşın. Serein'in kendi sesi dahil edilmez.
+screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = Paylaşılan uygulamanın sesini veya ekran paylaşırken diğer tüm uygulamaların sesini paylaşın. Rucord'in kendi sesi dahil edilmez.
 # Context: body
 screen-body-show-cursor = İmleci göster
 # Context: body
@@ -3449,7 +3449,7 @@ settings-activity-added-games = Eklenen Oyunlar
 # Context: activity_settings
 settings-activity-no-games-added = Eklenmiş oyun yok
 # Context: activity_settings
-settings-activity-hidden = Gizlendi. Serein bu oyunu algılamayacak.
+settings-activity-hidden = Gizlendi. Rucord bu oyunu algılamayacak.
 # Context: activity_settings
 settings-activity-detected = Otomatik algılandı
 # Context: activity_settings
@@ -3471,7 +3471,7 @@ settings-activity-click-to-rename = Yeniden adlandırmak için tıklayın
 # Context: activity_settings
 settings-activity-add-a-game = Oyun ekle
 # Context: activity_settings
-settings-activity-choose-program = Çalışan bir program seçin. Serein, çalıştığı her zaman onu oyununuz olarak gösterir.
+settings-activity-choose-program = Çalışan bir program seçin. Rucord, çalıştığı her zaman onu oyununuz olarak gösterir.
 # Context: activity_settings
 settings-activity-search-programs = Çalışan programlarda ara
 # Context: activity_settings
@@ -3493,7 +3493,7 @@ settings-appearance-settings-primary-color = Ana renk
 # Context: appearance_settings
 settings-appearance-settings-reset = Sıfırla
 # Context: appearance_settings
-settings-appearance-settings-restart-serein-after-changing-this-themes-can-customize-effects-while = Bunu değiştirdikten sonra Serein'i yeniden başlatın. Temalar etkinleştirildiğinde efektleri özelleştirebilir.
+settings-appearance-settings-restart-rucord-after-changing-this-themes-can-customize-effects-while = Bunu değiştirdikten sonra Rucord'i yeniden başlatın. Temalar etkinleştirildiğinde efektleri özelleştirebilir.
 # Context: appearance_settings
 settings-appearance-settings-the-active-theme-brings-its-own-accent-it-takes-over = Aktif tema kendi aksanını da beraberinde getiriyor; tema kullanımdayken görevi devralır.
 # Context: appearance_settings
@@ -3530,11 +3530,11 @@ settings-storage-page-clear-cache = Önbelleği temizle
 # Context: storage_page
 settings-storage-page-local-storage = Yerel depolama
 # Context: storage_page
-settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = Mesajlar ve taslaklar bu cihazda sınırlı, hesaptan yalıtılmış dosyalar içinde önbelleğe alınır. Önbellek verileri Serein tarafından şifrelenmez; kaydedilen oturum açma belirteçleri işletim sistemi kimlik bilgileri deposunu kullanır.
+settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = Mesajlar ve taslaklar bu cihazda sınırlı, hesaptan yalıtılmış dosyalar içinde önbelleğe alınır. Önbellek verileri Rucord tarafından şifrelenmez; kaydedilen oturum açma belirteçleri işletim sistemi kimlik bilgileri deposunu kullanır.
 # Context: storage_page
 settings-storage-page-removes-cached-messages-and-media-drafts-and-your-login-stay = Önbelleğe alınmış mesajları ve medyayı kaldırır. Taslaklar ve giriş bilgileriniz.
 # Context: storage_page
-settings-storage-page-serein-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Serein telemetri toplamaz veya tanılamayı yüklemez. Discord, hizmet tarafındaki verileri kendi politikalarına göre saklar.
+settings-storage-page-rucord-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Rucord telemetri toplamaz veya tanılamayı yüklemez. Discord, hizmet tarafındaki verileri kendi politikalarına göre saklar.
 # Context: storage_page
 settings-storage-page-your-privacy = Gizliliğiniz
 # Context: cosmetic_settings
@@ -3986,7 +3986,7 @@ updates-update-settings-could-not-load-or-save-update-preferences-changes-may-no
 # Context: update_settings
 updates-update-settings-download-update = Güncellemeyi indir
 # Context: update_settings
-updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = Güncellemeleri arka planda indirin. Hazır olduğunuzda yeniden başlayın. Serein hala başlangıçta ve bu kapalı olduğunda periyodik olarak kontrol ediyor.
+updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = Güncellemeleri arka planda indirin. Hazır olduğunuzda yeniden başlayın. Rucord hala başlangıçta ve bu kapalı olduğunda periyodik olarak kontrol ediyor.
 # Context: update_settings
 updates-update-settings-early-builds-with-the-newest-changes-nightly-releases-can-be = En yeni değişikliklerle erken sürümler. Gecelik sürümler daha az güvenilir olabilir.
 # Context: update_settings
@@ -4012,7 +4012,7 @@ updates-update-settings-release-channel = Yayın kanalı
 # Context: update_settings
 updates-update-settings-restart-to-update = Güncellemek için yeniden başlatın
 # Context: update_settings
-updates-update-settings-serein-was-installed-via-your-distribution-run-this-in-a = Serein dağıtımınız aracılığıyla kuruldu. Güncellemek için bunu bir terminalde çalıştırın.
+updates-update-settings-rucord-was-installed-via-your-distribution-run-this-in-a = Rucord dağıtımınız aracılığıyla kuruldu. Güncellemek için bunu bir terminalde çalıştırın.
 # Context: update_settings
 updates-update-settings-save-diagnostics = Tanılamayı kaydet
 # Context: update_settings
@@ -4034,7 +4034,7 @@ updates-update-settings-log-warnings = Hatalar ve uyarılar
 # Context: update_settings
 updates-update-settings-open-folder = Klasörü aç
 # Context: update_settings
-updates-update-settings-the-log-folder-could-not-be-written = Günlük klasörü yazılamadı. Serein'in veri klasörünü denetleyip yeniden deneyin.
+updates-update-settings-the-log-folder-could-not-be-written = Günlük klasörü yazılamadı. Rucord'in veri klasörünü denetleyip yeniden deneyin.
 # Context: update_settings
 updates-update-settings-timings-stages-and-failures-in-one-local-file-no-account-channel-or = Süreler, aşamalar ve hatalar tek bir yerel günlük dosyasında. Hesap, kanal, mesaj ve kimlik bilgileri asla yazılmaz ve hiçbir şey yüklenmez.
 # Context: update_log
@@ -4102,7 +4102,7 @@ verification-show-verification-required = Doğrulama gerekli
 # Context: show
 verification-show-verify = Doğrulamak
 # Context: show
-verification-show-safer-in-the-official-discord-app = Bu doğrulamayı resmi Discord uygulamasında tamamlamak daha güvenlidir. Serein'de çözülen bir doğrulamadan sonra Discord, yeni hesaplardan telefon numarası doğrulaması isteyebilir.
+verification-show-safer-in-the-official-discord-app = Bu doğrulamayı resmi Discord uygulamasında tamamlamak daha güvenlidir. Rucord'de çözülen bir doğrulamadan sonra Discord, yeni hesaplardan telefon numarası doğrulaması isteyebilir.
 # Context: show
 verification-show-open-discord = Discord'u aç
 
@@ -4485,7 +4485,7 @@ onboarding-rules-heading = Sunucu kuralları
 # Context: rules
 onboarding-rules-review = Sohbet edebilmen için bir moderatör bu yanıtları inceler.
 # Context: field
-onboarding-field-unsupported = Bu sunucu, Serein'in henüz gösteremediği bir soru soruyor. Katılımı Discord uygulamasında tamamla.
+onboarding-field-unsupported = Bu sunucu, Rucord'in henüz gösteremediği bir soru soruyor. Katılımı Discord uygulamasında tamamla.
 # Context: field
 onboarding-field-agree = Kuralları okudum ve kabul ediyorum
 
@@ -4624,7 +4624,7 @@ reading-double-click-reaction = Double-click reaction
 
 ## crates/platform/src/app_menu.rs
 # Context: macos_menu_bar
-app-menu-about = Serein Hakkında
+app-menu-about = Rucord Hakkında
 # Context: macos_menu_bar
 app-menu-updates = Güncellemeleri Denetle…
 # Context: macos_menu_bar
@@ -4632,13 +4632,13 @@ app-menu-settings = Ayarlar…
 # Context: macos_menu_bar
 app-menu-services = Servisler
 # Context: macos_menu_bar
-app-menu-hide = Serein'i Gizle
+app-menu-hide = Rucord'i Gizle
 # Context: macos_menu_bar
 app-menu-hide-others = Diğerlerini Gizle
 # Context: macos_menu_bar
 app-menu-show-all = Tümünü Göster
 # Context: macos_menu_bar
-app-menu-quit = Serein'den Çık
+app-menu-quit = Rucord'den Çık
 # Context: macos_menu_bar
 app-menu-file = Dosya
 # Context: macos_menu_bar
@@ -4680,7 +4680,7 @@ app-menu-bring-all-to-front = Tümünü Öne Getir
 # Context: macos_menu_bar
 app-menu-help = Yardım
 # Context: macos_menu_bar
-app-menu-github = GitHub'da Serein
+app-menu-github = GitHub'da Rucord
 # Context: macos_menu_bar
 app-menu-report-issue = Sorun Bildir…
 

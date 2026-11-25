@@ -558,7 +558,7 @@ fn voice_card(
 						.add_enabled_ui(blocked.is_none(), |ui| join_button(ui, theme, fill))
 						.inner;
 					if let Some(reason) = blocked {
-						join = join.on_disabled_hover_text(reason);
+						join = join.on_disabled_hover_text(crate::i18n::translate_if_key(reason));
 					}
 					if join.clicked() {
 						action = Some(Action::JoinVoice {
@@ -2934,7 +2934,7 @@ fn full_panel(
 }
 
 pub(crate) fn profile_opener_id() -> egui::Id {
-	egui::Id::unique("serein-profile-opener")
+	egui::Id::unique("rucord-profile-opener")
 }
 
 #[derive(Default)]
@@ -5050,7 +5050,7 @@ pub fn synthetic(user: &User, guild: Option<Id>) -> model::UserProfile {
 	let hash = |c: char| c.to_string().repeat(32);
 	model::UserProfile {
         user: user.clone(),
-        username: "serein.preview".into(),
+        username: "rucord.preview".into(),
         board: Some(vec![model::ProfileGameWidget {
             kind: model::ProfileGameWidgetKind::Favorite,
             games: vec![model::ProfileGame { id: Id(90001), name: Some("Synthetic favorite game".into()), icon: Some(hash('b')), cover: Some(hash('b')), comment: None, tags: vec![] }],

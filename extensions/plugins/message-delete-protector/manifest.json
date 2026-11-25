@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Serein contributors",
   "license": "MIT OR Apache-2.0",
-  "source": "https://github.com/ViceVerse-cz/Serein",
+  "source": "https://github.com/feds1337/Rucord",
   "kind": "plugin",
   "capabilities": [
     "deleted_messages"

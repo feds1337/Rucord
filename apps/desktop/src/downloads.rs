@@ -169,7 +169,7 @@ impl Downloads {
 		let context = context.clone();
 		// One dedicated owner keeps all file work and cleanup away from the render/runtime threads.
 		let spawn = std::thread::Builder::new()
-			.name("serein-download".into())
+			.name("rucord-download".into())
 			.spawn(move || {
 				if let Some(previous) = previous {
 					let _ = previous.join();
@@ -319,7 +319,7 @@ impl CopyFile {
 		let mut random = [0u8; 16];
 		getrandom::fill(&mut random).map_err(|_| "Temporary file unavailable")?;
 		let suffix: String = random.iter().map(|byte| format!("{byte:02x}")).collect();
-		let root = std::env::temp_dir().join(format!("serein-clipboard-{suffix}"));
+		let root = std::env::temp_dir().join(format!("rucord-clipboard-{suffix}"));
 		#[allow(unused_mut)] // Unix permissions require the mutable builder.
 		let mut directory = fs::DirBuilder::new();
 		#[cfg(unix)]
@@ -470,7 +470,7 @@ impl<'a> Partial<'a> {
 		let mut random = [0u8; 16];
 		getrandom::fill(&mut random).map_err(|_| "Temporary file unavailable")?;
 		let random: String = random.iter().map(|b| format!("{b:02x}")).collect();
-		let path = parent.join(format!(".serein-{random}.partial"));
+		let path = parent.join(format!(".rucord-{random}.partial"));
 		let mut options = OpenOptions::new();
 		options.write(true).create_new(true);
 		#[cfg(unix)]
@@ -1176,7 +1176,7 @@ mod tests {
 			assert!(original_url(&image).is_none());
 		}
 		let root =
-			std::env::temp_dir().join(format!("serein-download-tests-{}", std::process::id()));
+			std::env::temp_dir().join(format!("rucord-download-tests-{}", std::process::id()));
 		fs::create_dir_all(&root).unwrap();
 		let destination = root.join("chosen.bin");
 		let client = wreq::Client::builder()
@@ -1355,7 +1355,7 @@ mod tests {
 	#[tokio::test]
 	async fn attachment_download_accepts_cdn_content_length_differing_from_metadata_size() {
 		let root = std::env::temp_dir().join(format!(
-			"serein-download-test-mismatch-{}",
+			"rucord-download-test-mismatch-{}",
 			std::process::id()
 		));
 		fs::create_dir_all(&root).unwrap();
@@ -1396,7 +1396,7 @@ mod tests {
 	#[tokio::test]
 	async fn attachment_download_validates_content_length_bounds_and_fallback() {
 		let root = std::env::temp_dir().join(format!(
-			"serein-download-test-bounds-{}",
+			"rucord-download-test-bounds-{}",
 			std::process::id()
 		));
 		fs::create_dir_all(&root).unwrap();
@@ -1516,7 +1516,7 @@ mod tests {
 	#[tokio::test]
 	async fn a_reset_request_is_retried_before_the_download_fails() {
 		let root =
-			std::env::temp_dir().join(format!("serein-download-retry-{}", std::process::id()));
+			std::env::temp_dir().join(format!("rucord-download-retry-{}", std::process::id()));
 		fs::create_dir_all(&root).unwrap();
 		let destination = root.join("retried.bin");
 		let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();

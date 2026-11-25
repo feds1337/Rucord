@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Rucord
+Comment=Experimental unofficial native Discord client
+Exec=rucord
+Icon=rucord
+StartupWMClass=io.github.feds1337.rucord
+Terminal=false
+Categories=Network;InstantMessaging;

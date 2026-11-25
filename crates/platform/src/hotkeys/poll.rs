@@ -31,8 +31,8 @@ pub(super) fn supported(name: &str) -> bool {
 	os::supported(name)
 }
 
-/// Whether macOS lets Serein read keys typed into other apps (Input Monitoring). With `ask`,
-/// the first call in a process shows the system prompt, which also lists Serein in System
+/// Whether macOS lets Rucord read keys typed into other apps (Input Monitoring). With `ask`,
+/// the first call in a process shows the system prompt, which also lists Rucord in System
 /// Settings; Discord asks when a push-to-talk call starts too.
 #[cfg(target_os = "macos")]
 pub(super) fn listen_access(ask: bool) -> bool {
@@ -87,7 +87,7 @@ impl Poller {
 		let stopped = stop.clone();
 		let target = native.clone();
 		let thread = std::thread::Builder::new()
-			.name("serein-voice-keys".into())
+			.name("rucord-voice-keys".into())
 			.spawn(move || {
 				// X11 needs its own display connection, which must stay on this thread.
 				let Some(mut keys) = os::Keys::open() else {
@@ -158,7 +158,7 @@ impl Poller {
 		})
 	}
 
-	/// Whether this poller owns the chord even while Serein is focused. Keyboard keys are left
+	/// Whether this poller owns the chord even while Rucord is focused. Keyboard keys are left
 	/// to focused input there, which knows when the user is typing.
 	pub(super) fn owns_focused(&self, action: KeybindAction, chord: &KeyChord) -> bool {
 		is_mouse_button(&chord.key)
@@ -201,7 +201,7 @@ struct Input {
 	down: bool,
 	/// The group's chord wins for the held modifiers.
 	matching: bool,
-	/// This poller may start a press now. Keyboard keys are left to focused input while Serein
+	/// This poller may start a press now. Keyboard keys are left to focused input while Rucord
 	/// is focused; mouse buttons keep working because the window may not see them when the
 	/// pointer is elsewhere.
 	eligible: bool,
@@ -245,7 +245,7 @@ fn step<C: Copy + PartialEq>(
 }
 
 /// Turns physical state into press and release edges. A hold follows its key. A toggle starts
-/// only on a physical edge the poller may own, so handing a held key between Serein and
+/// only on a physical edge the poller may own, so handing a held key between Rucord and
 /// another app, or changing modifiers under it, never replays it.
 struct Tracker {
 	toggle: Vec<bool>,
@@ -768,7 +768,7 @@ mod tests {
 			step(&watched, 2, false, down, none),
 			vec![input(true, true, true), input(true, true, true)]
 		);
-		// Serein is focused: focused input owns the keyboard key, the button keeps working.
+		// Rucord is focused: focused input owns the keyboard key, the button keeps working.
 		assert_eq!(
 			step(&watched, 2, true, down, none),
 			vec![input(true, true, false), input(true, true, true)]
@@ -819,7 +819,7 @@ mod tests {
 		let mut tracker = Tracker::new(vec![true, false]);
 		let focused = [input(true, true, false), input(true, true, false)];
 		let away = [input(true, true, true), input(true, true, true)];
-		// Pressed while Serein is focused: focused input handled both.
+		// Pressed while Rucord is focused: focused input handled both.
 		assert!(tracker.advance(&focused).is_empty());
 		// Focus moves away with the keys still down: the hold continues, the toggle is not replayed.
 		assert_eq!(tracker.advance(&away), vec![(1, true)]);
@@ -839,7 +839,7 @@ mod tests {
 				.advance(&[input(true, true, true), input(true, true, true)])
 				.is_empty()
 		);
-		// Serein takes focus: the hold ends.
+		// Rucord takes focus: the hold ends.
 		assert_eq!(
 			tracker.advance(&[input(true, true, false), input(true, true, false)]),
 			vec![(1, false)]

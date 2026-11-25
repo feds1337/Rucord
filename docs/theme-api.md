@@ -84,7 +84,7 @@ emergency reset shortcut. Reset keeps installed themes available for re-selectio
 Disable removes the selected package and its local data.
 
 The Appearance **Transparency & blur** switch is the device-wide opt-in and requires
-restarting Serein after enabling or disabling it. Disabled launches use an opaque
+restarting Rucord after enabling or disabling it. Disabled launches use an opaque
 native window and GPU surface, with no blur or transparency compositor requests.
 Themes cannot enable window effects while this switch is off. Once enabled, the
 optional theme `transparency_blur` value can disable effects for that theme;
@@ -101,7 +101,7 @@ Setting transparency to zero disables blur and restores the native opaque-window
 hint where supported; only restarting with the Appearance switch off releases the
 alpha-capable GPU surface. X11 cannot change its native hint after window creation.
 The synthetic native preview can opt in without saved settings using
-`cargo run --locked -p serein --features demo -- --demo --demo-transparency`.
+`cargo run --locked -p rucord --features demo -- --demo --demo-transparency`.
 
 `icon_size` scales shared icon glyphs relative to the 20-pixel baseline without changing
 button hit regions. Custom-painted glyphs and fixed atlas geometry may opt out. **Preview

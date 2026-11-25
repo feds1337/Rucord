@@ -193,7 +193,7 @@ pub struct Keybinds {
 	pub previous_server: KeyChord,
 	pub next_server: KeyChord,
 	pub mark_channel_read: KeyChord,
-	/// Unassigned by default: Discord's Ctrl+E is Serein's Inline Code.
+	/// Unassigned by default: Discord's Ctrl+E is Rucord's Inline Code.
 	pub open_emoji_picker: KeyChord,
 	pub open_gif_picker: KeyChord,
 	pub open_sticker_picker: KeyChord,

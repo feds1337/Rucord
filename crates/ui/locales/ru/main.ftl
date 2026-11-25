@@ -3,7 +3,7 @@
 language-system = Система
 language-group = Язык
 language-label = Отображаемый язык
-language-description = Выберите язык Серейн. Контент Discord никогда не переводится.
+language-description = Выберите язык Rucord. Контент Discord никогда не переводится.
 section-user = Пользовательские настройки
 section-app = Приложение
 section-customization = Кастомизация
@@ -28,11 +28,11 @@ description-appearance = Тема, цвета, оконные эффекты и 
 description-chat = Как ведут себя сообщения, медиа, ссылки и прокрутка.
 description-messaging-permissions = Контролируйте, кто может связаться с вами и как фильтруются сообщения.
 description-notifications = Выберите, какие уведомления вы будете получать и как они будут отображаться.
-description-registered-games = Делитесь тем, во что играете, и исправляйте или добавляйте игры, найденные Serein.
+description-registered-games = Делитесь тем, во что играете, и исправляйте или добавляйте игры, найденные Rucord.
 description-voice = Микрофон, динамики, камера и обработка голоса.
-description-keybinds = Сочетания клавиш для Серейн.
-description-storage = Что Серейн хранит на этом устройстве.
-description-updates = Держите Серейн в курсе событий на этом устройстве.
+description-keybinds = Сочетания клавиш для Rucord.
+description-storage = Что Rucord хранит на этом устройстве.
+description-updates = Держите Rucord в курсе событий на этом устройстве.
 description-extensions = Управляйте плагинами сообщества.
 description-themes = Выберите тему сообщества.
 theme-maker = Создатель тем
@@ -46,38 +46,38 @@ unofficial = Неофициально · не одобрено Discord
 offline-preview = Офлайн-просмотр · изменения остаются в этом сеансе и никогда не отправляются.
 general-startup = Запускать
 general-open-at-startup = Откройте Sein при запуске компьютера
-general-open-at-startup-description = Серейн входит в систему и подключается в фоновом режиме.
+general-open-at-startup-description = Rucord входит в систему и подключается в фоновом режиме.
 general-start-minimized = Начать сворачивать
 general-start-minimized-description = Начните в фоновом режиме, подальше от вас.
 general-startup-unavailable = Автоматический запуск доступен в Windows и macOS.
 general-window = Окно
 general-hide-decorations = Без заголовка окна
-general-hide-decorations-description = Для тайловых оконных менеджеров: убирает все заголовки и рамки, включая собственный заголовок Serein. Перемещайте, изменяйте размер и закрывайте Serein средствами оконного менеджера.
+general-hide-decorations-description = Для тайловых оконных менеджеров: убирает все заголовки и рамки, включая собственный заголовок Rucord. Перемещайте, изменяйте размер и закрывайте Rucord средствами оконного менеджера.
 general-custom-title-bar = Собственный заголовок окна
-general-custom-title-bar-description = Заменяет системную строку заголовка собственной панелью заголовка Serein в стиле GTK 4.
-general-hide-title-bar = Скрыть строку заголовка Серейн
+general-custom-title-bar-description = Заменяет системную строку заголовка собственной панелью заголовка Rucord в стиле GTK 4.
+general-hide-title-bar = Скрыть строку заголовка Rucord
 general-hide-title-bar-description = Вместо этого используйте системную строку заголовка и кнопки окна.
-general-keep-menu-bar = Держите Серейн в строке меню
-general-keep-system-tray = Держите Серейн в системном трее
-general-menu-bar-description = При закрытии окна Серейн остается в строке меню. Выйдите из меню, чтобы выйти.
-general-linux-tray-description = Закрытие позволяет Серейн работать. Используйте лоток, чтобы показать, свернуть или выйти.
-general-windows-tray-description = Если закрыть окно, Серейн останется в области уведомлений. Выйдите из меню, чтобы выйти.
+general-keep-menu-bar = Держите Rucord в строке меню
+general-keep-system-tray = Держите Rucord в системном трее
+general-menu-bar-description = При закрытии окна Rucord остается в строке меню. Выйдите из меню, чтобы выйти.
+general-linux-tray-description = Закрытие позволяет Rucord работать. Используйте лоток, чтобы показать, свернуть или выйти.
+general-windows-tray-description = Если закрыть окно, Rucord останется в области уведомлений. Выйдите из меню, чтобы выйти.
 general-tray-unavailable = Лоток недоступен на этой платформе.
 general-graphics = Графика
 general-render-with = Рендеринг с помощью
 general-gpu-restart = Изменение этого параметра вступает в силу после перезапуска.
 general-gpu-current-prefix = Сейчас активна
 general-steady-refresh-rate = Постоянная частота обновления
-general-steady-refresh-rate-description = Пока окно Serein активно, отрисовка идёт с частотой обновления экрана, поэтому мониторы с переменной частотой обновления (VRR, G-SYNC, FreeSync) могут держать одну частоту и не мерцать. Расходует больше энергии.
+general-steady-refresh-rate-description = Пока окно Rucord активно, отрисовка идёт с частотой обновления экрана, поэтому мониторы с переменной частотой обновления (VRR, G-SYNC, FreeSync) могут держать одну частоту и не мерцать. Расходует больше энергии.
 steady-refresh-prompt-title = Обнаружен дисплей с G-SYNC
-steady-refresh-prompt-body = Serein перерисовывает окно только при изменениях, из-за чего дисплей с G-SYNC может мерцать, пока окно Serein активно. Постоянная частота обновления устраняет это, отрисовывая с частотой обновления экрана, но расходует больше энергии. Включить её?
+steady-refresh-prompt-body = Rucord перерисовывает окно только при изменениях, из-за чего дисплей с G-SYNC может мерцать, пока окно Rucord активно. Постоянная частота обновления устраняет это, отрисовывая с частотой обновления экрана, но расходует больше энергии. Включить её?
 steady-refresh-prompt-turn-on = Включить
 steady-refresh-prompt-keep-off = Нет, спасибо
 steady-refresh-prompt-settings = Это можно изменить позже в настройках: { $page } > { $group }.
 gpu-automatic = Автоматический
 gpu-high-performance = Высокая производительность
 gpu-power-saving = Экономия энергии
-gpu-automatic-description = Пусть Серейн выберет графический процессор, который сможет отрисовать это окно.
+gpu-automatic-description = Пусть Rucord выберет графический процессор, который сможет отрисовать это окно.
 gpu-high-performance-description = Используйте дискретную видеокарту, если она доступна.
 gpu-power-saving-description = Используйте встроенную графику для экономии заряда батареи.
 direct-messages = Личные сообщения
@@ -222,7 +222,7 @@ account-menu-custom-status-editor-clear-after = Очистить после
 # Context: custom_status_editor
 account-menu-custom-status-editor-no-custom-status = Нет индивидуального статуса
 # Context: custom_status_editor
-account-menu-custom-status-editor-serein-clears-it = Серейн очищает это
+account-menu-custom-status-editor-rucord-clears-it = Rucord очищает это
 # Context: custom_status_editor
 account-menu-custom-status-editor-status-text = Текст статуса
 # Context: custom_status_editor
@@ -1578,7 +1578,7 @@ keybinds-show-voice-enable-global-keybinds = Включить глобальны
 # Context: show_voice
 keybinds-show-voice-global-availability = Глобальная доступность
 # Context: show_voice
-keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = Используйте голосовые команды, пока другое приложение находится в фокусе. Если этот параметр отключен, сочетания клавиш работают только тогда, когда Серейн сфокусирована.
+keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = Используйте голосовые команды, пока другое приложение находится в фокусе. Если этот параметр отключен, сочетания клавиш работают только тогда, когда Rucord сфокусирована.
 
 ## crates/ui/src/lib.rs
 # Context: account_card
@@ -1656,7 +1656,7 @@ main-restoring-checking-your-saved-login = Проверка сохраненно
 # Context: restoring
 main-restoring-connecting-to-discord = Подключение к Дискорду
 # Context: restoring_screen
-main-restoring-screen-serein = Серейн
+main-restoring-screen-rucord = Rucord
 # Context: restoring_screen
 main-restoring-screen-use-a-different-account = Использовать другую учетную запись
 # Context: restoring_screen
@@ -1664,7 +1664,7 @@ main-restoring-screen-welcome-back = Добро пожаловать
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Сохраненные аккаунты
 # Context: sign_in_disclosures
-main-sign-in-disclosures-about-serein = О Серейн
+main-sign-in-disclosures-about-rucord = О Rucord
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Подключиться с помощью этого токена
 # Context: sign_in_disclosures
@@ -1678,7 +1678,7 @@ main-sign-in-header-sign-in-with-your-discord-account-to-get-started = Войд�
 # Context: sign_in_header
 main-sign-in-header-welcome-back = Добро пожаловать
 # Context: sign_in_header
-main-sign-in-header-welcome-to-serein = Добро пожаловать в Серейн
+main-sign-in-header-welcome-to-rucord = Добро пожаловать в Rucord
 # Context: sign_in_preview
 main-sign-in-status-copy-failure-details = Копировать сведения об ошибке
 main-sign-in-preview-explore-the-offline-preview = Ознакомьтесь с предварительной версией в автономном режиме
@@ -1687,7 +1687,7 @@ main-sign-in-preview-sample-conversations-no-discord-connection = Примеры
 # Context: sign_in_screen
 main-sign-in-screen-independent-and-open-source-not-affiliated-with-discord = Независимый и открытый исходный код. Не связан с Discord.
 # Context: sign_in_screen
-main-sign-in-screen-serein = Серейн
+main-sign-in-screen-rucord = Rucord
 # Context: ui
 main-ui-cancel = Отмена
 # Context: ui
@@ -2286,13 +2286,13 @@ screen-body-refresh = Обновить
 # Context: body
 screen-body-screen-or-window = Экран или окно
 # Context: body
-screen-body-send-what-your-mac-plays-along-with-the-screen-serein = Отправьте то, что ваш Mac воспроизводит вместе с экраном. Звук звонка Серейн не учитывается.
+screen-body-send-what-your-mac-plays-along-with-the-screen-rucord = Отправьте то, что ваш Mac воспроизводит вместе с экраном. Звук звонка Rucord не учитывается.
 # Context: body
-screen-body-share-sound-from-other-apps-even-when-sharing-one-window = Делитесь звуком из других приложений, даже если вы делитесь одним окном. Собственный звук Серейн не учитывается.
+screen-body-share-sound-from-other-apps-even-when-sharing-one-window = Делитесь звуком из других приложений, даже если вы делитесь одним окном. Собственный звук Rucord не учитывается.
 # Context: body
 screen-body-share-system-audio = Поделиться системным звуком
 # Context: body
-screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = Передавайте звук общего приложения или, при показе экрана, звук всех остальных приложений. Собственный звук Serein не передаётся.
+screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = Передавайте звук общего приложения или, при показе экрана, звук всех остальных приложений. Собственный звук Rucord не передаётся.
 # Context: body
 screen-body-show-cursor = Показать курсор
 # Context: body
@@ -3449,7 +3449,7 @@ settings-activity-added-games = Добавленные игры
 # Context: activity_settings
 settings-activity-no-games-added = Нет добавленных игр
 # Context: activity_settings
-settings-activity-hidden = Скрыто. Serein не будет обнаруживать эту игру.
+settings-activity-hidden = Скрыто. Rucord не будет обнаруживать эту игру.
 # Context: activity_settings
 settings-activity-detected = Обнаружено автоматически
 # Context: activity_settings
@@ -3471,7 +3471,7 @@ settings-activity-click-to-rename = Нажмите, чтобы переимен�
 # Context: activity_settings
 settings-activity-add-a-game = Добавить игру
 # Context: activity_settings
-settings-activity-choose-program = Выберите запущенную программу. Serein будет показывать её как вашу игру, когда она запущена.
+settings-activity-choose-program = Выберите запущенную программу. Rucord будет показывать её как вашу игру, когда она запущена.
 # Context: activity_settings
 settings-activity-search-programs = Поиск запущенных программ
 # Context: activity_settings
@@ -3493,7 +3493,7 @@ settings-appearance-settings-primary-color = Основной цвет
 # Context: appearance_settings
 settings-appearance-settings-reset = Сбросить
 # Context: appearance_settings
-settings-appearance-settings-restart-serein-after-changing-this-themes-can-customize-effects-while = Перезапустите Sein после изменения. Когда темы включены, можно настраивать эффекты.
+settings-appearance-settings-restart-rucord-after-changing-this-themes-can-customize-effects-while = Перезапустите Sein после изменения. Когда темы включены, можно настраивать эффекты.
 # Context: appearance_settings
 settings-appearance-settings-the-active-theme-brings-its-own-accent-it-takes-over = Активная тема вносит свой акцент; он вступает во владение, пока используется тема.
 # Context: appearance_settings
@@ -3530,11 +3530,11 @@ settings-storage-page-clear-cache = Очистить кэш
 # Context: storage_page
 settings-storage-page-local-storage = Локальное хранилище
 # Context: storage_page
-settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = Сообщения и черновики кэшируются на этом устройстве в ограниченных файлах, изолированных от учетной записи. Данные кэша не шифруются Serein; сохраненные токены входа используют хранилище учетных данных ОС.
+settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = Сообщения и черновики кэшируются на этом устройстве в ограниченных файлах, изолированных от учетной записи. Данные кэша не шифруются Rucord; сохраненные токены входа используют хранилище учетных данных ОС.
 # Context: storage_page
 settings-storage-page-removes-cached-messages-and-media-drafts-and-your-login-stay = Удаляет кэшированные сообщения и медиа. Черновики и ваш логин остаются.
 # Context: storage_page
-settings-storage-page-serein-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Serein не собирает телеметрию и не загружает диагностические данные. Discord сохраняет данные на стороне сервиса в соответствии со своей собственной политикой.
+settings-storage-page-rucord-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Rucord не собирает телеметрию и не загружает диагностические данные. Discord сохраняет данные на стороне сервиса в соответствии со своей собственной политикой.
 # Context: storage_page
 settings-storage-page-your-privacy = Ваша конфиденциальность
 # Context: cosmetic_settings
@@ -3996,7 +3996,7 @@ updates-update-settings-could-not-load-or-save-update-preferences-changes-may-no
 # Context: update_settings
 updates-update-settings-download-update = Скачать обновление
 # Context: update_settings
-updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = Загрузка обновлений в фоновом режиме. Перезапустите, когда будете готовы. Серейн по-прежнему проверяет при запуске и периодически, когда это выключено.
+updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = Загрузка обновлений в фоновом режиме. Перезапустите, когда будете готовы. Rucord по-прежнему проверяет при запуске и периодически, когда это выключено.
 # Context: update_settings
 updates-update-settings-early-builds-with-the-newest-changes-nightly-releases-can-be = Ранние сборки с новейшими изменениями. Ночные выпуски могут быть менее надежными.
 # Context: update_settings
@@ -4008,7 +4008,7 @@ updates-update-settings-in-app-installation-requires-a-macos-or-windows-release-
 # Context: update_settings
 updates-update-settings-issue-diagnostics = Диагностика проблем
 # Context: update_settings
-updates-update-settings-nightly = Nightly
+updates-update-settings-nightly = Ежедневные сборки
 # Context: update_settings
 updates-update-settings-package-manager-updates = Обновление с помощью пакетного менеджера
 # Context: update_settings
@@ -4022,7 +4022,7 @@ updates-update-settings-release-channel = Ветка релизов
 # Context: update_settings
 updates-update-settings-restart-to-update = Перезапустите, чтобы обновить
 # Context: update_settings
-updates-update-settings-serein-was-installed-via-your-distribution-run-this-in-a = Serein был установлен через пакетный менеджер. Используйте эту команду для обновления.
+updates-update-settings-rucord-was-installed-via-your-distribution-run-this-in-a = Rucord был установлен через пакетный менеджер. Используйте эту команду для обновления.
 # Context: update_settings
 updates-update-settings-save-diagnostics = Сохранить диагностику
 # Context: update_settings
@@ -4044,7 +4044,7 @@ updates-update-settings-log-warnings = Ошибки и предупрежден�
 # Context: update_settings
 updates-update-settings-open-folder = Открыть папку
 # Context: update_settings
-updates-update-settings-the-log-folder-could-not-be-written = Не удалось записать папку журнала. Проверьте папку данных Serein и повторите попытку.
+updates-update-settings-the-log-folder-could-not-be-written = Не удалось записать папку журнала. Проверьте папку данных Rucord и повторите попытку.
 # Context: update_settings
 updates-update-settings-timings-stages-and-failures-in-one-local-file-no-account-channel-or = Тайминги, этапы и сбои в одном локальном файле журнала. Данные аккаунта, каналов, сообщений и учётные данные не записываются, и ничего не отправляется.
 # Context: update_log
@@ -4112,7 +4112,7 @@ verification-show-verification-required = Требуется проверка
 # Context: show
 verification-show-verify = Проверять
 # Context: show
-verification-show-safer-in-the-official-discord-app = Безопаснее пройти эту проверку в официальном приложении Discord. После проверки, пройденной в Serein, Discord может попросить новые аккаунты подтвердить номер телефона.
+verification-show-safer-in-the-official-discord-app = Безопаснее пройти эту проверку в официальном приложении Discord. После проверки, пройденной в Rucord, Discord может попросить новые аккаунты подтвердить номер телефона.
 # Context: show
 verification-show-open-discord = Открыть Discord
 
@@ -4512,7 +4512,7 @@ onboarding-rules-heading = Правила сервера
 # Context: rules
 onboarding-rules-review = Модератор проверит эти ответы, прежде чем вы сможете писать.
 # Context: field
-onboarding-field-unsupported = Сервер задаёт вопрос, который Serein пока не умеет показывать. Завершите вступление в приложении Discord.
+onboarding-field-unsupported = Сервер задаёт вопрос, который Rucord пока не умеет показывать. Завершите вступление в приложении Discord.
 # Context: field
 onboarding-field-agree = Я прочитал(а) правила и согласен(на) с ними
 
@@ -4631,24 +4631,24 @@ screen-macos-system-picker-kind = Системный выбор содержим
 
 member-in-voice = В голосовом чате
 
-profiles-board = Board
-profiles-board-unavailable = This profile’s board is unavailable.
-profiles-board-empty = No games on this board yet.
-profiles-board-show-more = Show more
-profiles-board-show-less = Show less
+profiles-board = Игровая доска
+profiles-board-unavailable = Игровая доска этого профиля недоступна.
+profiles-board-empty = На этой доске пока нет игр.
+profiles-board-show-more = Показать больше
+profiles-board-show-less = Показать меньше
 profiles-activity-empty = Нет опубликованной активности.
 profiles-in-voice-server = на сервере { $server }
 profiles-in-voice-join = Присоединиться
 profiles-in-voice-joined = Вы уже в этом голосовом канале.
 profiles-in-voice-failed = Сначала закройте неудавшийся звонок, затем присоединитесь снова.
 profiles-in-voice-unavailable = Сейчас нельзя присоединиться к этому голосовому каналу.
-profiles-mutuals-empty = Nothing to show here.
+profiles-mutuals-empty = Здесь пока ничего нет.
 
-reading-double-click-reaction = Double-click reaction
+reading-double-click-reaction = Реакция по двойному щелчку
 
 ## crates/platform/src/app_menu.rs
 # Context: macos_menu_bar
-app-menu-about = О программе Serein
+app-menu-about = О программе Rucord
 # Context: macos_menu_bar
 app-menu-updates = Проверить обновления…
 # Context: macos_menu_bar
@@ -4656,13 +4656,13 @@ app-menu-settings = Настройки…
 # Context: macos_menu_bar
 app-menu-services = Службы
 # Context: macos_menu_bar
-app-menu-hide = Скрыть Serein
+app-menu-hide = Скрыть Rucord
 # Context: macos_menu_bar
 app-menu-hide-others = Скрыть остальные
 # Context: macos_menu_bar
 app-menu-show-all = Показать все
 # Context: macos_menu_bar
-app-menu-quit = Завершить Serein
+app-menu-quit = Завершить Rucord
 # Context: macos_menu_bar
 app-menu-file = Файл
 # Context: macos_menu_bar
@@ -4704,7 +4704,7 @@ app-menu-bring-all-to-front = Все окна — на передний план
 # Context: macos_menu_bar
 app-menu-help = Справка
 # Context: macos_menu_bar
-app-menu-github = Serein на GitHub
+app-menu-github = Rucord на GitHub
 # Context: macos_menu_bar
 app-menu-report-issue = Сообщить о проблеме…
 
@@ -4958,3 +4958,414 @@ group-add-title = Добавить друзей в ЛС
 group-add-subtitle = Выберите друга, которого нужно добавить в эту группу.
 group-add-full = Эта группа достигла лимита в 10 человек.
 group-add-confirm = Добавить друга
+
+
+## Полный русский перевод новых интерфейсов Rucord
+general-graphics-api = Графический API
+general-graphics-api-description = Применяется после перезапуска Rucord. Если выбранный API не может отрисовать окно, используется автоматический выбор.
+general-graphics-api-env-override = WGPU_BACKEND задаёт API для этого запуска. Удалите эту переменную окружения, чтобы использовать настройку.
+archives-show-no-older-thread-matches-this-search = Более старых веток по этому запросу нет.
+attachments-viewer-zoom-in = Приблизить
+attachments-viewer-more = Ещё
+attachments-viewer-copy-media-link = Копировать ссылку на медиа
+attachments-viewer-view-details = Сведения
+attachments-viewer-filename = Имя файла
+attachments-viewer-size = Размер
+attachments-viewer-copy-attachment-id = Копировать ID вложения
+embeds-poll-result-winning-answer = Победивший ответ
+embeds-poll-result-tie = Победитель не определён
+embeds-poll-result-no-votes = Никто не проголосовал
+embeds-poll-result-view-poll = Открыть опрос
+extensions-ui-card-body-details = Подробнее
+extensions-ui-details-modal-author = Автор
+extensions-ui-details-modal-capabilities = Возможности
+extensions-ui-details-modal-disable = Отключить расширение
+extensions-ui-details-modal-enable-to-use-tools = Включите расширение, чтобы использовать его настройки и инструменты.
+extensions-ui-details-modal-license = Лицензия
+extensions-ui-details-modal-no-capabilities = Разрешения не запрошены.
+extensions-ui-details-modal-no-description = Описание отсутствует.
+extensions-ui-details-modal-no-panel-actions = У этого расширения нет настроек и инструментов панели.
+extensions-ui-details-modal-package-information-and-native-tools = Сведения о пакете и встроенные настройки.
+extensions-ui-details-modal-plugin-id = ID плагина
+extensions-ui-details-modal-review-enable = Проверить и включить
+extensions-ui-details-modal-retry-cleanup = Повторить очистку
+extensions-ui-details-modal-settings-and-tools = Настройки и инструменты
+extensions-ui-details-modal-version = Версия
+fonts-show-search = Поиск установленных шрифтов
+fonts-show-loading = Загрузка установленных шрифтов…
+fonts-show-no-match = По вашему запросу шрифты не найдены.
+fonts-show-none-installed = В системе не найдены установленные шрифты.
+invites-show-join-voice = Присоединиться к голосовому каналу
+invites-show-no-one-in-voice = Сейчас в голосовом канале никого нет
+invites-show-in-voice = В голосовом канале: { $count }
+invites-show-members-see-voice = Только участники сервера могут видеть, кто в голосовом канале
+invites-show-established = Создан { $date }
+reading-chat-reading-settings-hide-blocked-messages = Скрывать сообщения заблокированных пользователей
+reading-chat-reading-settings-hide-blocked-messages-description = Скрывает сообщения заблокированных авторов на этом устройстве. Сообщения остаются в Discord, а состояние прочтения не меняется.
+reading-chat-reading-settings-hide-ignored-messages = Также скрывать сообщения игнорируемых пользователей
+reading-chat-reading-settings-hide-ignored-messages-description = Включает игнорируемых авторов в локальный фильтр. Неизвестное состояние отношений не приводит к скрытию сообщения.
+reading-chat-reading-settings-show-server-tags = Показывать теги серверов в чате
+reading-chat-reading-settings-show-server-tags-description = Показывает выбранный пользователем тег сервера рядом с его именем в сообщениях.
+reading-chat-reading-settings-show-server-tags-hidden-everywhere = Отключено, поскольку выключен параметр «Внешний вид › Теги серверов».
+search-date-heading = Дата
+search-date-help = Когда было отправлено сообщение
+search-date-before = До
+search-date-after = После
+search-date-during = В течение дня
+search-date-remove = Убрать дату
+search-date-previous-month = Предыдущий месяц
+search-date-next-month = Следующий месяц
+search-date-invalid = Выберите дату после 1 января 2015 года.
+search-date-invalid-range = Дата «После» должна быть раньше даты «До».
+search-date-month-year = { $count ->
+        [1] Январь { $year }
+        [2] Февраль { $year }
+        [3] Март { $year }
+        [4] Апрель { $year }
+        [5] Май { $year }
+        [6] Июнь { $year }
+        [7] Июль { $year }
+        [8] Август { $year }
+        [9] Сентябрь { $year }
+        [10] Октябрь { $year }
+        [11] Ноябрь { $year }
+        *[12] Декабрь { $year }
+    }
+search-date-weekday = { $count ->
+        [0] Вс
+        [1] Пн
+        [2] Вт
+        [3] Ср
+        [4] Чт
+        [5] Пт
+        *[6] Сб
+    }
+timeline-message-actions-translate = Перевести (откроется браузер)
+video-show-player-mute = Выключить звук
+video-show-player-unmute = Включить звук
+voice-server-mute = Выключить микрофон на сервере
+voice-server-unmute = Включить микрофон на сервере
+voice-move-to = Переместить в
+voice-disconnect-member = Отключить
+server-notifications-title = Настройки уведомлений
+server-notifications-default = Как задано на сервере
+server-notifications-default-all = Сейчас: все сообщения
+server-notifications-default-mentions = Сейчас: только упоминания
+server-notifications-default-unknown = Настройки сервера недоступны
+server-notifications-all = Все сообщения
+server-notifications-mentions = Только упоминания
+server-notifications-nothing = Ничего
+server-notifications-mute = Отключить уведомления сервера
+server-notifications-everyone = Подавлять @everyone и @here
+server-notifications-roles = Подавлять упоминания ролей
+server-notifications-overrides = Индивидуальные настройки каналов продолжают действовать. Уведомления отключены, пока вы не включите их снова.
+server-notifications-unknown = Некоторые настройки недоступны. Сохранение изменит только выбранные вами параметры.
+server-notifications-offline = Подключитесь снова, чтобы изменить настройки уведомлений.
+server-notifications-save = Сохранить изменения
+server-notifications-saving = Сохранение…
+public-upload-host-file = Отправить ссылкой…
+public-upload-heading = Поделиться публичной ссылкой
+public-upload-subtitle = Загрузите файл на публичный хостинг и отправьте ссылку вместо вложения Discord
+public-upload-offline = Автономный просмотр · файл не загружается
+public-upload-host = Файловый хостинг
+public-upload-host-x0at = До 1 ГБ · хранение от 3 до 100 дней, небольшие файлы хранятся дольше
+public-upload-host-catbox = До 200 МБ (GIF — 20 МБ) · возможное удаление после двух лет без обращений
+public-upload-host-litterbox = До 1 ГБ · временное хранение, удаление через 72 часа
+public-upload-over-limit = { $size } · превышает ваш лимит Discord: { $limit }
+public-upload-uploading = Загрузка на { $host } · { $sent } из { $total }
+public-upload-privacy = Любой, у кого есть ссылка, сможет открыть файл. Он загружается без изменений, включая метаданные, вне Discord. Rucord не сможет удалить его позже.
+public-upload-review = Пока ничего не отправлено. Добавьте ссылку в черновик или скопируйте её, затем отправьте самостоятельно.
+public-upload-return = Вернитесь в исходную беседу, чтобы добавить ссылку.
+public-upload-preparing = Подготовка публичной загрузки…
+public-upload-limits = Файл слишком большой или его тип не поддерживается хостингом
+public-upload-add = Добавить в черновик
+public-upload-copy = Копировать ссылку
+public-upload-close = Закрыть
+public-upload-cancel-upload = Отменить загрузку
+public-upload-upload = Загрузить на { $host }
+public-upload-cancel = Отмена
+public-upload-draft-full = Черновик заполнен; скопируйте публичную ссылку перед закрытием
+public-upload-leave = При выходе публичная загрузка отменяется, а ссылка из окна удаляется. Уже загруженные файлы могут остаться на хостинге; скопируйте ссылку перед продолжением.
+public-upload-error-cancelled = Публичная загрузка отменена; полученные данные могут остаться на хостинге
+public-upload-error-prepare = Не удалось подготовить публичную загрузку
+public-upload-error-changed = Файл изменился или стал недоступен; выберите его снова
+public-upload-error-failed = Публичная загрузка не удалась; полученные данные могут остаться на хостинге
+public-upload-error-rejected = Хостинг отклонил загрузку; сообщение в Discord не отправлено
+public-upload-error-incomplete = Публичная загрузка не завершена; полученные данные могут остаться на хостинге
+public-upload-error-response-limit = Ответ файлового хостинга превысил допустимый размер
+public-upload-error-interrupted = Публичная загрузка прервана; полученные данные могут остаться на хостинге
+public-upload-error-invalid-link = Хостинг вернул недопустимую ссылку
+public-upload-error-busy = Дождитесь завершения текущей операции с вложением
+public-upload-retry = Повторить
+public-upload-error-unavailable = Хостинг сейчас недоступен или не принимает файлы. Выберите другой хостинг.
+public-upload-oversized = Ваш тариф не позволяет отправлять файлы больше { $limit }. Удалите их или отправьте ссылкой.
+public-upload-error-conversation = Вернитесь в исходную беседу и снова проверьте файл перед публичной загрузкой
+public-upload-error-selection = Выбор изменился; снова проверьте файл перед публичной загрузкой
+public-upload-error-missing = Выберите файл снова перед публичной загрузкой
+gif-favorites-sync-refresh = Обновить из Discord
+gif-favorites-sync-failed = Синхронизация не удалась; локальное избранное сохранено. Обновите список перед следующей попыткой.
+gif-favorites-sync-unsupported = Избранные GIF Discord не поддерживаются или превышают безопасный лимит.
+gif-favorites-sync-unconfirmed = Изменение избранного не подтверждено. Обновите список перед повторной попыткой.
+settings-chat-box = Поле ввода сообщений
+settings-convert-emoticons = Преобразовывать текстовые смайлики
+settings-convert-emoticons-description = Преобразует отдельные смайлики, например :), в 🙂 при отправке или редактировании сообщений. Код и ссылки остаются без изменений.
+settings-preload-on-hover = Предзагрузка при наведении
+settings-preload-on-hover-description = Загружает беседу, профиль или выбор GIF при наведении, чтобы они открывались сразу. Использует те же запросы, что и открытие: не более 12 в минуту для каждого типа.
+settings-auto-idle = Автоматический статус «Нет на месте»
+settings-auto-idle-description = Показывает статус «Нет на месте» после указанного времени без ввода с клавиатуры и мыши или сразу после блокировки компьютера. Не действует во время голосовых звонков.
+settings-idle-after = Считать неактивным через
+settings-idle-after-minutes = { $count ->
+        [one] { $count } минуту
+        [few] { $count } минуты
+       *[many] { $count } минут
+    }
+game-mentions-loading = Загрузка игр…
+game-mentions-header = ИГРЫ ПО ЗАПРОСУ @{ $query }
+game-mentions-unavailable = Список игр недоступен.
+game-mentions-empty = Подходящие игры не найдены.
+game-mentions-retry = Повторить
+settings-cosmetics-all = Показывать все украшения
+settings-cosmetics-all-description = Включает все параметры ниже. При отключении градиентные имена также становятся одноцветными.
+settings-cosmetics-gradient-names = Градиентные имена
+settings-cosmetics-gradient-names-description = Имена с несколькими цветами, заданные ролью или Nitro. При отключении используется первый цвет.
+settings-cosmetics-clan-tags = Теги серверов
+settings-cosmetics-clan-tags-description = Выбранный пользователем тег сервера в профиле, списке участников и сообщениях.
+typing-badge-typing = Печатает…
+setup-appearance-title = Настройте под себя
+setup-appearance-body = Режим и цвета применяются сразу при выборе
+setup-window-title = Прозрачное окно
+setup-window-body = Показывайте рабочий стол сквозь панели Rucord
+setup-window-transparency-description = Темы могут настраивать эффект, пока он включён.
+setup-window-restart = Для включения или отключения прозрачности нужен перезапуск Rucord. Ваш выбор уже сохранён.
+setup-desktop-title = На рабочем столе
+setup-desktop-body = Автозапуск Rucord, строка заголовка и значок в трее
+setup-profiles-title = Украшения профилей
+setup-profiles-body = Оформление пользователей и их имён на этом устройстве
+setup-chat-title = Отображение чата
+setup-chat-body = Размер текста, интервалы между сообщениями и формат времени
+setup-notifications-title = Ваши уведомления
+setup-notifications-body = Действия Rucord при получении сообщения, когда вы заняты другим
+setup-notifications-desktop-description = Уведомления о личных сообщениях и упоминаниях. Отдельные серверы и каналы настраиваются через их меню.
+setup-notifications-sounds = Звуки уведомлений
+setup-notifications-sounds-description = Звуки сообщений, звонков и голосовых каналов. Отдельные звуки можно выбрать в настройках.
+setup-voice-title = Ваш микрофон
+setup-voice-body = Ваш голос в звонках. Устройства и уровни доступны в настройках.
+setup-voice-noise-description = Удаляет шум клавиатуры, вентиляторов и комнаты из звука микрофона.
+setup-later-in-settings = Всё это остаётся в настройках
+setup-back = Назад
+setup-skip = Пропустить
+setup-continue = Продолжить
+setup-done = Готово
+setup-run-again = Повторить первоначальную настройку
+setup-run-again-description = Снова настройте внешний вид, окно, рабочий стол, украшения, чат, уведомления и голос.
+setup-run-again-action = Начать
+mention-shortcut-silent = @silent — отправить без push-уведомлений
+mention-shortcut-time = @time — выбрать метку времени
+message-silent-indicator = Без звука
+message-silent-hint = Push-уведомления и уведомления рабочего стола отключены. Счётчики упоминаний сохраняются.
+timestamp-picker-title = Вставить метку времени
+timestamp-picker-date = Дата (ГГГГ-ММ-ДД)
+timestamp-picker-clock = Время (ЧЧ:ММ:СС)
+timestamp-picker-offset = Смещение UTC (±ЧЧ:ММ)
+timestamp-picker-offset-hint = Изначально используется ваше текущее смещение. Измените его для другого часового пояса или перехода на летнее время.
+timestamp-picker-format = Формат отображения
+timestamp-picker-invalid = Введите корректные дату, время и смещение UTC.
+timestamp-picker-rejected = Черновик изменился или метка времени не помещается. Отмените действие и попробуйте снова.
+timestamp-picker-cancel = Отмена
+timestamp-picker-insert = Вставить
+timestamp-style-default = Дата и время по умолчанию
+timestamp-style-t = Краткое время
+timestamp-style-long-time = Время с секундами
+timestamp-style-d = Краткая дата
+timestamp-style-long-date = Полная дата
+timestamp-style-f = Дата и время
+timestamp-style-full = Полные дата и время
+timestamp-style-relative = Относительное время
+timestamp-style-short-date-time = Краткие дата и время
+timestamp-style-short-date-seconds = Краткие дата и время с секундами
+native-login-email-or-phone = Электронная почта или номер телефона
+native-login-password = Пароль
+native-login-forgot-password = Забыли пароль?
+native-login-log-in = Войти
+native-login-logging-in = Вход…
+native-login-need-an-account = Нет аккаунта?
+native-login-register = Зарегистрироваться
+native-login-or = или
+native-login-back-to-saved-accounts = К сохранённым аккаунтам
+native-login-credentials-note = Пароль и коды отправляются напрямую в Discord и никогда не сохраняются.
+native-login-mfa-title = Двухфакторная аутентификация
+native-login-mfa-totp-subtitle = Введите шестизначный код из приложения аутентификации
+native-login-mfa-sms-subtitle = Введите код, отправленный Discord на ваш телефон
+native-login-mfa-backup-subtitle = Введите один из резервных кодов
+native-login-mfa-totp-label = Код аутентификации
+native-login-mfa-sms-label = Код из SMS
+native-login-mfa-backup-label = Резервный код
+native-login-mfa-six-digits = Шестизначный код
+native-login-mfa-eight-characters = Резервный код из 8 символов
+native-login-mfa-use-authenticator = Использовать приложение аутентификации
+native-login-mfa-use-sms = Получить код по SMS
+native-login-mfa-use-backup = Использовать резервный код
+native-login-mfa-resend-sms = Отправить код повторно
+native-login-sms-sent = Discord отправил код на ваш телефон.
+native-login-back-to-login = Вернуться ко входу
+native-login-captcha-title = Подтвердите, что вы человек
+native-login-captcha-subtitle = Подтвердите, что вы не робот
+native-login-captcha-cancel = Отмена
+native-login-qr-title = Войти по QR-коду
+native-login-qr-detail = Отсканируйте код в мобильном приложении Discord для входа.
+native-login-qr-expired = Срок действия кода истёк.
+native-login-qr-unavailable = Не удалось загрузить QR-код.
+native-login-qr-refresh = Обновить
+native-login-qr-check-your-phone = Проверьте телефон!
+native-login-qr-logging-in-as = Вход как { $name }
+native-login-qr-confirm-on-phone = Подтвердите вход на телефоне.
+native-login-qr-not-me = Это не я, начать заново
+native-login-settings = Настройки
+native-login-more-token = Токен сессии
+native-login-more-web = Вход через браузер
+native-login-token-detail = Вставьте уже имеющийся у вас токен сессии, например из другой установки Rucord.
+native-login-about-risk = Использование неофициальных клиентов, таких как Rucord, может привести к блокировке аккаунта Discord.
+native-login-about-storage = Сообщения и черновики кэшируются на этом устройстве. Данные входа хранятся в хранилище учётных данных ОС.
+native-login-web-detail = Открывает страницу входа Discord во временном окне. Нужен для аппаратных ключей и ключей доступа.
+native-login-web-open = Открыть страницу входа Discord
+
+
+## Voice controls and accessibility labels
+voice-label-exit-fullscreen = Выйти из полноэкранного режима
+voice-label-exit-fullscreen-esc = Выйти из полноэкранного режима (Esc)
+voice-label-stop-watching = Прекратить просмотр
+voice-label-stream-preview = Предпросмотр трансляции
+voice-label-streaming-now = Сейчас в эфире
+voice-label-preview-hidden-or-unavailable = Предпросмотр скрыт или недоступен
+voice-label-youre-streaming = Вы в эфире
+voice-label-watching = Просмотр
+voice-label-watch-stream = Смотреть трансляцию
+voice-label-you-are-already-streaming-in-this-channel = Вы уже ведёте трансляцию в этом канале
+voice-label-already-watching-this-stream = Вы уже смотрите эту трансляцию
+voice-label-join-this-voice-channel-before-watching = Присоединитесь к этому голосовому каналу для просмотра
+voice-label-this-stream-is-no-longer-live = Эта трансляция уже завершена
+voice-label-could-not-join-this-streams-voice-channel = Не удалось присоединиться к голосовому каналу трансляции
+voice-label-leave-the-current-call-before-watching-this-stream = Завершите текущий звонок перед просмотром этой трансляции
+voice-label-this-stream-is-not-available-in-the-connected-voice-channel = Трансляция недоступна в подключённом голосовом канале
+voice-label-your-screen-local-preview = Ваш экран · локальный предпросмотр
+voice-label-screen-share-you-are-watching = Просматриваемая демонстрация экрана
+voice-label-click-or-press-escape-to-return-to-the-grid = Нажмите здесь или Escape, чтобы вернуться к сетке
+voice-label-click-to-enlarge = Нажмите, чтобы увеличить
+voice-label-your-screen = Ваш экран
+voice-label-participant = Участник
+voice-label-connecting-to-the-stream = Подключение к трансляции…
+voice-label-stream-audio = Звук трансляции
+voice-label-stop-receiving-this-screen-share = Прекратить получение этой демонстрации экрана
+voice-label-deafened-by-the-server = Звук отключён сервером
+voice-label-muted-by-the-server = Микрофон отключён сервером
+voice-label-speaking-is-unavailable-in-this-channel-you-can-still-listen = Вы не можете говорить в этом канале, но можете слушать.
+voice-label-push-to-talk-is-required-to-speak-here-enable-it-in-voice-settings = Для речи здесь нужна активация по нажатию. Включите её в настройках голоса.
+voice-label-synthetic-participants-microphone-and-speakers-are-off = Демонстрационные участники · микрофон и динамики отключены.
+voice-label-you-are-already-in-this-call = Вы уже в этом звонке.
+voice-label-joining-this-channel-is-unavailable-with-current-permission-information = С текущими сведениями о разрешениях вход в канал недоступен.
+voice-label-calls-are-unavailable-in-the-offline-preview-no-microphone-is-accessed = Звонки недоступны в автономном просмотре. Микрофон не используется.
+voice-label-voice-is-unavailable-in-this-session = Голос недоступен в этой сессии.
+voice-label-reconnect-to-discord-before-calling = Подключитесь к Discord перед звонком.
+voice-label-waiting-for-the-previous-call-to-disconnect = Ожидание завершения предыдущего звонка.
+voice-label-stay-in-call = Остаться в звонке
+voice-label-call-switch-cancelled-previous-call-did-not-finish-disconnecting-try-joining-again = Переход отменён: предыдущий звонок ещё не отключён. Попробуйте присоединиться снова.
+voice-label-switch-calls = Переключиться на другой звонок?
+voice-label-switch-call = Переключить звонок
+voice-label-join-voice = Присоединиться к голосовому каналу
+voice-label-answer-call = Ответить на звонок
+voice-label-join-call = Присоединиться к звонку
+voice-label-start-voice-call = Начать голосовой звонок
+voice-label-join-audio-your-microphone-starts-after-the-call-is-secured = Присоединиться со звуком. Микрофон включится после установки защищённого соединения.
+voice-label-join-to-listen-speaking-is-unavailable-in-this-channel = Присоединиться для прослушивания. Речь в этом канале недоступна.
+voice-label-looking-for-cameras = Поиск камер…
+voice-label-stop-preview = Остановить предпросмотр
+voice-label-preview-camera = Предпросмотр камеры
+voice-label-voice-isolation = Изоляция голоса
+voice-label-automatic-noise-suppression-echo-cancellation-and-automatic-gain-for-speech = Автоматическое шумоподавление, эхоподавление и регулировка усиления для речи.
+voice-label-studio = Студия
+voice-label-open-microphone-without-suppression-echo-cancellation-or-automatic-gain = Открытый микрофон без шумоподавления, эхоподавления и автоматического усиления.
+voice-label-custom = Вручную
+voice-label-choose-your-noise-suppression-sensitivity-and-processing = Настройте шумоподавление, чувствительность и обработку.
+voice-label-rnnoise-is-active-this-device-is-too-busy-for-deepfilternet = Используется RNNoise: устройство слишком загружено для DeepFilterNet.
+voice-label-automatic = Автоматически
+voice-label-off = Выкл.
+voice-label-uses-deepfilternet-and-rnnoise-when-this-device-is-too-busy-for-it = Использует DeepFilterNet, а при высокой нагрузке на устройство — RNNoise.
+voice-label-low = Низкая
+voice-label-moderate = Умеренная
+voice-label-high = Высокая
+voice-label-very-high = Очень высокая
+voice-label-unmute = Включить микрофон
+voice-label-mute = Выключить микрофон
+voice-label-speaking-is-unavailable-in-this-channel = В этом канале нельзя говорить.
+voice-label-turn-on-microphone = Включить микрофон
+voice-label-turn-off-microphone = Выключить микрофон
+voice-label-voice-settings = Настройки голоса
+voice-label-microphone-and-speaker-settings = Настройки микрофона и динамиков
+voice-label-turn-off-camera = Выключить камеру
+voice-label-turn-on-camera = Включить камеру
+voice-label-stop-sharing-your-camera = Прекратить передачу видео с камеры
+voice-label-camera-is-off-in-the-offline-preview = Камера отключена в автономном просмотре
+voice-label-camera-capture-is-unavailable-on-this-platform = Захват с камеры недоступен на этой платформе
+voice-label-camera-requires-h264-support-from-the-voice-server = Для камеры нужна поддержка H264 на голосовом сервере
+voice-label-camera-is-unavailable-with-current-channel-permissions = Камера недоступна с текущими разрешениями канала
+voice-label-share-your-selected-camera-with-this-call = Передавать видео с выбранной камеры в этот звонок
+voice-label-camera-settings = Настройки камеры
+voice-label-choose-a-camera = Выбрать камеру
+voice-label-more-options = Другие параметры
+voice-label-more-call-options = Другие параметры звонка
+voice-label-undeafen = Включить звук
+voice-label-deafen = Отключить звук
+voice-label-hide-participants = Скрыть участников
+voice-label-show-participants = Показать участников
+voice-label-hide-the-participant-strip-under-the-enlarged-video = Скрыть полосу участников под увеличенным видео
+voice-label-show-the-other-participants-under-the-enlarged-video = Показать остальных участников под увеличенным видео
+voice-label-stream-volume = Громкость трансляции
+voice-label-stop-sharing = Остановить демонстрацию
+voice-label-share-your-screen = Поделиться экраном
+voice-label-screen-sharing-requires-a-connected-call-and-video-permission-on-a-supported-desktop = Для демонстрации экрана нужен подключённый звонок и разрешение на видео на поддерживаемой системе.
+voice-label-direct-message = Личное сообщение
+voice-label-decline = Отклонить
+voice-label-answer = Ответить
+voice-label-voice-connected = Голос подключён
+voice-label-stop-streaming = Остановить трансляцию
+voice-label-voice-preview = Предпросмотр голоса
+voice-label-call-failed = Ошибка звонка
+voice-label-connecting = Подключение…
+voice-label-switch-to-this-voice-channel = Перейти в этот голосовой канал
+voice-label-stop-sharing-your-screen = Остановить демонстрацию экрана
+voice-label-share-a-screen-or-window = Поделиться экраном или окном
+voice-label-turn-off-noise-suppression = Выключить шумоподавление
+voice-label-turn-on-noise-suppression = Включить шумоподавление
+voice-label-noise-suppression-reduces-keyboard-noise-breathing-and-fans-locally = Шумоподавление локально уменьшает шум клавиатуры, дыхания и вентиляторов.
+voice-label-noise-suppression-is-unavailable-in-this-build-or-preview = Шумоподавление недоступно в этой сборке или режиме просмотра.
+voice-label-fullscreen = На весь экран
+voice-label-view-this-screen-share-in-fullscreen = Смотреть демонстрацию экрана в полноэкранном режиме
+voice-label-microphone-gain = Усиление микрофона
+voice-label-speaker-volume = Громкость динамиков
+voice-label-looking-for-audio-devices = Поиск аудиоустройств…
+voice-label-audio-devices-loaded = Аудиоустройства загружены
+
+## Native proxy and activity tools
+proxy-auth-title = Аутентификация прокси
+proxy-auth-storage = Данные остаются в хранилище учётных данных ОС Rucord и не передаются плагину. Примените URL прокси перед сохранением.
+proxy-auth-http-warning = Аутентификация HTTP-прокси не зашифрована: наблюдатель соединения может узнать эти данные. Для шифрования используйте HTTPS-прокси.
+proxy-auth-username = Имя пользователя
+proxy-auth-password = Пароль
+proxy-auth-save = Сохранить данные входа
+proxy-auth-remove = Удалить сохранённые данные входа
+proxy-auth-mode = Выберите режим URL для настройки аутентификации прокси.
+presence-profile-preview = ПРЕДПРОСМОТР ПРОФИЛЯ
+presence-preview-artwork = Изображения загрузятся после применения. В предпросмотре используются заглушки.
+presence-preview-empty = Здесь будет ваша активность
+presence-preview-instructions = Введите ID приложения и название активности, затем нажмите «Предпросмотр».
+presence-preview-disabled = Публикация активности выключена. Включите её в разделе «Настройки › Зарегистрированные игры».
+presence-preview-offline-demo = Автономная демонстрация. Ничего не публикуется.
+presence-preview-offline = Нет соединения. Сохранённая активность будет опубликована после подключения.
+presence-preview-sharing = Включите публикацию активности в разделе «Настройки › Зарегистрированные игры». Статус «Невидимый» скрывает активность.
+presence-timer-elapsed = Время с момента начала; применение изменений сохраняет таймер.
+presence-timer-midnight = Таймер начинается с полуночи по местному времени.
+presence-party = Группа: { $current } / { $max }
+voice-screen-owner = Экран: { $name }
+voice-input-level = Уровень входа: { $level } дБFS
+
+voice-switch-confirm-body = Вы уже в другом звонке. Завершить его и присоединиться к { $name }?

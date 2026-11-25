@@ -2,7 +2,7 @@
  * Vencord, a modification for Discord's desktop app
  * Copyright (c) 2022 Vendicated and contributors
  *
- * Serein adaptation copyright (c) 2026 Serein contributors.
+ * Rucord adaptation copyright (c) 2026 Rucord contributors.
  * Changed November 8, 2026: only explicitly granted message text and public IDs cross the ABI.
  *
  * This program is free software: you can redistribute it and/or modify it under
@@ -72,7 +72,7 @@ fn handle(input: MessageActionInvocation) -> AppOutput {
 		text(selected),
 		Element::Separator,
 		text(
-			"This safe ViewRaw port exposes only the selected text and IDs granted by Serein—not private host objects or raw Gateway data.",
+			"This safe ViewRaw port exposes only the selected text and IDs granted by Rucord—not private host objects or raw Gateway data.",
 		),
 	]);
 	let output = AppOutput {

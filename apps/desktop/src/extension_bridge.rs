@@ -632,7 +632,7 @@ impl Bridge {
 			.map(|u| u.id.0.to_string());
 		if self.host.is_none() {
 			let root = if demo {
-				Some(std::env::temp_dir().join("serein-extension-demo"))
+				Some(std::env::temp_dir().join("rucord-extension-demo"))
 			} else {
 				local_store::data_dir()
 					.ok()
@@ -2148,7 +2148,7 @@ mod tests {
 		let mut nonce = [0; 8];
 		getrandom::fill(&mut nonce).unwrap();
 		let root = std::env::temp_dir().join(format!(
-			"serein-start-screen-test-{}",
+			"rucord-start-screen-test-{}",
 			u64::from_le_bytes(nonce)
 		));
 		let ctx = egui::Context::default();
@@ -2226,7 +2226,7 @@ mod tests {
 			id: "interface-plugin".into(),
 			name: "Interface plugin".into(),
 			version: "1.0.0".into(),
-			author: "Serein contributors".into(),
+			author: "Rucord contributors".into(),
 			license: "MIT".into(),
 			source: "https://example.org/source".into(),
 			kind: extensions::ExtensionKind::Plugin,
@@ -2337,7 +2337,7 @@ mod tests {
 			id: "interface-plugin".into(),
 			name: "Interface plugin".into(),
 			version: "1.0.0".into(),
-			author: "Serein contributors".into(),
+			author: "Rucord contributors".into(),
 			license: "MIT".into(),
 			source: "https://example.org/source".into(),
 			kind: extensions::ExtensionKind::Plugin,
@@ -2377,7 +2377,7 @@ mod tests {
 		let mut nonce = [0; 8];
 		getrandom::fill(&mut nonce).unwrap();
 		let root = std::env::temp_dir().join(format!(
-			"serein-invoked-start-screen-test-{}",
+			"rucord-invoked-start-screen-test-{}",
 			u64::from_le_bytes(nonce)
 		));
 		let ctx = egui::Context::default();

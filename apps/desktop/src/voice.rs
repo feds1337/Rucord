@@ -1743,7 +1743,7 @@ impl Voice {
 				Ok(_) => {
 					self.camera_scan = Some(receive);
 					ui.voice_camera_devices_loading = true;
-					ui.voice_camera_device_status = "Looking for cameras…";
+					ui.voice_camera_device_status = "voice-label-looking-for-cameras";
 				}
 				Err(_) => ui.voice_camera_device_status = "Could not start camera device discovery",
 			}

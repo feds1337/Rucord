@@ -3,7 +3,7 @@
  * Copyright (c) 2023 Vendicated and contributors
  * Portions adapted from ReplaceGoogleSearch, Copyright (c) 2024 Vendicated and contributors
  *
- * Serein adaptation copyright (c) 2026 Serein contributors.
+ * Rucord adaptation copyright (c) 2026 Rucord contributors.
  * Changed November 8, 2026: selected message text opens a host-reviewed
  * public browser URL instead of using inline translation or direct navigation.
  *
@@ -335,7 +335,7 @@ fn settings_panel(config: Config, notice: &str) -> Vec<Element> {
 			text: "External search tools".into(),
 		},
 		Element::Text {
-			text: "Translate or search the selected message in your browser. Serein does not fetch pages, call translation APIs, or send messages.".into(),
+			text: "Translate or search the selected message in your browser. Rucord does not fetch pages, call translation APIs, or send messages.".into(),
 		},
 		Element::Select {
 			id: "provider".into(),
@@ -686,12 +686,12 @@ mod tests {
 
 		let searched = run(serde_json::json!({
 			"action": "search",
-			"selected_message": "Serein",
+			"selected_message": "Rucord",
 			"storage": saved.output.storage
 		}));
 		assert!(
 			external_url(&searched)
-				.starts_with("https://en.wikipedia.org/w/index.php?search=Serein")
+				.starts_with("https://en.wikipedia.org/w/index.php?search=Rucord")
 		);
 	}
 

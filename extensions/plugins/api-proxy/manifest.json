@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Serein contributors",
   "license": "MIT OR Apache-2.0",
-  "source": "https://github.com/ViceVerse-cz/Serein-extensions/tree/main/plugins/api-proxy",
+  "source": "https://github.com/feds1337/Rucord-extensions/tree/main/plugins/api-proxy",
   "kind": "plugin",
   "capabilities": [
     "api_proxy",

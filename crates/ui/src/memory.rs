@@ -1,4 +1,4 @@
-//! Memory Serein can account for itself: egui textures by name, the glyph atlas, font files and
+//! Memory Rucord can account for itself: egui textures by name, the glyph atlas, font files and
 //! each image working set's own byte count. Allocator, driver and swapchain memory are not
 //! visible here; process totals come from OS tools.
 use crate::MessagingUi;
@@ -11,7 +11,7 @@ use std::{
 /// Texture names listed one per line; smaller groups are summed into one line.
 const NAMED_GROUPS: usize = 12;
 
-/// Texture names Serein creates without per-item data.
+/// Texture names Rucord creates without per-item data.
 const NAMES: [&str; 22] = [
 	"egui_font_texture",
 	"service-image",
@@ -64,7 +64,7 @@ fn label(name: &str) -> &'static str {
 }
 
 impl MessagingUi {
-	/// A Markdown section for the diagnostics report and `SEREIN_MEMORY_DIAGNOSTICS`.
+	/// A Markdown section for the diagnostics report and `RUCORD_MEMORY_DIAGNOSTICS`.
 	pub fn memory_report(&self, ctx: &egui::Context) -> String {
 		let mut groups: BTreeMap<&str, (usize, usize)> = BTreeMap::new();
 		for (_, meta) in ctx.tex_manager().read().allocated() {

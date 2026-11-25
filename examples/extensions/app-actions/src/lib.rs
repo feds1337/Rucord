@@ -59,7 +59,7 @@ fn handle(input: AppInvocation) -> AppOutput {
 						},
 						Element::Text {
 							text: format!(
-								"Conversation: {} ({channel_id}). Review proposes one action; Serein's Apply button performs it. Deletion cannot be undone. Sending preserves your existing draft and attachments.",
+								"Conversation: {} ({channel_id}). Review proposes one action; Rucord's Apply button performs it. Deletion cannot be undone. Sending preserves your existing draft and attachments.",
 								channel.name
 							),
 						},

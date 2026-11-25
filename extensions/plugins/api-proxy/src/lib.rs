@@ -9,7 +9,7 @@ fn panel(mode: &str, url: &str, notice: &str) -> Vec<Element> {
 			options: vec!["Direct".into(), "Automatic".into(), "URL".into()], value: mode.into(),
 		},
 		Element::TextInput { id: "url".into(), label: "HTTP/HTTPS proxy URL".into(), value: url.into() },
-		Element::Text { text: "Automatic uses environment proxy settings; PAC scripts are unsupported. A URL may contain only a host and optional port. Draft edits take effect only after Apply. For authenticated proxies, use Serein's Proxy authentication section below; never paste credentials into the URL.".into() },
+		Element::Text { text: "Automatic uses environment proxy settings; PAC scripts are unsupported. A URL may contain only a host and optional port. Draft edits take effect only after Apply. For authenticated proxies, use Rucord's Proxy authentication section below; never paste credentials into the URL.".into() },
 		Element::Button { id: "apply".into(), label: "Apply API proxy".into() },
 	];
 	if !notice.is_empty() {

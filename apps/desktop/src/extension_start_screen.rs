@@ -203,7 +203,7 @@ impl DeviceStartScreen {
 		let context = self.context.clone();
 		let (sender, receiver) = mpsc::sync_channel(1);
 		let spawned = std::thread::Builder::new()
-			.name("serein-start-screen-save".into())
+			.name("rucord-start-screen-save".into())
 			.spawn(move || {
 				let _ = sender.send(write(&path, writing.as_ref()));
 				if let Some(context) = context {

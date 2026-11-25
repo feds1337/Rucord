@@ -28,7 +28,7 @@ impl Monitor {
 		let watched = state.clone();
 		runtime.spawn(async move {
 			if let Err(error) = watch(&watched, &wake).await {
-				eprintln!("Session end monitor unavailable ({error}); logout may wait for Serein.");
+				eprintln!("Session end monitor unavailable ({error}); logout may wait for Rucord.");
 			}
 		});
 		Some(Self { state })
@@ -64,7 +64,7 @@ async fn watch(state: &AtomicU8, wake: &impl Fn()) -> ashpd::Result<()> {
 		state.store(value as u8, Ordering::Release);
 		wake();
 		if value == SessionState::QueryEnd {
-			// Serein never blocks logout, so answer at once instead of making the session wait.
+			// Rucord never blocks logout, so answer at once instead of making the session wait.
 			proxy.query_end_response(&session).await?;
 		}
 	}

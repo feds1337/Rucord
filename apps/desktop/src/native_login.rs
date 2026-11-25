@@ -1,4 +1,4 @@
-//! Native sign-in: Discord's own login form, MFA step and QR code, drawn by Serein and sent
+//! Native sign-in: Discord's own login form, MFA step and QR code, drawn by Rucord and sent
 //! with the identity every later request uses. A challenge is shown for the user to solve
 //! and nothing is retried on its own. See `discord_api::login` and
 //! `discord_gateway::remote_auth` for the wire side (unofficial, live-unverified).
@@ -784,7 +784,7 @@ impl Desktop {
 				if returning {
 					"main-sign-in-header-welcome-back"
 				} else {
-					"main-sign-in-header-welcome-to-serein"
+					"main-sign-in-header-welcome-to-rucord"
 				},
 				"main-sign-in-header-sign-in-with-your-discord-account-to-get-started",
 			),
@@ -1196,7 +1196,7 @@ impl Desktop {
 				ui.painter().rect_filled(mark, 8, p.accent);
 				ui::icons::paint(
 					ui.painter(),
-					ui::icons::Icon::Serein,
+					ui::icons::Icon::Rucord,
 					mark.shrink(8.0),
 					p.accent_text,
 				);

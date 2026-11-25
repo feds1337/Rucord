@@ -1,7 +1,7 @@
 # Offline Composer Tools
 
 Five deterministic, user-invoked composer actions ported from Equicord/Vencord to
-Serein's sandboxed Rust extension API.
+Rucord's sandboxed Rust extension API.
 
 ## Upstream and deliberate differences
 
@@ -59,7 +59,7 @@ Processing is offline and linear in the bounded SDK input size. Unexpectedly
 large generated expansions fall back to the original draft; the SDK independently
 enforces its serialized ABI byte limit. No result is sent anywhere automatically.
 
-Copyright Vendicated and contributors. Licensed under GPL-3.0-or-later; the Serein
+Copyright Vendicated and contributors. Licensed under GPL-3.0-or-later; the Rucord
 port retains those upstream notices in `src/lib.rs`.
 
 ## Packaging

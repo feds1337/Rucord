@@ -7,7 +7,7 @@ registry archive SHA-256 `d74371848b22e989f829cc1621d2ebd74960711557d8b45cfe740f
 SHA-256 `20278f4e2697210305f0a25ef5f3b73fecce789096c0ae55287684ea9282cfcb`.
 The library is dynamically linked against the system's libpulse; no PulseAudio server
 or native library is bundled. The resolved WinAPI 0.3.9 and architecture support crates
-are Windows-only declarations of libpulse-sys and are not selected by Serein's Linux
+are Windows-only declarations of libpulse-sys and are not selected by Rucord's Linux
 runtime or macOS development use of these bindings.
 
 Collected September 10, 2026. Except for the separately identified canonical MPL text below, files are unmodified source license/notices, copied from the exact resolved crates.io releases or fetched from the commit recorded in the release's `.cargo_vcs_info.json`. Registry source links identify the shipped source archive; SHA-256 values below verify the copied text. All files are flat for distribution staging.
@@ -133,7 +133,7 @@ no PulseAudio server is bundled.
 
 ## DeepFilterNet noise suppression — November 20, 2026
 
-`crates/deepfilternet` is Serein's Rust port of the DeepFilterNet3 real-time path. Its
+`crates/deepfilternet` is Rucord's Rust port of the DeepFilterNet3 real-time path. Its
 framing, feature and gain code follows `libDF` (`lib.rs` and `tract.rs`) from
 [ismailivanov/DeepFilterNetPlus](https://github.com/ismailivanov/DeepFilterNetPlus/tree/2dc5273d16e1e3769527ad0740654c5ccde581cc)
 commit `2dc5273d16e1e3769527ad0740654c5ccde581cc`, a maintained fork of
@@ -151,7 +151,7 @@ Hashes are of the LF-normalized files.
 upstream's `models/DeepFilterNet3_onnx.tar.gz` (7,983,136 bytes, SHA-256
 `c94d91f70911001c946e0fabb4aa9adc37045f45a03b56008cb0c8244cb63616`) as little-endian `f32`,
 reordered for the runtime's loops and otherwise unchanged. The local-SNR and DF-alpha
-heads, whose outputs Serein does not use, are left out. `tools/generate-deepfilternet-weights.py`
+heads, whose outputs Rucord does not use, are left out. `tools/generate-deepfilternet-weights.py`
 downloads the pinned archive, checks its hash and rebuilds the file byte for byte.
 
 `crates/deepfilternet/tests/fixtures/reference.f32` is twenty frames of synthetic audio as

@@ -6,7 +6,7 @@
 
 ## Outputs and host actions
 
-A handler returns a result describing what Serein should display or do. Some
+A handler returns a result describing what Rucord should display or do. Some
 fields update the plugin's local state immediately; a draft change or app action
 is a proposal that the user must approve. Capability consent and **Apply** are
 separate steps.
@@ -161,7 +161,7 @@ Follow an operation for its fields, example and additional checks.
 ### App actions
 
 `HostEffect::AppAction { action: AppAction }` proposes a typed operation through
-Serein's existing app controls. The outer `type` is `app_action`; the nested
+Rucord's existing app controls. The outer `type` is `app_action`; the nested
 `action.type` selects the operation. Each operation has a separate write grant.
 Read-only grants never authorize writes. Most action grants do not disclose data;
 `account_control` also exposes own presence/activity preferences, and
@@ -216,11 +216,11 @@ For example, a handler with `message_send` can propose:
 {"effects":[{"type":"app_action","action":{"type":"send_message","channel_id":"20","content":"Hello from my tool"}}]}
 ```
 
-Serein displays the destination and exact text. Nothing is sent until Apply.
+Rucord displays the destination and exact text. Nothing is sent until Apply.
 Apply rechecks the account, selected channel, access and normal sending limits.
 This sends the proposed text only: the user's existing draft, reply and selected
 attachments remain intact. It does not attach files or automatically mention a
-reply target. Normal service failures remain visible in Serein's pending-message UI.
+reply target. Normal service failures remain visible in Rucord's pending-message UI.
 
 #### Messages and read markers
 
@@ -237,7 +237,7 @@ to find IDs; these actions do not offer arbitrary message lookup.
 | `send_reply` / `SendReply` | `channel_id`, `message_id`, `content`: strings; `mention`: boolean | `message_send`; reply to a loaded message. `mention` controls whether the reply mentions its author. **Preview.** |
 | `send_sticker` / `SendSticker` | `channel_id`, `sticker_id`: IDs | `message_send`; send one sticker from the host's loaded sticker catalog. **Preview.** |
 | `forward_message` / `ForwardMessage` | `channel_id`, `message_id`: IDs; `target_channel_ids`: array of 1–5 distinct IDs; `note`: string | `message_send`; forward a loaded source message to the selected accessible destinations, optionally with a note. **Preview.** |
-| `open_attachment_picker` / `OpenAttachmentPicker` | `channel_id`: ID | `message_send`; open Serein's native attachment picker for the still-selected text conversation. The plugin receives no path or bytes and nothing is sent automatically. **Preview.** |
+| `open_attachment_picker` / `OpenAttachmentPicker` | `channel_id`: ID | `message_send`; open Rucord's native attachment picker for the still-selected text conversation. The plugin receives no path or bytes and nothing is sent automatically. **Preview.** |
 | `edit_message` / `EditMessage` | `channel_id`, `message_id`, `content`: strings | `message_manage`; edit a loaded message authored by the current user. |
 | `delete_message` / `DeleteMessage` | `channel_id`, `message_id`: IDs | `message_manage`; delete an eligible loaded message. Requires ownership or native moderation permission. **Deletion cannot be undone.** |
 | `set_message_pinned` / `SetMessagePinned` | `channel_id`, `message_id`: IDs; `pinned`: boolean | `message_manage`; set the desired pin state using native permissions. |
@@ -292,13 +292,13 @@ permissions, loaded details and pending-operation checks apply again at Apply.
 The [Conversation Actions example](../examples/extensions/app-actions/src/lib.rs)
 provides a complete native form, handler and manifest for these operations.
 It checks that its form's conversation still matches the current snapshot;
-Serein independently validates the resulting proposal.
+Rucord independently validates the resulting proposal.
 
 #### Channels, conversations and servers
 
 > **Preview SDK — PR #411, not yet released.**
 
-These operations reuse Serein's native channel, group, DM and server admission
+These operations reuse Rucord's native channel, group, DM and server admission
 paths. `channel_control` covers channel administration and conversation-local
 settings. `server_control` is separate because invites and leaving a server have
 different scope and consequences. Apply rechecks the loaded target, access,
@@ -364,7 +364,7 @@ Image/icon uploads are intentionally absent because Wasm receives no file paths
 or bytes.
 
 ```json
-{"effects":[{"type":"app_action","action":{"type":"update_server_settings","guild_id":"10","settings":{"name":"Serein Community","description":"Native client discussion","activity_feed":false}}}]}
+{"effects":[{"type":"app_action","action":{"type":"update_server_settings","guild_id":"10","settings":{"name":"Rucord Community","description":"Native client discussion","activity_feed":false}}}]}
 ```
 
 #### Roles and moderation
@@ -428,7 +428,7 @@ missing loaded data is an error, not permission to fetch or guess a target.
 ```
 
 These account writes are not plugin storage. Service errors and any required
-user-solved verification use Serein's ordinary native flow. A plugin receives no
+user-solved verification use Rucord's ordinary native flow. A plugin receives no
 credentials or verification bypass.
 
 #### Own profile and presence
@@ -628,12 +628,12 @@ complete JSON for a translation workflow could be:
 
 The URL is an absolute HTTPS URL, at most 2,048 UTF-8 bytes, with a host, no
 credentials, no backslashes or control characters, and no non-default port. An
-explicit `:443` is normalized away. Serein validates the URL before displaying
+explicit `:443` is normalized away. Rucord validates the URL before displaying
 the proposal and again at Apply. The complete URL
 is shown to the user. Apply hands it to the normal native external-link flow,
 including the user's confirmation setting; it never performs an HTTP request in
 Wasm or in the extension worker. The operating system and browser establish the
-connection, so this action does **not** provide Serein's catalog download
+connection, so this action does **not** provide Rucord's catalog download
 public-IP/DNS pinning. Sensitive text included in the URL is shared with that site
 after the user approves navigation.
 
@@ -892,7 +892,7 @@ cannot submit them. Declaring the capability still requires the user's grant.
 | `{"type":"clear"}` / `RichPresenceUpdate::Clear` | Remove this plugin's contribution |
 | Missing or null `rich_presence` / `None` | Leave the contribution unchanged |
 
-The user must also enable Serein's activity-sharing preference. A saved Set is
+The user must also enable Rucord's activity-sharing preference. A saved Set is
 pending while sharing is off; the extension grant does not enable that preference.
 Account changes, revocation, disable and logout retire the contribution. Among
 enabled plugins with valid contributions, the first plugin in ascending ID order
@@ -957,12 +957,12 @@ an explanatory panel and retain input values without an ActivityPreview or Set.
 Use the separate `storage` grant for saved settings. Save the applied configuration
 and an active flag on explicit Apply, and return Set from activation only when
 that saved flag is enabled. Stop should return Clear and save `active: false`
-while retaining the last applied fields. Disable is different: Serein removes the
+while retaining the last applied fields. Disable is different: Rucord removes the
 installed package and plugin data; re-enabling starts fresh. Do not use activation
 to save new storage: activation restores existing data.
 
 The host resolves application metadata and image assets outside rendering.
-External artwork URLs go through Discord's image proxy; Wasm and Serein do not
+External artwork URLs go through Discord's image proxy; Wasm and Rucord do not
 fetch the caller's URL directly. Metadata or artwork failures clear the outgoing
 custom activity and report an error; users can revise and reapply. Button/text/
 image links and other rich fields depend on Discord's handling of this unofficial
@@ -989,7 +989,7 @@ validates output and consent.
 
 Only the Discord REST API is affected. Gateway, CDN, media and calls keep their
 existing transports. Custom HTTP/HTTPS origins are capped at 2048 bytes and cannot
-contain credentials, a non-root path, a query or a fragment. HTTP Basic proxy authentication is configured separately in Serein's host-managed
+contain credentials, a non-root path, a query or a fragment. HTTP Basic proxy authentication is configured separately in Rucord's host-managed
 masked form and OS credential store; it never enters Wasm input or plugin storage.
 SOCKS and PAC are unsupported. Saved invalid configuration should trap during
 activation rather than silently return Direct; the host then blocks initial API
@@ -1073,7 +1073,7 @@ is `0x96 0x28`, the cells `2 1 1 2` over `0 2 2 0`:
 
 ## Panels and storage
 
-A panel is a list of native controls returned by your handler. Serein renders
+A panel is a list of native controls returned by your handler. Rucord renders
 those controls; the plugin does not run while they are drawn. Editing a field
 changes the panel's local form values. A **panel button** runs another declared
 action with those values. It does not automatically approve a host action that
@@ -1121,7 +1121,7 @@ serialized output budget. Byte limits count UTF-8 bytes, not visible letters.
 ### How a button receives form values
 
 1. A user opens a foreground action, and its output supplies a panel.
-2. Serein initializes each input from `value` or `checked` and keeps edits locally.
+2. Rucord initializes each input from `value` or `checked` and keeps edits locally.
    Typing, selecting, dragging and checking do not call your handler.
 3. Clicking a button creates a fresh invocation whose `action` is the button ID.
    Input IDs become keys in `values`; all values are strings. The button itself
@@ -1156,7 +1156,7 @@ invalid values explicitly; do not silently turn either into a saved preference.
 The `storage` capability gives this plugin one opaque UTF-8 string for the
 current account. Each non-null `output.storage` replaces the **whole** saved
 value. Omit it to leave storage alone. To store multiple settings, encode one
-JSON object yourself; Serein does not merge object fields for you.
+JSON object yourself; Rucord does not merge object fields for you.
 
 For example, this is a complete output that saves a JSON object inside the
 storage string:
@@ -1187,7 +1187,7 @@ is ordinary local data, not encrypted secret storage; never put credentials in i
 
 ### Complete settings panel and Save handler
 
-This example stores **plugin preferences**, not Serein's reading settings. It
+This example stores **plugin preferences**, not Rucord's reading settings. It
 requests only `storage`; changing the app's reading preferences instead requires
 a `local_settings` host proposal and Apply.
 

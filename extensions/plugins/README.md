@@ -30,7 +30,7 @@ Sticker Images plugin is retired. Native eligibility uses the account's Nitro
 entitlement. Unavailable native selections enter the composer as named artwork
 links; explicit Send uses Markdown with text, or attachments for artwork alone.
 Declarative themes are under `../themes/`.
-The author packages compiled bytes; Serein never runs a repository's build scripts.
+The author packages compiled bytes; Rucord never runs a repository's build scripts.
 
 ## Equicord-derived safe tools
 
@@ -70,7 +70,7 @@ All versions and updates require explicit user consent.
 ## Custom Rich Presence (preview)
 
 See [Custom RPC](custom-rpc/README.md) for setup and builds. Requires the preview
-rich-presence SDK from Serein PR #465. Install through the shared catalog or import
+rich-presence SDK from Rucord PR #465. Install through the shared catalog or import
 the package locally. Older clients without this capability cannot install it.
 
 ## API Proxy (preview)

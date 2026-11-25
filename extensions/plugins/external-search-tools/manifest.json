@@ -5,7 +5,7 @@
   "version": "1.0.3",
   "author": "Equicord/Vencord contributors; Serein port contributors",
   "license": "GPL-3.0-or-later",
-  "source": "https://github.com/ViceVerse-cz/Serein/tree/main/extensions/plugins/external-search-tools",
+  "source": "https://github.com/feds1337/Rucord/tree/main/extensions/plugins/external-search-tools",
   "kind": "plugin",
   "capabilities": [
     "selected_message",

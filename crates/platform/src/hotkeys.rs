@@ -8,17 +8,17 @@ use std::sync::atomic::{AtomicU8, Ordering};
 use std::sync::{Arc, Mutex, Weak};
 
 const READY: &str = "Global voice keybinds are enabled.";
-const DISABLED: &str = "Global keybinds are off. Shortcuts work while Serein is focused.";
+const DISABLED: &str = "Global keybinds are off. Shortcuts work while Rucord is focused.";
 #[cfg(target_os = "linux")]
 const WAYLAND_PENDING: &str = "Approve the global voice keybinds in your desktop's dialog.";
 #[cfg(target_os = "linux")]
-const WAYLAND_UNAVAILABLE: &str = "Global voice keybinds were denied or the desktop GlobalShortcuts portal is unavailable; they still work while Serein is focused.";
+const WAYLAND_UNAVAILABLE: &str = "Global voice keybinds were denied or the desktop GlobalShortcuts portal is unavailable; they still work while Rucord is focused.";
 const UNAVAILABLE: &str =
-	"Global voice keybinds are unavailable on this system; they work while Serein is focused.";
-const INVALID: &str = "One or more voice bindings cannot be registered globally; they still work while Serein is focused.";
-const MODIFIER_REQUIRED: &str = "Add Ctrl, Alt, Shift, or Command to use a voice binding globally; it still works while Serein is focused.";
+	"Global voice keybinds are unavailable on this system; they work while Rucord is focused.";
+const INVALID: &str = "One or more voice bindings cannot be registered globally; they still work while Rucord is focused.";
+const MODIFIER_REQUIRED: &str = "Add Ctrl, Alt, Shift, or Command to use a voice binding globally; it still works while Rucord is focused.";
 #[cfg(target_os = "macos")]
-const INPUT_MONITORING: &str = "Allow Serein in System Settings > Privacy & Security > Input Monitoring to use single-key voice bindings in other apps.";
+const INPUT_MONITORING: &str = "Allow Rucord in System Settings > Privacy & Security > Input Monitoring to use single-key voice bindings in other apps.";
 
 static NATIVE_INPUTS: Mutex<Vec<Weak<NativeInput>>> = Mutex::new(Vec::new());
 
@@ -218,7 +218,7 @@ impl Hotkeys {
 	}
 
 	/// Focus and call state for the key poller: keyboard keys stay with focused input while
-	/// Serein is focused, and polling slows down outside a call.
+	/// Rucord is focused, and polling slows down outside a call.
 	pub fn set_activity(&mut self, focused: bool, in_call: bool) {
 		self.poll_flags
 			.focused
@@ -582,8 +582,8 @@ async fn portal(
 		.await?;
 	// A host install has no portal app ID until this connection registers one; Flatpak skips
 	// it. Portals without the Registry interface, or without an installed
-	// cz.viceverse.serein.desktop entry, reject it, so the session request still proceeds.
-	if let Ok(app_id) = "cz.viceverse.serein".parse() {
+	// io.github.feds1337.rucord.desktop entry, reject it, so the session request still proceeds.
+	if let Ok(app_id) = "io.github.feds1337.rucord".parse() {
 		match tokio::time::timeout(
 			std::time::Duration::from_secs(5),
 			ashpd::register_host_app_with_connection(connection.clone(), app_id),
@@ -703,11 +703,11 @@ fn portal_id(action: KeybindAction) -> &'static str {
 #[cfg(target_os = "linux")]
 fn portal_description(action: KeybindAction) -> &'static str {
 	match action {
-		KeybindAction::PushToTalk => "Serein push to talk",
-		KeybindAction::PushToMute => "Serein push to mute",
-		KeybindAction::ToggleMute => "Toggle Serein microphone mute",
-		KeybindAction::ToggleDeafen => "Toggle Serein deafen",
-		_ => "Serein voice shortcut",
+		KeybindAction::PushToTalk => "Rucord push to talk",
+		KeybindAction::PushToMute => "Rucord push to mute",
+		KeybindAction::ToggleMute => "Toggle Rucord microphone mute",
+		KeybindAction::ToggleDeafen => "Toggle Rucord deafen",
+		_ => "Rucord voice shortcut",
 	}
 }
 

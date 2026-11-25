@@ -3,7 +3,7 @@
 language-system = System
 language-group = Language
 language-label = Display language
-language-description = Choose Serein's language. Discord content is never translated.
+language-description = Choose Rucord's language. Discord content is never translated.
 section-user = User settings
 section-app = App settings
 section-customization = Customization
@@ -28,11 +28,11 @@ description-appearance = Theme, colours, window effects and layout.
 description-chat = How messages, media, links and scrolling behave.
 description-messaging-permissions = Control who can contact you and how messages are filtered.
 description-notifications = Choose which notifications you receive and how they appear.
-description-registered-games = Share what you play, and fix or add the games Serein detects.
+description-registered-games = Share what you play, and fix or add the games Rucord detects.
 description-voice = Microphone, speakers, camera and voice processing.
-description-keybinds = Keyboard shortcuts for Serein.
-description-storage = What Serein keeps on this device.
-description-updates = Keep Serein up to date on this device.
+description-keybinds = Keyboard shortcuts for Rucord.
+description-storage = What Rucord keeps on this device.
+description-updates = Keep Rucord up to date on this device.
 description-extensions = Manage community plugins.
 description-themes = Choose a community theme.
 theme-maker = Theme maker
@@ -45,42 +45,42 @@ log-out = Log out
 unofficial = Unofficial · not endorsed by Discord
 offline-preview = Offline preview · changes stay in this session and are never sent.
 general-startup = Startup
-general-open-at-startup = Open Serein when your computer starts
-general-open-at-startup-description = Serein signs in and connects in the background.
+general-open-at-startup = Open Rucord when your computer starts
+general-open-at-startup-description = Rucord signs in and connects in the background.
 general-start-minimized = Start minimized
 general-start-minimized-description = Start in the background, out of your way.
 general-startup-unavailable = Automatic startup is available on Windows and macOS.
 general-window = Window
 general-hide-decorations = No title bar
-general-hide-decorations-description = For tiling window managers: remove every title bar and border, including Serein's own. Move, resize and close Serein with your window manager.
+general-hide-decorations-description = For tiling window managers: remove every title bar and border, including Rucord's own. Move, resize and close Rucord with your window manager.
 general-custom-title-bar = Custom title bar
-general-custom-title-bar-description = Replace the system title bar with Serein's own GTK 4 style header bar.
-general-hide-title-bar = Hide Serein title bar
+general-custom-title-bar-description = Replace the system title bar with Rucord's own GTK 4 style header bar.
+general-hide-title-bar = Hide Rucord title bar
 general-hide-title-bar-description = Use the system title bar and window buttons instead.
-general-keep-menu-bar = Keep Serein in the menu bar
-general-keep-system-tray = Keep Serein in the system tray
-general-menu-bar-description = Closing the window keeps Serein in the menu bar. Quit from its menu to exit.
-general-linux-tray-description = Closing keeps Serein running. Use the tray to show, minimize or quit.
-general-windows-tray-description = Closing the window keeps Serein in the notification area. Quit from its menu to exit.
+general-keep-menu-bar = Keep Rucord in the menu bar
+general-keep-system-tray = Keep Rucord in the system tray
+general-menu-bar-description = Closing the window keeps Rucord in the menu bar. Quit from its menu to exit.
+general-linux-tray-description = Closing keeps Rucord running. Use the tray to show, minimize or quit.
+general-windows-tray-description = Closing the window keeps Rucord in the notification area. Quit from its menu to exit.
 general-tray-unavailable = The tray is unavailable on this platform.
 general-graphics = Graphics
 general-render-with = Render with
 general-graphics-api = Graphics API
-general-graphics-api-description = Takes effect after restarting Serein. Uses Automatic if the selected API cannot draw this window.
+general-graphics-api-description = Takes effect after restarting Rucord. Uses Automatic if the selected API cannot draw this window.
 general-graphics-api-env-override = WGPU_BACKEND controls the API for this launch. Remove that environment override to use this setting.
-general-gpu-restart = Takes effect the next time Serein starts.
+general-gpu-restart = Takes effect the next time Rucord starts.
 general-gpu-current-prefix = Currently drawing with
 general-steady-refresh-rate = Steady refresh rate
-general-steady-refresh-rate-description = While Serein is the active window, draw at the display's refresh rate so variable refresh rate (VRR, G-SYNC, FreeSync) displays can hold one rate instead of flickering. Uses more power.
+general-steady-refresh-rate-description = While Rucord is the active window, draw at the display's refresh rate so variable refresh rate (VRR, G-SYNC, FreeSync) displays can hold one rate instead of flickering. Uses more power.
 steady-refresh-prompt-title = G-SYNC display detected
-steady-refresh-prompt-body = Serein only redraws when something changes, which can make a G-SYNC display flicker while Serein is the active window. Steady refresh rate avoids that by drawing at the display's refresh rate, and uses more power. Turn it on?
+steady-refresh-prompt-body = Rucord only redraws when something changes, which can make a G-SYNC display flicker while Rucord is the active window. Steady refresh rate avoids that by drawing at the display's refresh rate, and uses more power. Turn it on?
 steady-refresh-prompt-turn-on = Turn on
 steady-refresh-prompt-keep-off = No thanks
 steady-refresh-prompt-settings = Change it later in Settings > { $page } > { $group }.
 gpu-automatic = Automatic
 gpu-high-performance = High performance
 gpu-power-saving = Power saving
-gpu-automatic-description = Let Serein choose the GPU that can draw this window.
+gpu-automatic-description = Let Rucord choose the GPU that can draw this window.
 gpu-high-performance-description = Use the discrete graphics card when one is available.
 gpu-power-saving-description = Use integrated graphics to save battery.
 direct-messages = Direct Messages
@@ -224,7 +224,7 @@ account-menu-custom-status-editor-clear-after = Clear after
 # Context: custom_status_editor
 account-menu-custom-status-editor-no-custom-status = No custom status
 # Context: custom_status_editor
-account-menu-custom-status-editor-serein-clears-it = Serein clears it
+account-menu-custom-status-editor-rucord-clears-it = Rucord clears it
 # Context: custom_status_editor
 account-menu-custom-status-editor-status-text = Status text
 # Context: custom_status_editor
@@ -1118,7 +1118,7 @@ fonts-show-none-installed = No installed fonts were found on this system.
 # Context: show
 fonts-show-the-quick-brown-fox-jumps-over-the-lazy-dog-0123456789 = The quick brown fox jumps over the lazy dog. 0123456789
 # Context: show
-fonts-show-ttf-or-otf-up-to-32-mib-saved-on-this = Fonts installed on this device, up to 32 MiB. A copy is saved for Serein. Code keeps its monospace font.
+fonts-show-ttf-or-otf-up-to-32-mib-saved-on-this = Fonts installed on this device, up to 32 MiB. A copy is saved for Rucord. Code keeps its monospace font.
 # Context: show
 fonts-show-typography = Typography
 
@@ -1641,7 +1641,7 @@ keybinds-show-voice-enable-global-keybinds = Enable global keybinds
 # Context: show_voice
 keybinds-show-voice-global-availability = Global availability
 # Context: show_voice
-keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = Use voice shortcuts while another app is focused. When off, shortcuts only work while Serein is focused.
+keybinds-show-voice-use-voice-shortcuts-while-another-app-is-focused-when-off = Use voice shortcuts while another app is focused. When off, shortcuts only work while Rucord is focused.
 
 ## crates/ui/src/lib.rs
 # Context: account_card
@@ -1719,7 +1719,7 @@ main-restoring-checking-your-saved-login = Checking your saved login
 # Context: restoring
 main-restoring-connecting-to-discord = Connecting to Discord
 # Context: restoring_screen
-main-restoring-screen-serein = Serein
+main-restoring-screen-rucord = Rucord
 # Context: restoring_screen
 main-restoring-screen-use-a-different-account = Use a different account
 # Context: restoring_screen
@@ -1727,7 +1727,7 @@ main-restoring-screen-welcome-back = Welcome back
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Saved accounts
 # Context: sign_in_disclosures
-main-sign-in-disclosures-about-serein = About Serein
+main-sign-in-disclosures-about-rucord = About Rucord
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Connect with this token
 # Context: sign_in_disclosures
@@ -1741,7 +1741,7 @@ main-sign-in-header-sign-in-with-your-discord-account-to-get-started = Sign in w
 # Context: sign_in_header
 main-sign-in-header-welcome-back = Welcome back
 # Context: sign_in_header
-main-sign-in-header-welcome-to-serein = Welcome to Serein
+main-sign-in-header-welcome-to-rucord = Welcome to Rucord
 # Context: sign_in_preview
 main-sign-in-status-copy-failure-details = Copy failure details
 main-sign-in-preview-explore-the-offline-preview = Explore the offline preview
@@ -1750,7 +1750,7 @@ main-sign-in-preview-sample-conversations-no-discord-connection = Sample convers
 # Context: sign_in_screen
 main-sign-in-screen-independent-and-open-source-not-affiliated-with-discord = Independent and open source · Not affiliated with Discord
 # Context: sign_in_screen
-main-sign-in-screen-serein = Serein
+main-sign-in-screen-rucord = Rucord
 # Context: ui
 main-ui-cancel = Cancel
 # Context: ui
@@ -2365,13 +2365,13 @@ screen-body-refresh = Refresh
 # Context: body
 screen-body-screen-or-window = Screen or window
 # Context: body
-screen-body-send-what-your-mac-plays-along-with-the-screen-serein = Send what your Mac plays along with the screen. Serein's own call audio is left out.
+screen-body-send-what-your-mac-plays-along-with-the-screen-rucord = Send what your Mac plays along with the screen. Rucord's own call audio is left out.
 # Context: body
-screen-body-share-sound-from-other-apps-even-when-sharing-one-window = Share sound from other apps, even when sharing one window. Serein's own audio is left out.
+screen-body-share-sound-from-other-apps-even-when-sharing-one-window = Share sound from other apps, even when sharing one window. Rucord's own audio is left out.
 # Context: body
 screen-body-share-system-audio = Share system audio
 # Context: body
-screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = Share the shared app's sound, or every other app's sound when sharing a screen. Serein's own audio is left out.
+screen-body-share-the-shared-apps-sound-or-other-apps-for-a-screen = Share the shared app's sound, or every other app's sound when sharing a screen. Rucord's own audio is left out.
 # Context: body
 screen-body-show-cursor = Show cursor
 # Context: body
@@ -3563,7 +3563,7 @@ settings-activity-added-games = Added Games
 # Context: activity_settings
 settings-activity-no-games-added = No games added
 # Context: activity_settings
-settings-activity-hidden = Hidden. Serein will not detect this game.
+settings-activity-hidden = Hidden. Rucord will not detect this game.
 # Context: activity_settings
 settings-activity-detected = Detected automatically
 # Context: activity_settings
@@ -3585,7 +3585,7 @@ settings-activity-click-to-rename = Click to rename
 # Context: activity_settings
 settings-activity-add-a-game = Add a game
 # Context: activity_settings
-settings-activity-choose-program = Choose a running program. Serein shows it as your game whenever it runs.
+settings-activity-choose-program = Choose a running program. Rucord shows it as your game whenever it runs.
 # Context: activity_settings
 settings-activity-search-programs = Search running programs
 # Context: activity_settings
@@ -3607,7 +3607,7 @@ settings-appearance-settings-primary-color = Primary color
 # Context: appearance_settings
 settings-appearance-settings-reset = Reset
 # Context: appearance_settings
-settings-appearance-settings-restart-serein-after-changing-this-themes-can-customize-effects-while = Restart Serein after changing this. Themes can customize effects while enabled.
+settings-appearance-settings-restart-rucord-after-changing-this-themes-can-customize-effects-while = Restart Rucord after changing this. Themes can customize effects while enabled.
 # Context: appearance_settings
 settings-appearance-settings-the-active-theme-brings-its-own-accent-it-takes-over = The active theme brings its own accent; it takes over while the theme is in use.
 # Context: appearance_settings
@@ -3644,11 +3644,11 @@ settings-storage-page-clear-cache = Clear cache
 # Context: storage_page
 settings-storage-page-local-storage = Local storage
 # Context: storage_page
-settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = Messages and drafts are cached on this device inside bounded, account-isolated files. Cache data is not encrypted by Serein; saved login tokens use the OS credential store.
+settings-storage-page-messages-and-drafts-are-cached-on-this-device-inside-bounded = Messages and drafts are cached on this device inside bounded, account-isolated files. Cache data is not encrypted by Rucord; saved login tokens use the OS credential store.
 # Context: storage_page
 settings-storage-page-removes-cached-messages-and-media-drafts-and-your-login-stay = Removes cached messages and media. Drafts and your login stay.
 # Context: storage_page
-settings-storage-page-serein-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Serein does not collect telemetry or upload diagnostics. Discord retains service-side data according to its own policies.
+settings-storage-page-rucord-does-not-collect-telemetry-or-upload-diagnostics-discord-retains = Rucord does not collect telemetry or upload diagnostics. Discord retains service-side data according to its own policies.
 # Context: storage_page
 settings-storage-page-your-privacy = Your privacy
 # Context: cosmetic_settings
@@ -4108,7 +4108,7 @@ updates-update-settings-could-not-load-or-save-update-preferences-changes-may-no
 # Context: update_settings
 updates-update-settings-download-update = Download update
 # Context: update_settings
-updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = Download updates in the background. Restart when you are ready. Serein still checks at startup and periodically when this is off.
+updates-update-settings-download-updates-in-the-background-restart-when-you-are-ready = Download updates in the background. Restart when you are ready. Rucord still checks at startup and periodically when this is off.
 # Context: update_settings
 updates-update-settings-early-builds-with-the-newest-changes-nightly-releases-can-be = Early builds with the newest changes. Nightly releases can be less reliable.
 # Context: update_settings
@@ -4134,7 +4134,7 @@ updates-update-settings-release-channel = Release channel
 # Context: update_settings
 updates-update-settings-restart-to-update = Restart to update
 # Context: update_settings
-updates-update-settings-serein-was-installed-via-your-distribution-run-this-in-a = Serein was installed via your distribution. Run this in a terminal to update.
+updates-update-settings-rucord-was-installed-via-your-distribution-run-this-in-a = Rucord was installed via your distribution. Run this in a terminal to update.
 # Context: update_settings
 updates-update-settings-save-diagnostics = Save diagnostics
 # Context: update_settings
@@ -4156,7 +4156,7 @@ updates-update-settings-log-warnings = Errors and warnings
 # Context: update_settings
 updates-update-settings-open-folder = Open folder
 # Context: update_settings
-updates-update-settings-the-log-folder-could-not-be-written = The log folder could not be written. Check Serein's data folder and try again.
+updates-update-settings-the-log-folder-could-not-be-written = The log folder could not be written. Check Rucord's data folder and try again.
 # Context: update_settings
 updates-update-settings-timings-stages-and-failures-in-one-local-file-no-account-channel-or = Timings, stages and failures in one local log file. Account, channel, message and credential data are never written, and nothing is uploaded.
 # Context: update_log
@@ -4224,7 +4224,7 @@ verification-show-verification-required = Verification required
 # Context: show
 verification-show-verify = Verify
 # Context: show
-verification-show-safer-in-the-official-discord-app = Completing this check in the official Discord app is safer. Discord may ask newer accounts to verify a phone number after a check solved in Serein.
+verification-show-safer-in-the-official-discord-app = Completing this check in the official Discord app is safer. Discord may ask newer accounts to verify a phone number after a check solved in Rucord.
 # Context: show
 verification-show-open-discord = Open Discord
 
@@ -4644,7 +4644,7 @@ onboarding-rules-heading = Server rules
 # Context: rules
 onboarding-rules-review = A moderator reviews these answers before you can chat.
 # Context: field
-onboarding-field-unsupported = This server asks a question Serein can't show yet. Finish joining in the Discord app.
+onboarding-field-unsupported = This server asks a question Rucord can't show yet. Finish joining in the Discord app.
 # Context: field
 onboarding-field-agree = I have read and agree to the rules
 
@@ -4684,7 +4684,7 @@ public-upload-host-catbox = Up to 200 MB (GIF 20 MB) · may be removed after two
 public-upload-host-litterbox = Up to 1 GB · temporary, deleted after 72 hours
 public-upload-over-limit = { $size } · over your { $limit } Discord upload limit
 public-upload-uploading = Uploading to { $host } · { $sent } of { $total }
-public-upload-privacy = Anyone with the link can open this file. It is uploaded unchanged, metadata included, outside Discord, and Serein cannot delete it later.
+public-upload-privacy = Anyone with the link can open this file. It is uploaded unchanged, metadata included, outside Discord, and Rucord cannot delete it later.
 public-upload-review = Nothing is sent yet. Add the link to your draft or copy it, then send it yourself.
 public-upload-return = Return to the original conversation to add its link.
 public-upload-preparing = Preparing public upload…
@@ -4839,7 +4839,7 @@ reading-double-click-reaction = Double-click reaction
 
 ## crates/platform/src/app_menu.rs
 # Context: macos_menu_bar
-app-menu-about = About Serein
+app-menu-about = About Rucord
 # Context: macos_menu_bar
 app-menu-updates = Check for Updates…
 # Context: macos_menu_bar
@@ -4847,13 +4847,13 @@ app-menu-settings = Settings…
 # Context: macos_menu_bar
 app-menu-services = Services
 # Context: macos_menu_bar
-app-menu-hide = Hide Serein
+app-menu-hide = Hide Rucord
 # Context: macos_menu_bar
 app-menu-hide-others = Hide Others
 # Context: macos_menu_bar
 app-menu-show-all = Show All
 # Context: macos_menu_bar
-app-menu-quit = Quit Serein
+app-menu-quit = Quit Rucord
 # Context: macos_menu_bar
 app-menu-file = File
 # Context: macos_menu_bar
@@ -4895,7 +4895,7 @@ app-menu-bring-all-to-front = Bring All to Front
 # Context: macos_menu_bar
 app-menu-help = Help
 # Context: macos_menu_bar
-app-menu-github = Serein on GitHub
+app-menu-github = Rucord on GitHub
 # Context: macos_menu_bar
 app-menu-report-issue = Report an Issue…
 
@@ -5132,17 +5132,17 @@ new-message-cancel = Cancel
 setup-appearance-title = Make it yours
 setup-appearance-body = Mode and colours apply as you pick them
 setup-window-title = See through the window
-setup-window-body = Let your desktop show behind Serein's panels
+setup-window-body = Let your desktop show behind Rucord's panels
 setup-window-transparency-description = Themes can tune the effect while it is on.
-setup-window-restart = Serein needs a restart before transparency turns on or off. Your choice is saved now.
+setup-window-restart = Rucord needs a restart before transparency turns on or off. Your choice is saved now.
 setup-desktop-title = On your desktop
-setup-desktop-body = Whether Serein opens with your computer, its title bar and the tray
+setup-desktop-body = Whether Rucord opens with your computer, its title bar and the tray
 setup-profiles-title = Profile cosmetics
 setup-profiles-body = What this device draws around people and their names
 setup-chat-title = How chat reads
 setup-chat-body = Text size, message spacing and the clock on every message
 setup-notifications-title = What reaches you
-setup-notifications-body = What Serein does when a message arrives while you are elsewhere
+setup-notifications-body = What Rucord does when a message arrives while you are elsewhere
 setup-notifications-desktop-description = Banners for direct messages and mentions. Fine-tune servers and channels from their menus.
 setup-notifications-sounds = Notification sounds
 setup-notifications-sounds-description = Message, call and voice sounds. Pick individual ones in Settings.
@@ -5255,8 +5255,8 @@ native-login-qr-not-me = Not me, start over
 native-login-settings = Settings
 native-login-more-token = Session token
 native-login-more-web = Web login
-native-login-token-detail = Paste a session token you already have, for example from another Serein install.
-native-login-about-risk = Unofficial clients like Serein can put your Discord account at risk.
+native-login-token-detail = Paste a session token you already have, for example from another Rucord install.
+native-login-about-risk = Unofficial clients like Rucord can put your Discord account at risk.
 native-login-about-storage = Messages and drafts are cached on this device. Your login is kept in the OS credential store.
 native-login-web-detail = Opens Discord's login page in a temporary window. Needed for security keys and passkeys.
 native-login-web-open = Open Discord's login page
@@ -5269,3 +5269,144 @@ group-add-title = Add Friends to DM
 group-add-subtitle = Choose a friend to add to this group.
 group-add-full = This group has reached the 10-person limit.
 group-add-confirm = Add Friend
+
+
+## Voice controls and accessibility labels
+voice-label-exit-fullscreen = Exit fullscreen
+voice-label-exit-fullscreen-esc = Exit fullscreen (Esc)
+voice-label-stop-watching = Stop watching
+voice-label-stream-preview = Stream preview
+voice-label-streaming-now = Streaming Now
+voice-label-preview-hidden-or-unavailable = Preview hidden or unavailable
+voice-label-youre-streaming = You're streaming
+voice-label-watching = Watching
+voice-label-watch-stream = Watch Stream
+voice-label-you-are-already-streaming-in-this-channel = You are already streaming in this channel
+voice-label-already-watching-this-stream = Already watching this stream
+voice-label-join-this-voice-channel-before-watching = Join this voice channel before watching
+voice-label-this-stream-is-no-longer-live = This stream is no longer live
+voice-label-could-not-join-this-streams-voice-channel = Could not join this stream's voice channel
+voice-label-leave-the-current-call-before-watching-this-stream = Leave the current call before watching this stream
+voice-label-this-stream-is-not-available-in-the-connected-voice-channel = This stream is not available in the connected voice channel
+voice-label-your-screen-local-preview = Your screen · local preview
+voice-label-screen-share-you-are-watching = Screen share you are watching
+voice-label-click-or-press-escape-to-return-to-the-grid = Click or press Escape to return to the grid
+voice-label-click-to-enlarge = Click to enlarge
+voice-label-your-screen = Your screen
+voice-label-participant = Participant
+voice-label-connecting-to-the-stream = Connecting to the stream…
+voice-label-stream-audio = Stream audio
+voice-label-stop-receiving-this-screen-share = Stop receiving this screen share
+voice-label-deafened-by-the-server = Deafened by the server
+voice-label-muted-by-the-server = Muted by the server
+voice-label-speaking-is-unavailable-in-this-channel-you-can-still-listen = Speaking is unavailable in this channel. You can still listen.
+voice-label-push-to-talk-is-required-to-speak-here-enable-it-in-voice-settings = Push-to-talk is required to speak here. Enable it in Voice settings.
+voice-label-synthetic-participants-microphone-and-speakers-are-off = Synthetic participants · microphone and speakers are off.
+voice-label-you-are-already-in-this-call = You are already in this call.
+voice-label-joining-this-channel-is-unavailable-with-current-permission-information = Joining this channel is unavailable with current permission information.
+voice-label-calls-are-unavailable-in-the-offline-preview-no-microphone-is-accessed = Calls are unavailable in the offline preview. No microphone is accessed.
+voice-label-voice-is-unavailable-in-this-session = Voice is unavailable in this session.
+voice-label-reconnect-to-discord-before-calling = Reconnect to Discord before calling.
+voice-label-waiting-for-the-previous-call-to-disconnect = Waiting for the previous call to disconnect.
+voice-label-stay-in-call = Stay in call
+voice-label-call-switch-cancelled-previous-call-did-not-finish-disconnecting-try-joining-again = Call switch cancelled: previous call did not finish disconnecting. Try joining again.
+voice-label-switch-calls = Switch calls?
+voice-label-switch-call = Switch call
+voice-label-join-voice = Join Voice
+voice-label-answer-call = Answer call
+voice-label-join-call = Join call
+voice-label-start-voice-call = Start voice call
+voice-label-join-audio-your-microphone-starts-after-the-call-is-secured = Join audio. Your microphone starts after the call is secured.
+voice-label-join-to-listen-speaking-is-unavailable-in-this-channel = Join to listen. Speaking is unavailable in this channel.
+voice-label-looking-for-cameras = Looking for cameras...
+voice-label-stop-preview = Stop preview
+voice-label-preview-camera = Preview camera
+voice-label-voice-isolation = Voice Isolation
+voice-label-automatic-noise-suppression-echo-cancellation-and-automatic-gain-for-speech = Automatic noise suppression, echo cancellation and automatic gain for speech.
+voice-label-studio = Studio
+voice-label-open-microphone-without-suppression-echo-cancellation-or-automatic-gain = Open microphone without suppression, echo cancellation or automatic gain.
+voice-label-custom = Custom
+voice-label-choose-your-noise-suppression-sensitivity-and-processing = Choose your noise suppression, sensitivity and processing.
+voice-label-rnnoise-is-active-this-device-is-too-busy-for-deepfilternet = RNNoise is active: this device is too busy for DeepFilterNet.
+voice-label-automatic = Automatic
+voice-label-off = Off
+voice-label-uses-deepfilternet-and-rnnoise-when-this-device-is-too-busy-for-it = Uses DeepFilterNet, and RNNoise when this device is too busy for it.
+voice-label-low = Low
+voice-label-moderate = Moderate
+voice-label-high = High
+voice-label-very-high = Very high
+voice-label-unmute = Unmute
+voice-label-mute = Mute
+voice-label-speaking-is-unavailable-in-this-channel = Speaking is unavailable in this channel.
+voice-label-turn-on-microphone = Turn on microphone
+voice-label-turn-off-microphone = Turn off microphone
+voice-label-voice-settings = Voice settings
+voice-label-microphone-and-speaker-settings = Microphone and speaker settings
+voice-label-turn-off-camera = Turn off camera
+voice-label-turn-on-camera = Turn on camera
+voice-label-stop-sharing-your-camera = Stop sharing your camera
+voice-label-camera-is-off-in-the-offline-preview = Camera is off in the offline preview
+voice-label-camera-capture-is-unavailable-on-this-platform = Camera capture is unavailable on this platform
+voice-label-camera-requires-h264-support-from-the-voice-server = Camera requires H264 support from the voice server
+voice-label-camera-is-unavailable-with-current-channel-permissions = Camera is unavailable with current channel permissions
+voice-label-share-your-selected-camera-with-this-call = Share your selected camera with this call
+voice-label-camera-settings = Camera settings
+voice-label-choose-a-camera = Choose a camera
+voice-label-more-options = More options
+voice-label-more-call-options = More call options
+voice-label-undeafen = Undeafen
+voice-label-deafen = Deafen
+voice-label-hide-participants = Hide participants
+voice-label-show-participants = Show participants
+voice-label-hide-the-participant-strip-under-the-enlarged-video = Hide the participant strip under the enlarged video
+voice-label-show-the-other-participants-under-the-enlarged-video = Show the other participants under the enlarged video
+voice-label-stream-volume = Stream volume
+voice-label-stop-sharing = Stop sharing
+voice-label-share-your-screen = Share your screen
+voice-label-screen-sharing-requires-a-connected-call-and-video-permission-on-a-supported-desktop = Screen sharing requires a connected call and video permission on a supported desktop.
+voice-label-direct-message = Direct message
+voice-label-decline = Decline
+voice-label-answer = Answer
+voice-label-voice-connected = Voice Connected
+voice-label-stop-streaming = Stop streaming
+voice-label-voice-preview = Voice preview
+voice-label-call-failed = Call failed
+voice-label-connecting = Connecting…
+voice-label-switch-to-this-voice-channel = Switch to this voice channel
+voice-label-stop-sharing-your-screen = Stop sharing your screen
+voice-label-share-a-screen-or-window = Share a screen or window
+voice-label-turn-off-noise-suppression = Turn off noise suppression
+voice-label-turn-on-noise-suppression = Turn on noise suppression
+voice-label-noise-suppression-reduces-keyboard-noise-breathing-and-fans-locally = Noise suppression reduces keyboard noise, breathing and fans locally.
+voice-label-noise-suppression-is-unavailable-in-this-build-or-preview = Noise suppression is unavailable in this build or preview.
+voice-label-fullscreen = Fullscreen
+voice-label-view-this-screen-share-in-fullscreen = View this screen share in fullscreen
+voice-label-microphone-gain = Microphone gain
+voice-label-speaker-volume = Speaker volume
+voice-label-looking-for-audio-devices = Looking for audio devices…
+voice-label-audio-devices-loaded = Audio devices loaded
+
+## Native proxy and activity tools
+proxy-auth-title = Proxy authentication
+proxy-auth-storage = Credentials stay in Rucord’s OS credential store and are never shared with the plugin. Apply the proxy URL before saving credentials.
+proxy-auth-http-warning = HTTP proxy authentication is unencrypted: anyone observing the connection to the proxy can recover these credentials. Use an HTTPS proxy for encrypted authentication.
+proxy-auth-username = Username
+proxy-auth-password = Password
+proxy-auth-save = Save credentials
+proxy-auth-remove = Remove saved credentials
+proxy-auth-mode = Choose URL mode to configure proxy authentication.
+presence-profile-preview = PROFILE PREVIEW
+presence-preview-artwork = Artwork resolves when applied. This draft preview uses placeholders.
+presence-preview-empty = Your activity goes here
+presence-preview-instructions = Enter an application ID and activity name, then choose Preview.
+presence-preview-disabled = Activity sharing is off. Enable it in Settings > Registered Games to publish your presence.
+presence-preview-offline-demo = Offline demo. Nothing is published.
+presence-preview-offline = Offline. Your saved activity will wait for a connection.
+presence-preview-sharing = Enable activity sharing in Settings > Registered Games. Invisible hides your activity.
+presence-timer-elapsed = Elapsed since starting; applying edits keeps the timer.
+presence-timer-midnight = Timer starts at local midnight.
+presence-party = Party: { $current } / { $max }
+voice-screen-owner = { $name }’s screen
+voice-input-level = Input level: { $level } dBFS
+
+voice-switch-confirm-body = You are already in another call. Leave it and join { $name }?

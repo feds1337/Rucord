@@ -6,7 +6,7 @@ import pack
 
 theme = (catalog.ROOT / "themes/ocean.serein-extension").read_bytes()
 plugin = (catalog.ROOT / "plugins/packages/message-delete-protector.serein-extension").read_bytes()
-assert catalog.validate(theme)["id"] == "serein-ocean"
+assert catalog.validate(theme)["id"] == "rucord-ocean"
 assert catalog.validate(plugin)["kind"] == "plugin"
 rpc = (catalog.ROOT / "plugins/packages/custom-rpc.serein-extension").read_bytes()
 assert catalog.validate(rpc)["capabilities"] == ["rich_presence", "storage"]
@@ -48,7 +48,7 @@ for entry in pinned["entries"]:
     commit = entry["source_commit"]
     for value in [entry] + ([entry["preview"]] if "preview" in entry else []):
         key = "release_url" if value is entry else "url"
-        value[key] = value[key].replace("ViceVerse-cz/Serein-extensions/" + commit + "/", "ViceVerse-cz/Serein/" + commit + "/extensions/")
+        value[key] = value[key].replace("feds1337/Rucord-extensions/" + commit + "/", "feds1337/Rucord/" + commit + "/extensions/")
 moved = json.loads(json.dumps(pinned))
 for entry in moved["entries"]:
     old = entry["source_commit"]
@@ -56,8 +56,8 @@ for entry in moved["entries"]:
     for value in [entry] + ([entry["preview"]] if "preview" in entry else []):
         key = "release_url" if value is entry else "url"
         value[key] = value[key].replace(old, "f" * 40)
-assert catalog.content(pinned, "ViceVerse-cz/Serein") == catalog.content(moved, "ViceVerse-cz/Serein") is not None
+assert catalog.content(pinned, "feds1337/Rucord") == catalog.content(moved, "feds1337/Rucord") is not None
 assert catalog.content(pinned, "ViceVerse-cz/Other") is None
 moved["entries"][0]["sha256"] = "0" * 64
-assert catalog.content(pinned, "ViceVerse-cz/Serein") != catalog.content(moved, "ViceVerse-cz/Serein")
+assert catalog.content(pinned, "feds1337/Rucord") != catalog.content(moved, "feds1337/Rucord")
 print("Theme/plugin identity, byte, capability, action and URL checks passed.")

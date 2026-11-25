@@ -384,7 +384,7 @@ impl Desktop {
 							ui.label(
 								ui::design::semibold(
 									ui,
-									ui::i18n::translate("main-restoring-screen-serein"),
+									ui::i18n::translate("main-restoring-screen-rucord"),
 									16.0,
 								)
 								.color(p.muted),
@@ -490,7 +490,7 @@ impl Desktop {
 							ui.label(
 								ui::design::semibold(
 									ui,
-									ui::i18n::translate("main-sign-in-screen-serein"),
+									ui::i18n::translate("main-sign-in-screen-rucord"),
 									15.0,
 								)
 								.color(p.text_strong),
@@ -1037,7 +1037,7 @@ impl Desktop {
 	fn sign_in_more(&mut self, ui: &mut egui::Ui, ctx: &egui::Context) {
 		let p = ui::design::palette(ui);
 		let labels = [
-			"main-sign-in-disclosures-about-serein",
+			"main-sign-in-disclosures-about-rucord",
 			"native-login-more-token",
 			"native-login-more-web",
 		]
@@ -1193,7 +1193,7 @@ fn settings_button(ui: &mut egui::Ui, hint: &str, update: bool) -> egui::Respons
 	response.on_hover_text(hint)
 }
 
-/// The Serein mark on a solid accent tile; one shape at every size, no halo.
+/// The Rucord mark on a solid accent tile; one shape at every size, no halo.
 fn app_mark(ui: &mut egui::Ui, size: f32) {
 	let p = ui::design::palette(ui);
 	let (mark, _) = ui.allocate_exact_size(egui::Vec2::splat(size), egui::Sense::hover());
@@ -1201,7 +1201,7 @@ fn app_mark(ui: &mut egui::Ui, size: f32) {
 		.rect_filled(mark, (size * 0.25).round() as u8, p.accent);
 	ui::icons::paint(
 		ui.painter(),
-		ui::icons::Icon::Serein,
+		ui::icons::Icon::Rucord,
 		mark.shrink(size * 0.24),
 		p.accent_text,
 	);

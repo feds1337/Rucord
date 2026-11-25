@@ -43,7 +43,7 @@ uploads, Gateway and voice WebSockets, and Discord CDN downloads use a shared de
 profile from `client_core::fingerprint`. On November 19 the owner's official macOS client
 (0.0.423, Electron 44.10.2, Chromium 152) was recorded on a burner account; see the
 [compatibility notes](discord-compatibility.md#desktop-client-recording--november-19).
-Serein now matches its super-properties field for field (OS version and SDK version,
+Rucord now matches its super-properties field for field (OS version and SDK version,
 architectures, `has_client_mods`, a per-launch `client_launch_id`, the web build read from
 Discord's `/app` page at launch, the macOS
 native build number, and on Linux the desktop, distribution, packaging and session type),
@@ -60,7 +60,7 @@ see the [Gateway identity notes](discord-compatibility.md#desktop-gateway-identi
 REST also carries the Discord-issued installation ID as `X-Installation-ID`, and the Gateway identify
 carries it as `installation_id`; with Discord's own cookies these keep one device across launches
 (see [storage policy](storage-policy.md#discord-device-state-november-13-2026)). Captchas for
-joins, DMs, friend requests and messages are offered in Serein with a warning that completing them
+joins, DMs, friend requests and messages are offered in Rucord with a warning that completing them
 in the official client is safer: a new account reported a phone-verification request after one
 was solved here (cause unverified).
 See [compatibility notes](discord-compatibility.md#desktop-metadata-reference--november-12)
@@ -78,7 +78,7 @@ Locale/timezone come from the OS with en-US/UTC fallbacks. Startup sends no
 Settings writers wait for that accepted identity, so saved-login account checks
 complete before any presence, idle-timeout or activity-sharing settings write.
 Hosts other than Discord (updater, extension downloads, external uploads, third-party
-media) get no emulation; the updater and external uploads send a `Serein/x.y` user agent. Certificates are verified against the Chromium
+media) get no emulation; the updater and external uploads send a `Rucord/x.y` user agent. Certificates are verified against the Chromium
 Root Store bundled with wreq, not the operating system trust store, so a TLS-inspecting proxy
 whose root is installed only in the OS is rejected.
 
@@ -96,7 +96,7 @@ its reported X11 freeze and timeout still require testing on the affected Linux 
 These are implemented limits, not measured teardown/storage or live login compatibility.
 
 **Native sign-in (unofficial, live-unverified; November 19, 2026).** The sign-in screen is
-Serein's own form: email or phone number and password, the MFA step (authenticator app, SMS
+Rucord's own form: email or phone number and password, the MFA step (authenticator app, SMS
 or backup code) and a QR code for the Discord mobile app. It sends the unauthenticated
 requests Discord's login page sends (`POST /auth/login`, `/auth/mfa/{totp,sms,backup}`,
 `/auth/mfa/sms/send`, `/users/@me/remote-auth/login`, and the remote-auth v2 socket at
@@ -106,7 +106,7 @@ engine identity; whether that difference caused the session rejections in issue 
 unverified. Wire shapes follow SakuraCord's sign-in (commit `aa8a3da8`) and
 discord-userdoccers; no code was copied.
 
-- When the form opens Serein makes the login page's opening requests, as the recorded
+- When the form opens Rucord makes the login page's opening requests, as the recorded
   client does: `GET /experiments` (whose answer carries the fingerprint, sent as
   `X-Fingerprint` from then on) and `GET /auth/location-metadata`. The fingerprint is issued
   by Discord, never made up, and sign-in proceeds without it; it is kept in memory for one
@@ -143,7 +143,7 @@ The hosted login page in a temporary platform webview, not OAuth, remains as tha
 
 1. Build `cargo run --locked` on a supported platform. Use a private conversation controlled by the account owner. The owner enables the private-test acknowledgment and presses **Sign in with Discord**.
 2. Complete one of the real login methods available in Discord’s page. Do not bypass a challenge, and do not change the webview's engine identity or the identity described above to get past a rejection. Cancel if the page or handoff is unsupported. The webview expires after ten minutes and closes when it supplies a candidate token.
-3. Native REST verifies `/users/@me`, rejects a bot account, retrieves the gateway location, and waits for normal-user READY. A socket opening is not authentication success. The token is saved in the OS credential store only after readiness; if a keyring exists but saving fails, the UI reports session-only login. On a desktop without any OS credential store (Linux with no Secret Service provider such as GNOME Keyring, KWallet or KeePassXC), the login is saved to a bounded, private, unencrypted file instead and the post-login status says so; see [storage policy](storage-policy.md). Expiry cleanup does not report a removal failure for a store that does not exist. When no Secret Service answers, Serein D-Bus-activates `org.kde.kwalletd6`/`kwalletd5` (KWallet is often not activatable as `org.freedesktop.secrets` outside Plasma) and retries the store at most every 15 seconds rather than for the rest of the run; KWallet's Secret Service integration must be enabled (unverified on a live KDE desktop). `AUTH_SESSION_CHANGE` only updates the auth-session hash and does not end the session; revocation is HTTP 401 or Gateway close 4004.
+3. Native REST verifies `/users/@me`, rejects a bot account, retrieves the gateway location, and waits for normal-user READY. A socket opening is not authentication success. The token is saved in the OS credential store only after readiness; if a keyring exists but saving fails, the UI reports session-only login. On a desktop without any OS credential store (Linux with no Secret Service provider such as GNOME Keyring, KWallet or KeePassXC), the login is saved to a bounded, private, unencrypted file instead and the post-login status says so; see [storage policy](storage-policy.md). Expiry cleanup does not report a removal failure for a store that does not exist. When no Secret Service answers, Rucord D-Bus-activates `org.kde.kwalletd6`/`kwalletd5` (KWallet is often not activatable as `org.freedesktop.secrets` outside Plasma) and retries the store at most every 15 seconds rather than for the rest of the run; KWallet's Secret Service integration must be enabled (unverified on a live KDE desktop). `AUTH_SESSION_CHANGE` only updates the auth-session hash and does not end the session; revocation is HTTP 401 or Gateway close 4004.
 4. Choose the existing private channel/DM. Load one 50-message page. Deliberately compose and send one short test message. Verify it appears in an official Discord client. Reply from that official client and verify the reply appears natively through Gateway. Do not count an offline fixture, matching text, or a bot reply as success.
 5. In the same conversation, verify an edit, deletion, HTTP/Gateway confirmation ordering, permission rejection if available, disconnect/resume and non-resumable reload. Keep traffic small; run stress tests only against synthetic transports.
 6. Quit after local saves finish. Relaunch and verify credential-store restoration and saved draft recovery without opening the webview. Inspect recovered drafts before sending: an interrupted send can have succeeded remotely.
@@ -151,7 +151,7 @@ The hosted login page in a temporary platform webview, not OAuth, remains as tha
 
 Record only date, OS/build, methods tested, pass/fail and redacted failure category in the task PR description. Never record credentials, account/channel IDs, signed URLs, message contents or QR data. **No real owner-controlled session was supplied or exercised during implementation; the live milestone remains blocked.**
 
-Every build's sign-in screen also offers "Sign in with a token": the owner pastes a session token they already hold, for example from another signed-in Serein install. It skips Discord's hosted login page entirely, still requires the owner-authorization checkbox, still validates through `SessionSecret::from_owner_input` (which drops surrounding whitespace and one pair of surrounding double quotes, as browser storage displays the value), and is saved to the OS credential store the same way a normal login is. It never reads or extracts a credential from another application.
+Every build's sign-in screen also offers "Sign in with a token": the owner pastes a session token they already hold, for example from another signed-in Rucord install. It skips Discord's hosted login page entirely, still requires the owner-authorization checkbox, still validates through `SessionSecret::from_owner_input` (which drops surrounding whitespace and one pair of surrounding double quotes, as browser storage displays the value), and is saved to the OS credential store the same way a normal login is. It never reads or extracts a credential from another application.
 
 Saved-login startup reports credential lookup separately from Discord connection. A found credential advances the status immediately; absent/invalid/unavailable outcomes remain visible. The UI stops awaiting lookup after 10 seconds and permits manual hosted login. Manual login, preview, logout and timeout discard late lookup results. Native login credential IO uses one bounded worker (one active job and one queued job), with a five-second wait per operation. Expired queued work is skipped; a native operation already in progress may finish later. Plaintext IO and cleanup continue on the credential coordinator after that wait. Empty authority markers prevent late or older OS writes from reviving a deleted plaintext login or a logged-out session. Plaintext fallback applies only when no OS credential store exists; proxy credentials remain OS-store-only.
 

@@ -3,7 +3,7 @@
  * Copyright (c) Vendicated and contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  *
- * Changed 2026-11-08: safe, user-invoked Rust port for Serein composer actions.
+ * Changed 2026-11-08: safe, user-invoked Rust port for Rucord composer actions.
  */
 
 use serein_extension_sdk::{Element, Invocation, Output};
