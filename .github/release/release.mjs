@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { appendFileSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';
 import semanticRelease from 'semantic-release';
@@ -18,7 +18,8 @@ if (plan) assert.equal(channel, plan.channel, 'Release channel changed');
 const tapRepo = 'feds1337/homebrew-rucord';
 const caskPath = 'Casks/rucord.rb';
 const tapToken = process.env.HOMEBREW_TAP_TOKEN;
-if (plan) assert(tapToken, 'HOMEBREW_TAP_TOKEN is required to publish the Homebrew cask');
+const caskAsset = plan ? `release-assets/rucord-${plan.gitTag}-macOS-ARM64.zip` : null;
+const hasCaskAsset = caskAsset !== null && existsSync(caskAsset);
 
 function checkTapAccess() {
   const push = execFileSync('gh', ['api', `repos/${tapRepo}`, '--jq', '.permissions.push'], {
@@ -37,13 +38,12 @@ function releaseExists() {
   }
 }
 const resumed = plan !== null && releaseExists();
-if (plan && !resumed) checkTapAccess();
+if (plan && !resumed && tapToken && hasCaskAsset) checkTapAccess();
 
 // The cask lives in its own tap repository so users do not clone this one. The tap file is the
 // single source of truth; releases only rewrite its version and checksum.
 function publishCask() {
-  const asset = `release-assets/rucord-${plan.gitTag}-macOS-ARM64.zip`;
-  const checksum = createHash('sha256').update(readFileSync(asset)).digest('hex');
+  const checksum = createHash('sha256').update(readFileSync(caskAsset)).digest('hex');
   const gh = args => execFileSync('gh', args, {
     encoding: 'utf8', env: { ...process.env, GH_TOKEN: tapToken },
   });
@@ -133,5 +133,9 @@ if (mode === 'plan') {
     execFileSync('gh', ['release', 'edit', plan.gitTag, '--draft=false', '--prerelease', '--latest=false'],
     { stdio: 'inherit' });
   }
-  publishCask();
+  if (tapToken && hasCaskAsset) {
+    publishCask();
+  } else {
+    console.log('Skipping Homebrew cask update: a macOS asset and tap token are required.');
+  }
 }

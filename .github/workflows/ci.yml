@@ -10,6 +10,9 @@ concurrency:
   cancel-in-progress: true
 permissions:
   contents: read
+env:
+  CARGO_PROFILE_TEST_DEBUG: 0
+  CARGO_INCREMENTAL: 0
 jobs:
   native:
     if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
@@ -35,6 +38,9 @@ jobs:
       - uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: 1.4.2
+      - name: Install NSIS
+        if: runner.os == 'Windows'
+        run: choco install nsis --no-progress -y
       - uses: Swatinem/rust-cache@v2.9.2
         with:
           cache-on-failure: true
@@ -60,14 +66,27 @@ jobs:
         run: cargo replay
       - if: github.event_name != 'pull_request'
         run: cargo replay --soak 5
+      - name: Test Windows installer with offline fixture
+        if: runner.os == 'Windows'
+        run: python packaging/windows/test_installer.py
       - name: Package app without demo or developer features
         if: github.event_name != 'pull_request'
         run: cargo xtask package
+      - name: Require generated Windows installer
+        if: runner.os == 'Windows' && github.event_name != 'pull_request'
+        shell: pwsh
+        run: |
+          $installers = @(Get-ChildItem -Path "dist-installer/*-setup.exe" -File -ErrorAction SilentlyContinue)
+          if ($installers.Count -ne 1) {
+            throw "Expected one NSIS installer in dist-installer; found $($installers.Count)."
+          }
       - if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v7.0.1
         with:
           name: rucord-${{ runner.os }}-${{ runner.arch }}-unsigned
-          path: dist/
+          path: |
+            dist/
+            dist-installer/*-setup.exe
   extension-sdk:
     runs-on: ubuntu-latest
     steps:

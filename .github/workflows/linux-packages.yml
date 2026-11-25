@@ -185,7 +185,6 @@ jobs:
         run: |
           mkdir release-assets
           cp target/flatpak-build/Rucord-linux.flatpak "release-assets/rucord-$TAG-Linux-x86_64.flatpak"
-          cp target/flatpak-build/rucord.flatpakref "release-assets/rucord.flatpakref"
       - uses: actions/upload-artifact@v7.0.1
         with:
           name: rucord-linux-flatpak

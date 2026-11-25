@@ -1,7 +1,9 @@
 // Offline release smoke; never invokes semantic-release publishing or Apple services.
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { load } from 'js-yaml';
 import { analyzeCommits } from '@semantic-release/commit-analyzer';
 import { generateNotes } from '@semantic-release/release-notes-generator';
@@ -48,20 +50,67 @@ assert(prodNotes.includes('## New Contributors'));
 assert(prodNotes.indexOf('## New Contributors') > prodNotes.indexOf('notification sounds'));
 assert(prodNotes.includes('Release Note Author made their first contribution'));
 
-const nightlyNotes = await generateReleaseNotes('nightly', { preset: 'conventionalcommits' }, releaseNotesContext);
-assert(nightlyNotes.includes('category and channel permission settings'));
-assert(!nightlyNotes.includes('notification sounds'));
+const originalCwd = process.cwd();
+const historyFixture = mkdtempSync(join(tmpdir(), 'rucord-release-history-'));
+let audioHash;
+let categoryHash;
+try {
+  const git = args => execFileSync('git', args, { cwd: historyFixture, encoding: 'utf8' }).trim();
+  git(['init', '--quiet', '--initial-branch=main']);
+  git(['config', 'user.name', 'Fixture Author']);
+  git(['config', 'user.email', 'fixture@example.invalid']);
+  writeFileSync(join(historyFixture, 'history.txt'), 'initial\n');
+  git(['add', 'history.txt']);
+  git(['commit', '--quiet', '-m', 'chore: release notes fixture']);
+  writeFileSync(join(historyFixture, 'history.txt'), 'audio\n');
+  git(['add', 'history.txt']);
+  execFileSync('git', ['-c', 'user.name=Audio Note Author', '-c', 'user.email=audio-note-author@example.invalid', 'commit', '--quiet', '-m', 'feat(audio): bundle notification sounds (#140)'], { cwd: historyFixture });
+  audioHash = git(['rev-parse', 'HEAD']);
+  git(['tag', 'v1.0.0']);
+  writeFileSync(join(historyFixture, 'history.txt'), 'categories\n');
+  git(['add', 'history.txt']);
+  execFileSync('git', ['-c', 'user.name=Release Note Author', '-c', 'user.email=release-note-author@example.invalid', 'commit', '--quiet', '-m', 'feat(ui): add category and channel permission settings (#149)'], { cwd: historyFixture });
+  categoryHash = git(['rev-parse', 'HEAD']);
+  const nightlyContext = {
+    ...releaseNotesContext,
+    commits: [releaseNotesContext.commits[1], releaseNotesContext.commits[0]].map(commit => ({
+      ...commit,
+      hash: commit.author.name === 'Audio Note Author' ? audioHash : categoryHash,
+    })),
+    nextRelease: { version: '1.1.0-nightly.20261125.2', gitHead: categoryHash },
+  };
+  process.chdir(historyFixture);
+  const nightlyNotes = await generateReleaseNotes('nightly', { preset: 'conventionalcommits' }, nightlyContext);
+  assert(nightlyNotes.includes('category and channel permission settings'));
+  assert(!nightlyNotes.includes('notification sounds'));
+} finally {
+  process.chdir(originalCwd);
+  rmSync(historyFixture, { recursive: true, force: true });
+}
 
 const workflow = load(readFileSync('.github/workflows/release.yml', 'utf8'));
-assert.deepEqual(Object.keys(workflow.on), ['schedule', 'workflow_dispatch']);
-assert(workflow.jobs.build.strategy.matrix.os.includes('windows-11-arm'));
-for (const job of Object.values(workflow.jobs)) {
-  for (const step of job.steps ?? []) {
-    if (step.run && step.shell !== 'pwsh') execFileSync('bash', ['-n'], { input: step.run });
+assert.deepEqual(Object.keys(workflow.on), ['workflow_dispatch']);
+assert.equal(workflow.env.CARGO_PROFILE_TEST_DEBUG, 0);
+assert.equal(workflow.env.CARGO_INCREMENTAL, 0);
+const ciWorkflow = load(readFileSync('.github/workflows/ci.yml', 'utf8'));
+assert.equal(ciWorkflow.env.CARGO_PROFILE_TEST_DEBUG, 0);
+assert.equal(ciWorkflow.env.CARGO_INCREMENTAL, 0);
+assert.deepEqual(workflow.jobs.build.strategy.matrix.os, ['windows-latest', 'windows-11-arm']);
+assert.equal(workflow.jobs.repositories, undefined, 'release must not deploy an unsigned package repository');
+assert(workflow.jobs.build.steps.some(step => step.name === 'Test installer with offline fixture'));
+assert(workflow.jobs.build.steps.some(step => step.run?.includes('Expected one NSIS installer')));
+assert(workflow.jobs.publish.steps.some(step => step.run === 'gh auth setup-git'));
+assert(!readFileSync('.github/release/release.mjs', 'utf8').includes('HOMEBREW_TAP_TOKEN is required'));
+assert(!readFileSync('.github/workflows/linux-packages.yml', 'utf8').includes('cp target/flatpak-build/rucord.flatpakref "release-assets/'));
+if (process.platform !== 'win32') {
+  for (const job of Object.values(workflow.jobs)) {
+    for (const step of job.steps ?? []) {
+      if (step.run && step.shell !== 'pwsh') execFileSync('bash', ['-n'], { input: step.run });
+    }
   }
+  execFileSync('bash', ['-n', 'packaging/macos/sign-release.sh']);
+  execFileSync('bash', ['packaging/macos/test_sign_release.sh'], { stdio: 'inherit' });
 }
-execFileSync('bash', ['-n', 'packaging/macos/sign-release.sh']);
-execFileSync('bash', ['packaging/macos/test_sign_release.sh'], { stdio: 'inherit' });
 execFileSync(process.env.PYTHON || 'python3', ['-c', `
 import glob, os, pathlib, shutil, subprocess, tempfile, tomllib
 root = pathlib.Path.cwd()
@@ -85,5 +134,6 @@ with tempfile.TemporaryDirectory() as directory:
             assert next(p['version'] for p in packages if p['name'] == 'model' and 'source' not in p) == version
     import plistlib
     assert plistlib.loads(pathlib.Path('packaging/macos/Info.plist').read_bytes())['CFBundleShortVersionString'] == '1.2.3'
+    os.chdir(root)
 `], { stdio: 'inherit' });
 console.log('Release smoke passed: semantic bumps/notes, nightly isolation, manifest/lock versions, YAML and shell syntax.');

@@ -1,6 +1,6 @@
 # Linux packages
 
-Release builds target native packages for Ubuntu 26.04 (`apt`, x86_64 and ARM64), Fedora 43/44 (`dnf`),
+The stable release workflow publishes native packages for Ubuntu 26.04 (`apt`, x86_64 and ARM64), Fedora 43/44 (`dnf`),
 openSUSE Tumbleweed (`zypper`) and Arch (`pacman`), plus a
 [Flatpak bundle](../flatpak/README.md) for distributions with a compatible Flatpak runtime.
 The [AppImage](../appimage/README.md) supports in-app updates on Linux x86_64 with
@@ -18,8 +18,9 @@ sudo pacman -U ./rucord-*.pkg.tar.zst               # Arch
 flatpak install --user ./rucord-*.flatpak           # Flatpak bundle
 ```
 
-Use a directory containing only the selected package. Local build artifacts are
-unsigned; package-manager signature policy may require an operator-signed package.
+Use a directory containing only the selected package. Release packages are not
+signed by a distribution repository key; install the downloaded local file using
+the distribution's package manager.
 The [signed repository setup](../repositories/README.md) prepares apt, dnf/zypper
 and pacman repositories for normal package-manager upgrades. Hosting and signing
 credentials must be configured before those repository URLs are usable. Rucord is
@@ -45,7 +46,9 @@ application monitors on PulseAudio or PipeWire-Pulse. Rucord's playback is exclu
 no virtual device or output rerouting is required. Native package tools derive the
 linked libpulse runtime dependency from the executable. Source builds require its
 development package, installed by `install-build-deps.sh`.
-Native screen capture and installation of the updated packages remain unverified.
+The package workflow validates payloads and library dependencies on each listed
+build distribution. This does not verify native desktop startup, screen capture,
+login, physical audio or installation on a user's machine.
 
 ## Native builds
 
