@@ -47,4 +47,3 @@ The demo uses synthetic data and does not test a connection to Discord. When red
 Rucord stores its settings, cache, and credentials in its own data directories. It does not modify or automatically import data from other applications. Extension ABI names and package formats are retained for compatibility.
 
 Documentation: [storage policy](docs/storage-policy.md), [authentication](docs/authentication.md), [platform support](docs/platform-support.md), and the [extension SDK](docs/extension-sdk-overview.md). The source code is licensed under MIT or Apache-2.0. Third-party components may use other licenses; see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
-
