@@ -1,0 +1,5 @@
+# Release packages are hash-addressed artifacts; never rewrite their line endings.
+*.serein-extension -text
+
+# Local SVG sources are hash-pinned by the icon atlas generator.
+/assets/**/*.svg text eol=lf

@@ -1,0 +1,23 @@
+[package]
+name = "discord-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+model.workspace = true
+client-core.workspace = true
+discord-protocol.workspace = true
+wreq.workspace = true
+wreq-util.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio = { workspace = true, features = ["test-util"] }
+zeroize.workspace = true
+futures-util.workspace = true
+url.workspace = true
+# Already built for wreq; request bodies are handed over as zeroizing owners.
+bytes = "1"
+
+[lints]
+workspace = true
