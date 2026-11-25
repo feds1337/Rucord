@@ -10,6 +10,9 @@ concurrency:
   cancel-in-progress: true
 permissions:
   contents: read
+env:
+  CARGO_PROFILE_TEST_DEBUG: 0
+  CARGO_INCREMENTAL: 0
 jobs:
   native:
     if: github.event_name != 'pull_request' || github.event.pull_request.draft == false

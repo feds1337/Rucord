@@ -90,6 +90,11 @@ try {
 
 const workflow = load(readFileSync('.github/workflows/release.yml', 'utf8'));
 assert.deepEqual(Object.keys(workflow.on), ['workflow_dispatch']);
+assert.equal(workflow.env.CARGO_PROFILE_TEST_DEBUG, 0);
+assert.equal(workflow.env.CARGO_INCREMENTAL, 0);
+const ciWorkflow = load(readFileSync('.github/workflows/ci.yml', 'utf8'));
+assert.equal(ciWorkflow.env.CARGO_PROFILE_TEST_DEBUG, 0);
+assert.equal(ciWorkflow.env.CARGO_INCREMENTAL, 0);
 assert.deepEqual(workflow.jobs.build.strategy.matrix.os, ['windows-latest', 'windows-11-arm']);
 assert.equal(workflow.jobs.repositories, undefined, 'release must not deploy an unsigned package repository');
 assert(workflow.jobs.build.steps.some(step => step.name === 'Test installer with offline fixture'));
