@@ -95,6 +95,12 @@ assert.equal(workflow.env.CARGO_INCREMENTAL, 0);
 const ciWorkflow = load(readFileSync('.github/workflows/ci.yml', 'utf8'));
 assert.equal(ciWorkflow.env.CARGO_PROFILE_TEST_DEBUG, 0);
 assert.equal(ciWorkflow.env.CARGO_INCREMENTAL, 0);
+const linuxWorkflow = load(readFileSync('.github/workflows/linux-packages.yml', 'utf8'));
+const linuxPackageStep = linuxWorkflow.jobs.native.steps.find(step => step.name === 'Build and inspect native package');
+assert.equal(linuxPackageStep.env.CARGO_PROFILE_RELEASE_LTO, "${{ matrix.runner == 'ubuntu-24.04-arm' && 'thin' || 'fat' }}");
+assert.equal(linuxPackageStep.env.CARGO_PROFILE_RELEASE_CODEGEN_UNITS, "${{ matrix.runner == 'ubuntu-24.04-arm' && '4' || '1' }}");
+assert(linuxPackageStep.run.includes('CARGO_PROFILE_RELEASE_LTO="$CARGO_PROFILE_RELEASE_LTO"'));
+assert(linuxPackageStep.run.includes('CARGO_PROFILE_RELEASE_CODEGEN_UNITS="$CARGO_PROFILE_RELEASE_CODEGEN_UNITS"'));
 assert.deepEqual(workflow.jobs.build.strategy.matrix.os, ['windows-latest', 'windows-11-arm']);
 assert.equal(workflow.jobs.repositories, undefined, 'release must not deploy an unsigned package repository');
 assert(workflow.jobs.build.steps.some(step => step.name === 'Test installer with offline fixture'));
@@ -103,6 +109,7 @@ assert(workflow.jobs.publish.steps.some(step => step.run === 'gh auth setup-git'
 assert(!readFileSync('.github/release/release.mjs', 'utf8').includes('HOMEBREW_TAP_TOKEN is required'));
 assert(!readFileSync('.github/workflows/linux-packages.yml', 'utf8').includes('cp target/flatpak-build/rucord.flatpakref "release-assets/'));
 if (process.platform !== 'win32') {
+  execFileSync('bash', ['-n'], { input: linuxPackageStep.run });
   for (const job of Object.values(workflow.jobs)) {
     for (const step of job.steps ?? []) {
       if (step.run && step.shell !== 'pwsh') execFileSync('bash', ['-n'], { input: step.run });
