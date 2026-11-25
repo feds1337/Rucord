@@ -4,7 +4,7 @@ default-members = ["apps/desktop"]
 resolver = "3"
 
 [workspace.package]
-version = "1.0.0"
+version = "1.0.1"
 edition = "2024"
 rust-version = "1.99"
 license = "MIT OR Apache-2.0"
@@ -61,11 +61,10 @@ global-hotkey = "=0.8.0"
 unsafe_code = "forbid"
 
 [profile.release]
-# Fat LTO inlines across the bundled C libraries (libopus, sqlite, sonora) and drops their
-# unused code; stripping the symbol table removes the 7-8 MB `__LINKEDIT`/`.symtab` from the
-# shipped binary. Line tables still land in the split debug file for symbolicating crashes.
-lto = "fat"
-codegen-units = 1
+# Keep release builds practical on local developer machines: avoid the memory-heavy whole-program
+# LTO pass and let rustc split LLVM work across codegen units. Optimization remains at level 3.
+lto = false
+codegen-units = 16
 strip = "symbols"
 debug = "line-tables-only"
 

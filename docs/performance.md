@@ -2147,3 +2147,36 @@ no hardware decoder is installed. Real calls and streams were not run: the strea
 come from the synthetic source only, and stream and camera pictures are still copied on
 every platform. Package size was not measured. `video::gst::tests::native_mov_decodes_audio_video_and_seeks` fails
 on the Asahi machine ("no frame after seek") with and without this change.
+
+## Local release build profile — November 26, 2026
+
+Windows 11 Pro x64, AMD Ryzen 7 5800X (8 cores / 16 threads), 31.9 GiB RAM, Rust 1.99.1.
+`cargo xtask package` built Rucord 1.0.1 with voice enabled, `opt-level=3`, LTO disabled,
+16 codegen units, four Cargo jobs, and the release target on D:. This was the first build after
+changing the profile, so Cargo rebuilt the release dependency graph. Wall time was 960.5 s. An
+unchanged repeat with eight Cargo jobs took 57.4 s wall time including NSIS compression; Cargo
+reported 0.71 s for the already-built release target.
+
+| Metric | Result |
+| --- | ---: |
+| Executable | 119,846,400 bytes |
+| Portable directory payload | 124,212,908 bytes |
+| Portable ZIP | 68,197,180 bytes |
+| Windows Setup.exe | 56,567,698 bytes |
+| Linux executable | 126,594,048 bytes |
+| Ubuntu 24.04 DEB | 59,193,796 bytes |
+| Debian Installed-Size | 128,170 KiB |
+| Linux x86_64 AppImage | 69,163,512 bytes |
+| AppImage zsync metadata | 236,699 bytes |
+
+The Ubuntu 24.04 package smoke check passed for 247 files. Its release compilation took 8m 26s;
+the first xtask build took 2m 50s. The AppImage reused the Linux target and passed its ELF header
+and zsync packaging checks. WSL's virtual disk, Rust toolchain, Cargo cache and Linux target are
+stored on D:. The AppImage staging code normalizes the desktop file's line endings so packaging
+also works from a Windows checkout.
+
+The previous fat-LTO, one-codegen-unit profile failed twice on this machine with LLVM out of
+memory before producing a package; the largest observed `rustc` working set was 15.4 GiB. That
+is not a successful timing or size baseline, so no speedup percentage or package-size delta is
+claimed. Runtime CPU, memory, startup and voice workloads have not been compared; `opt-level=3`
+remains enabled, but the runtime effect of disabling LTO is unmeasured.

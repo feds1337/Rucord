@@ -50,7 +50,12 @@ def build(root, version):
         stage_payload(root, appdir)
         shutil.copyfile("packaging/appimage/AppRun", appdir / "AppRun")
         (appdir / "AppRun").chmod(0o755)
-        shutil.copyfile("packaging/linux/rucord.desktop", appdir / "io.github.feds1337.rucord.desktop")
+        desktop_file = appdir / "io.github.feds1337.rucord.desktop"
+        desktop_file.write_bytes(
+            Path("packaging/linux/rucord.desktop")
+            .read_bytes()
+            .replace(b"\r\n", b"\n")
+        )
         shutil.copyfile("packaging/linux/hicolor/256x256/apps/rucord.png", appdir / "rucord.png")
         doc = appdir / "usr/share/doc/rucord"
         shutil.copyfile("packaging/appimage/README.md", doc / "AppImage-README.md")
